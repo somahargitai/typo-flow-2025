@@ -18,6 +18,55 @@ function App() {
         </header>
         
         <main className="max-w-4xl mx-auto">
+          {/* Font Testing Section */}
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+              Font Testing
+            </h2>
+            
+            {/* Big Shoulders Display */}
+            <div className="mb-8 p-6 bg-gray-100 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-700 mb-4">
+                Big Shoulders Display
+              </h3>
+              <div className="space-y-3">
+                <p className="text-4xl font-bold" style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}>
+                  Bold - Typo Flow 2025
+                </p>
+                <p className="text-3xl font-semibold" style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}>
+                  Semibold - Typography Biennale
+                </p>
+                <p className="text-2xl font-extrabold" style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}>
+                  Extrabold - Design Campus
+                </p>
+              </div>
+            </div>
+
+            {/* Geist */}
+            <div className="mb-8 p-6 bg-gray-100 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-700 mb-4">
+                Geist
+              </h3>
+              <div className="space-y-3">
+                <p className="text-2xl font-light" style={{ fontFamily: 'Geist, sans-serif' }}>
+                  Light - Typo Flow 2025
+                </p>
+                <p className="text-2xl font-normal" style={{ fontFamily: 'Geist, sans-serif' }}>
+                  Regular - Typography Biennale
+                </p>
+                <p className="text-2xl font-medium" style={{ fontFamily: 'Geist, sans-serif' }}>
+                  Medium - Design Campus
+                </p>
+                <p className="text-2xl font-semibold" style={{ fontFamily: 'Geist, sans-serif' }}>
+                  Semibold - Győr 2025
+                </p>
+                <p className="text-2xl font-bold" style={{ fontFamily: 'Geist, sans-serif' }}>
+                  Bold - October 22 - November 9
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="bg-gray-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
               Website under construction
