@@ -1,11 +1,26 @@
-/** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './index.html',
+    './src/**/*.{js,jsx,ts,tsx}',
   ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+  safelist: [
+    'bg-blue-600',
+    'bg-black',
+    'text-white',
+    'px-4',
+    'mb-8',
+    'py-16',
+    'py-20',
+    'bg-gray-100',
+    'text-gray-700',
+    'text-3xl',
+    'md:text-5xl',
+    'text-6xl',
+    'md:text-8xl',
+    'font-extrabold',
+    'leading-tight',
+    'grid-cols-3',
+    'lg:grid-cols-4',
+    'xl:grid-cols-5',
+  ],
 }
