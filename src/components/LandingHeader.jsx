@@ -5,17 +5,22 @@ const LandingHeader = () => {
   const { t } = useLanguage();
 
   return (
-    <header className="relative bg-black text-white py-20">
+    <header className="relative text-white h-screen flex flex-col pt-15 pb-10" style={{ backgroundColor: '#ff5251' }}>
+      <div className="flex-1 flex items-center justify-center w-full overflow-hidden">
+        <img
+          src="/images/logo.svg"
+          alt="Typo Flow Logo"
+          className="w-auto h-auto object-contain"
+          style={{ 
+            width: 'min(90%, 90%)',
+            height: 'min(90%, 90%)',
+            maxWidth: '90vw',
+            maxHeight: '100%',
+            objectFit: 'contain'
+          }}
+        />
+      </div>
       <div className="container mx-auto px-4 text-center">
-        {/* Logo */}
-        <div className="mb-8 flex justify-center bg-blue-600">
-          <img
-            src="/images/logo.svg"
-            alt="Typo Flow Logo"
-            className="h-24 md:h-32 w-auto"
-            style={{ width: 'auto', height: '96px' }}
-          />
-        </div>
         
         <h1 
           className="text-6xl md:text-8xl font-extrabold mb-6 leading-tight"
