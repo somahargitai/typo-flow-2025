@@ -31,15 +31,10 @@ tipográfiai projekteken alapuló művészkönyvek és grafika szakelméleti
 könyvek szerzője. Mint grafikus tervező, elsődlegesen a kulturális szféra
 megrendelői számára dolgozik, kiemelten a könyv- és kiadványtervezés
 területén. Az AGI (Alliance Graphique Internationale) tagja.`,
-      description_en: `Dóra Balla is a graphic artist and recipient of the Noémi Ferenczy Award, as well as a habilitated university
-associate professor. She is an active participant in domestic and international exhibitions and an organizer of professional
-events and exhibitions. Her primary field of research is the
-history and theory of contemporary graphic design, the experimental
-aspects and border areas of graphic design. She is the author of self-published, autonomous art and
-typography projects based on artist books and graphic design theory
-books. As a graphic designer, he primarily works for clients in the cultural sphere,
- with a focus on book and publication design.
- He is a member of AGI (Alliance Graphique Internationale).`,
+      description_en: `Dóra Balla, Ferenczy Noémi Award-winning graphic artist, habilitated 
+associate professor. An active participant in national and international exhibitions, as well as an organizer of professional events and exhibitions. Her primary research focuses on the history and theory of contemporary graphic design, along with the experimental aspects and border areas 
+of design practice. She is the author of self-published artists’ books and graphic design theory books based on autonomous artistic and typographic projects. As a graphic designer, she primarily works for clients in the cultural sector, with a particular emphasis on book and publication design. She is a member of the AGI (Alliance Graphique Internationale).
+`,
     },
     {
       firstName: 'OSZKÁR',
@@ -54,7 +49,12 @@ folyamatosan. Oktat, témavezet művészeti egyetemeken mint: PTE MK,
 METU, MKE, MOME. Betűtervezői munkáiért Magyar Tervezőgrafikai
 Biennálé Díjat, Magyar Formatervezési Díjat, Pécs Innovációs Díjat és
 Arany Rajzszög Díjat kapott.`,
-      description_en: `In the field of professional type design and its teaching, I see the revival of Hungarian type design. With the "Next" typeface series, I think about and make forgotten Hungarian designers' typefaces available continuously. I teach and supervise at art universities such as PTE MK, METU, MKE, MOME. I have received awards for my type design work, including the Hungarian Graphic Design Biennale, Hungarian Form Design Award, Pécs Innovation Award, and Arany Rajzszög Award.`,
+      description_en: `He sees the revival of Hungarian type design in professional typeface creation and its teaching. Through his "Next" typeface series, he 
+reinterprets and continuously makes available the forgotten fonts 
+of Hungarian designers. He teaches and supervises theses at art 
+universities such as PTE MK, METU, MKE, and MOME. For his type design work, he has received the Hungarian Graphic Design Biennial Award, 
+the Hungarian Design Award, the Pécs Innovation Award, 
+and the Golden Drawing Pin Award.`,
     },
     {
       firstName: 'GERGŐ',
@@ -71,7 +71,8 @@ főszervezője vagyok. Több mint 10 éve tanítok a felsőoktatásban; az
 arculattervezés mellett többek között tipográfiát és kiadványszerkesztést
 is. Munkáimat hazai és nemzetközi díjakkal ismerték el, köztük egy Red
 Dot Design Awarddal.`,
-      description_en: `I have been working as a freelance graphic designer for 15+ years, and for the past 5 years I have been the creative leader of a British fintech platform. My work focuses on branding and digital solutions, as well as typography — I also work as a book and cover designer, and I also teach typography and publication design. My work has been recognized with numerous awards, including a Red Dot Design Award.`,
+      description_en: `I have been working as a freelance graphic designer for over 15 years and have served as the creative director of a UK-based fintech platform for nearly 5 years. In addition to brand identity design and digital solutions, my work focuses strongly on typography — I also work as a book and cover designer, and I lead typography workshops. I am a co-founder and chief organizer of FontFront, a typography competition and exhibition. 
+I have been teaching in higher education for more than 10 years; alongside brand identity design, I also teach typography and publication design, among other subjects. My work has been recognized with national and international awards, including a Red Dot Design Award.`,
     },
     {
       firstName: 'ANNA',
@@ -87,14 +88,8 @@ munkák köthetők a nevéhez, mint az Anaptár, a Zeneakadémia arculata,
 a Magvető, a Graphifest vagy a Szabó Magda 100 logói és elsősorban
 kulturális intézményekkel, múzeumoknak dolgozik. Rendszeres
 résztvevője hazai és nemzetközi tervezőgrafikai kiállításoknak.`,
-      description_en: `Red Dot: Grand Prix, Noémi Ferenczy, and multiple Red Dot
-Winner, Graphis, CommArts, TDC, MFD, and Aranyrajszög award-winning
-graphic designer. Lecturer at the Hungarian University of Fine Arts. More than
-25 years ago, she founded his own studio called Anagraphic. Her graphic design
-work includes Anaptár, the image of the Academy of Music,
-Magvető, Graphifest, and the 100 logos of Magda Szabó. She works primarily
-with cultural institutions and museums. She is a regular
-participant in domestic and international graphic design exhibitions.`,
+      description_en: `Red Dot: Grand Prix, Ferenczy Noémi Award, as well as multiple Red Dot Winner, Graphis, CommArts, TDC, MFD, and Golden Drawing Pin award-winning graphic designer. She is a lecturer at the Hungarian 
+University of Fine Arts. More than 25 years ago, she founded her own studio under the name Anagraphic. Her design work includes projects such as Anaptár, the visual identity of the Liszt Academy of Music, as well as logos for Magvető, Graphifest, and Szabó Magda 100. She primarily works with cultural institutions and museums. She is a regular participant in both national and international graphic design exhibitions.`,
     },
 
     {
@@ -109,12 +104,10 @@ a márkaépítés, termékarculat tervezés és az experimentális tipográfia.
 Az Art Force Design kreatív igazgatója, a győri Széchenyi István Egyetem
 Design Campusának docense, a Metropolitan Egyetem szaktanára,
 a FontFront tipográfiai verseny alapítója.`,
-      description_en: `Noémi Ferenczy Award winner, multiple National Graphic Design Biennial and
-Golden Drawing Pin Award winner graphic designer and typographer. Her areas of expertise
-include brand building, product image design, and experimental typography.
-Creative director at Art Force Design, associate professor at the Design Campus of Széchenyi István University in Győr,
- lecturer at Metropolitan University,
-founder of the FontFront typography competition.`,
+      description_en: `Ferenczy Noémi Award-winning graphic designer and typographer, 
+multiple recipient of the National Graphic Design Biennial and Golden Drawing Pin Awards. His areas of expertise include branding, product identity design, and experimental typography. He is the creative director of Art Force Design, an associate professor at the Design Campus 
+of Széchenyi István University in Győr, a lecturer at Metropolitan 
+University, and the founder of the FontFront typography competition.`,
     },
     {
       firstName: 'NÓRA',
@@ -131,15 +124,9 @@ Munkái több nemzetközi könyvben és magazinban is helyet kaptak,
 a Moholy-Nagy Művészeti Egyetemen, ahol diplomamunkáját ‘Rektori
 Díjban’ részesítették. Jelenleg szabadúszó grafikusként dolgozik, főként
 vizuális arculatok, kiadványok és csomagolások tervezésével foglalkozik.`,
-      description_en: `World Brand Design Society & DNA Paris award winner, multiple
-ArtHungry award-winning graphic designer, winner of the Ministry of Human
-Resources' grand prize at the XXII. Graphic Design Biennial in 2020.
-His works have been featured in several international books and magazines,
-such as Novum, IdN, BranD, It's Nice That, and Dieline magazine.
-In 2018, he obtained his master's degree in graphic design
-from the Moholy-Nagy University of Art and Design, where his thesis was awarded the 'Rector's
-Prize'. He currently works as a freelance graphic designer, mainly
-designing visual identities, publications, and packaging.`,
+      description_en: `World Brand Design Society and DNA Paris award-winning graphic 
+designer, multiple ArtHungry Award recipient, and winner of the Grand Prize of the Ministry of Human Capacities at the 22nd Graphic Design Biennial in 2020. Her work has been featured in several international books and magazines, including Novum, IdN, BranD, It’s Nice That, and Dieline magazine. She earned her master’s degree in graphic design from the Moholy-Nagy University of Art and Design in 2018, where her diploma project received the Rector’s Award. She currently works as a freelance graphic designer, focusing mainly on visual identities, publications, 
+and packaging design.`,
     },
     {
       firstName: 'MATEUSZ',
@@ -152,11 +139,10 @@ designing visual identities, publications, and packaging.`,
   professzora és rektor helyettese. Tervezői munkája mellett kutatásokban
   vesz részt, előadásokat tart, kiállítások kurátora és aktívan népszerűsíti
   a lengyel tervezőgrafikát nemzetközi színtéren.`,
-      description_en: `An award-winning graphic artist, his work focuses on typography and
-  visual communication. He is a professor and vice-rector at the Academy of Fine Arts in Warsaw
- . In addition to his design work, he is involved in research
- , gives lectures, curates exhibitions, and actively promotes
-  Polish graphic design on the international stage.`,
+      description_en: `An award-winning designer specializing in typography and visual 
+communication, he is a professor at the Academy of Fine Arts in Warsaw and the Rector's Representative. In addition to his design work, he is involved in research, lectures, exhibition curation, and the promotion 
+of Polish design worldwide.
+`,
     },
     {
       firstName: 'JÁNOS',
@@ -169,11 +155,10 @@ Alapfokú Művészeti Iskola - gimnázium és grafikus (OKJ) szakma.
 2009-2014, Sopron, Nyugat-Magyarországi Egyetem, Alkalmazott
 Művészeti intézet, tervezőgrafikus BA és MA diploma. 2014-től
 jelenleg - a Halisten Stúdió tagjaként tervezőgrafikusként dolgozom.`,
-      description_en: `2004-2009, Zirc, III. Béla High School, Art High School and
-Elementary Art School - high school and graphic designer (OKJ) profession.
-2009-2014, Sopron, University of West Hungary, Institute of Applied
-Arts, BA and MA degrees in graphic design. 2014-present
-- I work as a graphic designer at Halisten Studio.`,
+      description_en: `2004–2009, Zirc – III. Béla Secondary Grammar School, Secondary School of Arts and Elementary Art School – Secondary education and Graphic Designer qualification (OKJ). 2009–2014, Sopron – University 
+of West Hungary, Institute of Applied Arts – BA and MA degrees in 
+Graphic Design. 2014–present – Working as a graphic designer as 
+a member of Halisten Studio.`,
     },
     {
       firstName: 'DOROTTYA',
@@ -191,16 +176,9 @@ Kiválósági Ösztöndíj és Best of Grafika díjazott voltam, 2021-ben Red-,
 2023-ban pedig Green- és Különdíjat kaptam az RGB – Kreatív Design
 Award-on. 2025-ben Scroll című munkám megjelent a Slanted
 Experimental Type 2.0 című kiadványban.`,
-      description_en: `I obtained my bachelor's and master's degrees from Moholy-Nagy University of Art and Design
-in graphic design in 2021 and 2025. I began my professional
-career in 2019 at Salt Communications
-as a graphic designer. In addition to my permanent freelance graphic design work,
- I have been working with the NUR&MOR team since 2025, and I am currently
-working as a designer at MOME. At university, I was awarded the Stefan Lengyel
-Excellence Scholarship and Best of Graphics, and in 2021 I received the Red Award,
-and in 2023 the Green Award and Special Award at the RGB – Creative Design
-Award. In 2025, my work Scroll was published in Slanted
-Experimental Type 2.0.`,
+      description_en: `I obtained my bachelor's and master's degrees in graphic design from Moholy-Nagy University of Art and Design in 2021 and 2025. I started 
+my professional career in 2019 as a graphic designer at Salt 
+Communications. In addition to my permanent freelance graphic design work, I worked for the NUR&MOR team from 2025, and I am currently working as a designer at MOME. At university, I was awarded the Stefan Lengyel Excellence Scholarship and the Best of Grafika award, and in 2021 I received the Red Award and in 2023 the Green Award and Special Award at the RGB – Creative Design Award. In 2025, my work Scroll was published in Slanted Experimental Type 2.0.`,
     },
     {
       firstName: 'LÁSZLÓ',
@@ -212,16 +190,8 @@ Experimental Type 2.0.`,
 letteringeket készít, betűtervezőként pedig saját betűtervei mellett több
 arculati betűtípust készített. Jelenleg a tervezés mellett betűtervezést
 oktat a győri Széchenyi Egyetem Design Campusán, és workshopokon.`,
-      description_en: `I obtained my bachelor's and master's degrees from Moholy-Nagy University of Art and Design
-in graphic design in 2021 and 2025. I began my professional
-career in 2019 at Salt Communications
-as a graphic designer. In addition to my permanent freelance graphic design work,
- I have been working with the NUR&MOR team since 2025, and I am currently
-working as a designer at MOME. At university, I was awarded the Stefan Lengyel
-Excellence Scholarship and Best of Graphics, and in 2021 I received the Red Award,
-and in 2023 the Green Award and Special Award at the RGB – Creative Design
-Award. In 2025, my work Scroll was published in Slanted
-Experimental Type 2.0.`,
+      description_en: `As a graphic designer, Laci mainly creates typography-focused visual identities, logos, and letterings, while as a type designer he has developed several custom brand typefaces in addition to his own typefaces. 
+Currently, alongside his design work, he also teaches type design at the Design Campus of Széchenyi University in Győr, as well as in workshops.`,
     },
     {
       firstName: 'PÉTER',
@@ -239,16 +209,11 @@ egyre távolabbi környezetemé is. Ezt szolgáljuk csapatommal
 a zwoelfben, és ezért jött létre a brandguide is, hogy erre a változásra
 még nagyobb hatásunk lehessen. Talán jó úton haladunk, de van még
 mit tenni…`,
-      description_en: `I grew up in a creative environment as a child. My parents
-sought solutions even within the limited possibilities of socialism.
-I reached adulthood, my desire for beautiful visual surroundings only grew,
-which is why I drifted into a career in graphic design and typography. Today, this desire
-has grown into a belief, which helps me to strive not only
-for the visual culture of my immediate surroundings to be in order, but also
-that of my increasingly distant surroundings. This is what my team and I strive for
-at zwoelf, and this is why we created the brand guide, so that we can have an even greater impact on this change.
- We may be on the right track, but there is still
-work to be done...`,
+      description_en: `In my childhood, I grew up in a creative environment. Even within the 
+limited possibilities of socialism, my parents always looked for solutions. By the time I reached early adulthood, my need for a beautiful visual 
+environment had only grown stronger, which led me to the path of 
+graphic design and typography. Today, this need has become a 
+conviction—one that drives me not only to nurture the visual culture of my immediate surroundings but also to improve that of the broader world around me. This is what we serve with my team at zwoelf, and it is also the reason we created brandguide: to have an even greater impact on this change. Perhaps we are on the right path, but there is still much to do…`,
     },
     {
       firstName: 'JOSÉ',
@@ -267,17 +232,7 @@ magazin művészeti vezetője, valamint társalapítója a kortárs művészeti
 eseményeknek helyet adó Bäse – Creatív Clubhouse-nak. A TypoHungry
 – Tipográfia Magyarországon a XXI. században és STANC – Kreatív
 magyar gasztrocsomagolások című művészeti albumok szerkesztője.`,
-      description_en: `Hungarian Design Award winner, Golden Drawing Pin Award winner, multiple National
-Graphic Design Biennial Award winner graphic designer. Since 1999, he has been primarily
-involved in image design, brand building, packaging design, and
-publication design. He has been involved in numerous creative collectives and
-projects, including Grotesque Design, and
-later founded Simon Says Graphic Studio, the ArtHungry.com
-community art platform, and Phenom.hu online pop culture
-magazine, as well as co-founder of Bäse – Creatív Clubhouse, a venue for contemporary art
-events. He is the editor of the art albums TypoHungry
-– Typography in Hungary in the 21st Century and STANC – Creative
-Hungarian Gastronomic Packaging.`,
+      description_en: `An award-winning graphic designer and artist, recipient of the Hungarian Design Award, the Golden Drawing Pin Award, and multiple prizes at the National Graphic Design Biennale. Since 1999, he has specialized in visual identity design, branding, packaging, and publication design. He has been the driving force behind numerous creative collectives and projects; founder of Grotesque Design and later Simon Says Graphic Studio, art director of the community art platform ArtHungry.com and the online pop culture magazine Phenom.hu, as well as co-founder of Bäse – Creative Clubhouse, a venue for contemporary art events. He is also the editor of the art books TypoHungry – Typography in Hungary in the 21st Century and STANC – Creative Hungarian Food Packaging.`,
     },
     {
       firstName: 'SZABÓ',
@@ -292,13 +247,11 @@ díjat, valamint meghívást hozott számára. Alkotói munkásságát finoman
 kimunkált könyvek, plakátok, kulturális arculatok, autonóm alkotások
 jellemzik. 2022-ben a zsűri neki ítélte az utóbbi évek kiemelkedő
 tervezőgrafikai tevékenységéért járó Aranyrajzszög díjat.`,
-      description_en: `Noémi Ferenczy is an award-winning graphic artist and assistant professor at the Hungarian University of Fine Arts.
-Her nearly two decades of experience as an exhibiting and graphic designer have earned her numerous domestic and international awards and invitations.
-Her creative work is characterized by finely crafted books, posters, cultural images, and autonomous works.
-awards, and invitations. Her creative work is characterized by
-exquisitely crafted books, posters, cultural images, and autonomous works.
- In 2022, the jury awarded her the Aranyrajzszög Prize for her outstanding
-work as a graphic designer in recent years.`,
+      description_en: `Ferenczy Noémi Award-winning graphic artist and assistant professor at the Hungarian University of Fine Arts. Over the past two decades, his 
+exhibitions and graphic design practice have earned him numerous 
+national and international recognitions, awards, and invitations. 
+His creative work is characterized by finely crafted books, posters, cultural identities, and autonomous artworks. In 2022, the jury honored him with the Golden Drawing Pin Award for his outstanding achievements in 
+graphic design in recent years.`,
     },
   ]
 
@@ -311,7 +264,7 @@ work as a graphic designer in recent years.`,
       role_hu: 'képzőművész, tervezőgrafikus',
       role_en: `visual artistm graphic designer`,
       presentationTitle_hu: 'SOR- ÉS SZENTSÉGTÖRÉS',
-      presentationTitle_en: 'Breaking the line and the code',
+      presentationTitle_en: 'BREAKING THE LINE AND THE CODE',
       presentationTime: '10:00',
       description_hu: `1998-ban alapította stúdióját. Számos arculat, zenei album és kulturális plakát
 tervezője. Mellette készíti autonóm alkotásait, főként a kísérleti grafika és tipográfia,
@@ -321,7 +274,9 @@ Egyetemen tervezőgrafikát, kísérleti grafikát. A Bükki Művésztelep és 
 művészeti projekt egyik alapítója. Aktív tagja a Magyar Plakát Társaságnak.
 Rendszeresen szerepel hazai és nemzetközi kiállításokon, önálló kiállításain
 általában tematikus sorozatait mutatja be.`,
-      decription_en: `He founded his studio in 1998. He is the designer of numerous corporate identities, music albums and cultural posters. He also creates autonomous works, mainly in the fields of experimental graphics, typography and collage. In his approach, he contrasts the constructive graphic approach with a freer, more expressive graphic world. He has been teaching design graphics and experimental graphics at the Budapest Metropolitan University for years. He is one of the founders of the Bükki Artists' Colony and the Opla art project. He is an active member of the Hungarian Poster Society. He regularly participates in domestic and international exhibitions, and usually presents his thematic series in his solo exhibitions.`,
+      decription_en: `He founded his studio in 1998 and has since designed numerous visual identities, music albums, and cultural posters. Alongside this, he creates autonomous works, mainly in the fields of experimental graphics, typography, and collage. His approach confronts a 
+constructive graphic mindset with a freer, more expressive visual world. For many years, he has been teaching graphic design and experimental graphics at the Budapest Metropolitan University. He is a co-founder of the Bükk Art Colony and the Opla art project, 
+and an active member of the Hungarian Poster Association. He regularly exhibits both in Hungary and internationally, with his solo shows typically presenting thematic series.`,
     },
     {
       firstName: 'PETRUCZ',
@@ -332,7 +287,7 @@ Rendszeresen szerepel hazai és nemzetközi kiállításokon, önálló kiállí
       presentationTitle_hu:
         'FOLYAMATOS BETŰK - SZABÁLYKÖVETÉS, VÁLTOZÁS ÉS ESETLEGESSÉG A GENERATÍV TIPOGRÁFIÁBAN',
       presentationTitle_en:
-        'Flowy letters - Rules, changes and randomness in generative typography',
+        'CONTINUOUS TYPES – RULE-FOLLOWING, CHANGE, AND RANDOMNESS IN GENERATIVE TYPOGRAPHY ',
       presentationTime: '10:45',
       description_hu: `Munkássága az újmédia-művészet, adatvezérelt tervezés és kreatív kódolás metszéspontjában
 helyezkedik el, különös hangsúlyt fektetve az adatvizualizáció és generatív
@@ -343,7 +298,8 @@ kiállításon, többek között az Ars Electronica Fesztiválon (Linz, Ausztria
 Weeken, valamint Dél-Koreában, Indonéziában és Cipruson. Szakmai elismerései között
 szerepel a Tipozóna hallgatói díj (2024), valamint a Moholy-Nagy Művészeti Egyetemen
 kétszer elnyert Stefan Lengyel Kiválósági Ösztöndíj (2023/2024).`,
-      description_en: `His work is situated at the intersection of new media art, data-driven design and creative coding, with a particular emphasis on the aesthetic and conceptual possibilities of data visualization and generative systems. His theoretical and visual research explores, among others, the themes of dataism, post-digital culture and alternative human-machine interactions. His work has been featured in numerous national and international exhibitions, including the Ars Electronica Festival (Linz, Austria), London Design Week, as well as in South Korea, Indonesia and Cyprus. His professional recognitions include the Tipozóna Student Award (2024) and the Stefan Lengyel Excellence Scholarship (2023/2024) awarded twice at the Moholy-Nagy University of Arts.`,
+      description_en: `His practice lies at the intersection of new media art, data-driven design, and creative coding, with a particular focus on the aesthetic and conceptual possibilities of data visualization and generative systems. His theoretical and visual research explores themes such as dataism, post-digital culture, and alternative forms of human–machine 
+interaction. His works have been showcased at numerous national and international exhibitions, including Ars Electronica Festival (Linz, Austria), London Design Week, as well as in South Korea, Indonesia, and Cyprus. His professional recognition includes the Tipozóna Student Award (2024) and the Stefan Lengyel Excellence Scholarship, which he received twice (2023/2024) at the Moholy-Nagy University of Art and Design.`,
     },
     {
       firstName: 'POLGÁRDI',
@@ -353,11 +309,12 @@ kétszer elnyert Stefan Lengyel Kiválósági Ösztöndíj (2023/2024).`,
       role_en: 'graphic designer',
       presentationTitle_hu: 'A KÖZLEKEDÉSI MÚZEUM BETŰCSALÁDJA',
       presentationTitle_en:
-        'The Font Family of the Hungarian Museum of Science, Technology and Transport',
+        'THE TYPEFACE FAMILY OF THE HUNGARIAN MUSEUM OF SCIENCE, TECHNOLOGY AND TRANSPORT',
       presentationTime: '11:30',
       description_hu: `A SUBMACHINE tervezőgrafikai kollektíva egyik fele, a Magyar Könyvtervezés díj
 alapítója. Soma és Léna édesapja, Zita férje.`,
-      description_en: `One half of the graphic design collective SUBMACHINE, founder of the Hungarian Book Design Award. Father of Soma and Léna, husband of Zita.`,
+      description_en: `One half of the graphic design collective SUBMACHINE and founder 
+of the Hungarian Book Design Award. Father of Soma and Léna, husband of Zita.`,
     },
     {
       firstName: 'ANNA WIELUŃSKA - MATEUSZ MACHALSKI',
@@ -368,7 +325,7 @@ alapítója. Soma és Léna édesapja, Zita férje.`,
       presentationTitle:
         'CONNECTING THE DOTS. TYPOTEKA – A LENGYEL TIPOGRÁFIA TÖRTÉNETE',
       presentationTitle_en:
-        'Connecting the Dots. Typoteca – The History of Polish Typography',
+        'CONNECTING THE DOTS. TYPOTEKA – HISTORY OF POLISH TYPOGRAPHY',
       presentationTime: '14:00',
       description_hu: `Anna Tipográfus, tervezőgrafikus és a Varsói Képzőművészeti Akadémia tanára. Munkája
 főként a tipográfia és annak a vizuális kommunikációra gyakorolt szerepének vizsgálatára
@@ -378,7 +335,9 @@ Mateusz díjnyertes grafikusművész, munkássága fókuszában a tipográfia é
 kommunikáció áll. A Varsói Képzőművészeti Akadémia professzora és rektor helyettese.
 Tervezői munkája mellett kutatásokban vesz részt, előadásokat tart, kiállítások kurátora
 és aktívan népszerűsíti a lengyel tervezőgrafikát nemzetközi színtéren.`,
-      description_en: `Anna is a typographer, graphic designer and professor at the Academy of Fine Arts in Warsaw. Her work is mainly focused on examining typography and its role in visual communication. In addition to her design activities, she gives lectures and researches the history of Polish typography. Mateusz is an award-winning graphic artist, focusing on typography and visual communication. He is a professor and vice-rector at the Academy of Fine Arts in Warsaw. In addition to his design work, he is involved in research, lectures, curates exhibitions and actively promotes Polish graphic design on the international stage.`,
+      description_en: `Anna typographer, graphic designer, and lecturer at the Academy of Fine Arts in Warsaw. Her work focuses on typography and its influence on visual communication. In addition to her design work, she lectures and conducts research on the history of Polish typography.
+
+Mateusz an award-winning designer specializing in typography and visual communication, he is a professor at the Academy of Fine Arts in Warsaw and the Rector's Representative. In addition to his design work, he is involved in research, lectures, exhibition curation, and the promotion of Polish design worldwide.`,
     },
     {
       firstName: 'UGLY BUT USELESS',
@@ -387,7 +346,7 @@ Tervezői munkája mellett kutatásokban vesz részt, előadásokat tart, kiáll
       role_hu: 'Asztalos Ádám, Batke Bendegúz',
       role_en: 'Ádám Asztalos, Bendegúz Batke',
       presentationTitle_hu: 'SORJA',
-      presentationTitle_en: 'SORJA',
+      presentationTitle_en: 'BURR',
       presentationTime: '15:00',
       description_hu: `A fáramászás és a dunába való szikladobálás mellett a csúnya betűk iránti vonzalmunk
 hozott össze minket a MOME mesterképzésén 2018-ban. Egyetem után különöző helyeken
@@ -397,7 +356,8 @@ fesztivál branding, étterem arculat vagy csupán egy logó. A kommmunikáción
 összetevője az önirónia és a humor. Szóval ne lepődjön meg senki, ha a projektjeinket
 vizsgálva az éktelen betűformák és förtelmes színek mellett, eddig ismeretlen
 egérfajok neveivel vagy a kőolajiparban használt kifejezésekkel is találkozna!`,
-      description_en: `Besides climbing trees and throwing rocks into the Danube, our love for ugly letters brought us together at MOME's master's program in 2018. After university, we worked in different places, and in 2024 we definitively committed ourselves to ugly letters and ugly graphics. Our work is defined by our approach to typography, whether it's festival branding, restaurant branding or just a logo. Self-irony and humor are essential components of our communication. So don't be surprised if, when examining our projects, you come across the names of previously unknown mouse species or terms used in the oil industry, in addition to the indecent letterforms and hideous colors!`,
+      description_en: `Besides climbing trees and throwing rocks into the Danube, it was our love for ugly letters that first brought us together during our MA at MOME back in 2018. After 
+graduation, we went our separate ways work-wise, but by 2024 we had fully pledged allegiance to grotesque type and awkward graphics. Typography is always at the core of what we do—whether it’s branding a festival, shaping the identity of a restaurant, or designing a simple logo. And since self-irony and humor are key to how we communicate, don’t be alarmed if, while exploring our projects, you bump into not only monstrous letterforms and atrocious colors, but also the names of obscure mouse species or random jargon borrowed from the oil industry!`,
     },
     {
       firstName: 'ESZTER',
@@ -405,8 +365,8 @@ egérfajok neveivel vagy a kőolajiparban használt kifejezésekkel is találkoz
       image: 'Misztarka_Eszter2_static.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
-      presentationTitle_hu: 'DIGITÁLIS TIPOGRÁFIA',
-      presentationTitle_en: 'DIGITAL TYPOGRAPHY',
+      presentationTitle_hu: 'EZ CSAK EGY BETŰ',
+      presentationTitle_en: 'IT’S JUST A TYPE',
       presentationTime: '15:45',
       description_hu: `A Képzőművészeti Egyetemen végzett díjnyertes szabadúszó tervezőgrafikus,
 társalapítója a szintén díjnyertes Classmate Stúdiónak. Közel tíz évet töltött hazai kreatív
@@ -417,7 +377,8 @@ sem, hiszen szerinte ezek teszik igazán színessé és izgalmassá ezt a szakm�
 során munkái számos díjat nyertek: Red Dot Design Award, Indigo Design Award, RGB
 Kreatív Design Díj és Aranyrajzszög Díj – Év grafikai Stúdiója kategória
 (Classmate Studio).`,
-      description_en: `An award-winning freelance graphic designer graduated from the University of Fine Arts and is the co-founder of the award-winning Classmate Studio. He spent nearly ten years in Hungarian creative studios, where he primarily worked on elegant and minimalistic identity projects, packaging and publication design. He is dedicated to conceptual and structural design, but he does not say no to experimental graphics and graphic elements that emerge through coincidences, as he believes that these are what make this profession truly colorful and exciting. Over the years, his works have won numerous awards: Red Dot Design Award, Indigo Design Award, RGB Creative Design Award and Aranyrajzszög Award – Graphic Studio of the Year category (Classmate Studio).`,
+      description_en: `An award-winning freelance graphic designer and graduate of the Hungarian University of Fine Arts, she is also the co-founder of the likewise award-winning Classmate Studio. She spent nearly a decade working at Hungarian creative studios, primarily on elegant and minimalist identity projects, packaging, and publication design. She is dedicated to 
+conceptual and structural design, yet she also embraces experimental graphics and the visual elements born of chance—believing these are what make the profession truly colorful and exciting. Over the years, her work has been recognized with numerous awards, including the Red Dot Design Award, Indigo Design Award, RGB Creative Design Award, and the Golden Drawing Pin Award – Graphic Design Studio of the Year (Classmate Studio).`,
     },
     {
       firstName: 'REBEKA',
@@ -435,7 +396,8 @@ A mesterképzés alatt és azt követően főleg arculattervezés területén s
 tapasztalatokat. A betűtervezés az alapszak óta foglalkoztatta, végül az elmúlt évben
 jelentkezett a hágai Royal Academy of Art (KABK) TypeMedia nevű mesterképzésére, ahol
 idén átvette a betűtervező diplomáját. Jelenleg szabadúszóként dolgozik.`,
-      description_en: `Rebeka Orosz is a graphic designer, typographer, and certified type designer. She completed her bachelor's degree in Graphic Design at the University of Sopron in 2019, and then her master's degree in Graphic Design at the Moholy-Nagy University of Arts in 2022. During and after her master's degree, she gained significant experience, mainly in the field of corporate identity design. Type design has been her passion since her undergraduate studies, and last year she applied for the TypeMedia master's degree at the Royal Academy of Art (KABK) in The Hague, where she received her diploma in type design this year. She currently works as a freelancer.`,
+      description_en: `Rebeka Orosz is a graphic designer, typographer, and certified type designer. She earned her BA in Graphic Design from the University of Sopron in 2019, followed by an MA in Graphic Design from Moholy-Nagy University of Art and Design in 2022. During and after her master’s studies, she gained significant experience in visual identity design. 
+Her interest in type design began during her BA years, and last year she was admitted to the TypeMedia master’s program at the Royal Academy of Art (KABK) in The Hague, where she recently graduated as a type designer. She is currently working as a freelancer.`,
     },
   ]
 
@@ -650,7 +612,10 @@ const HoverOverlay = ({
 
       {/* Mobile and iPad fullscreen modal */}
       {isOpen && (
-        <div className="xl:hidden fixed inset-0 z-50 flex flex-col" style={{ backgroundColor: '#ff5251' }}>
+        <div
+          className="xl:hidden fixed inset-0 z-50 flex flex-col"
+          style={{ backgroundColor: '#ff5251' }}
+        >
           {/* Close button */}
           <button
             onClick={onTap}
