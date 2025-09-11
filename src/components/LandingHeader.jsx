@@ -24,11 +24,11 @@ const LandingHeader = () => {
           height: '100%',
         }}
       >
-        {/* Logo */}
+        {/* Logo - Mobile: centered, Desktop: bottom positioned */}
         <img
           src="/images/logo.svg"
           alt="Typo Flow Logo"
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
+          className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 md:top-auto md:bottom-0 md:translate-y-0"
           style={{
             width: 'min(60vw, 60vh)',
             height: 'min(60vw, 60vh)',
@@ -82,43 +82,7 @@ const LandingHeader = () => {
             <div className="w-1/2">{/* Empty right half */}</div>
           </div>
         </div>
-
-    
       </div>
-          {/* Mobile labels container */}
-        <div
-          id="mobile-labels"
-          className="absolute bottom-0 left-0 right-0 flex md:hidden justify-center items-end px-4"
-          style={{ paddingBottom: '0rem' }}
-        >
-          <div className="text-center">
-            <p
-              className="font-bold mb-0"
-              style={{
-                fontFamily: 'Big Shoulders Display, sans-serif',
-                fontSize: 'clamp(1.2rem, 4vh, 2rem)',
-                lineHeight: 1.0,
-                color: '#231f20',
-              }}
-            >
-              Győr
-            </p>
-            <p
-              className="font-bold mt-0"
-              style={{
-                fontFamily: 'Big Shoulders Display, sans-serif',
-                fontSize: 'clamp(0.6rem, 2.5vh, 1rem)',
-                lineHeight: 1.0,
-                verticalAlign: 'baseline',
-                position: 'relative',
-                top: '0.2em',
-                color: '#231f20',
-              }}
-            >
-              {t.hero.location}
-            </p>
-          </div>
-        </div>
 
       {/* Main Title and Date */}
       <div id="main-title" className="container mx-auto px-4 text-center mt-20">
@@ -128,8 +92,9 @@ const LandingHeader = () => {
         >
           {t.hero.subtitle}
         </h1>
+        {/* Desktop date */}
         <p
-          className="font-semibold text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-5xl font-big-shoulders"
+          className="font-semibold text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-5xl font-big-shoulders hidden md:block"
           style={{
             fontFamily: 'Big Shoulders Display, sans-serif',
             color: '#231f20',
@@ -137,6 +102,27 @@ const LandingHeader = () => {
         >
           {t.hero.date}
         </p>
+        {/* Mobile date and location */}
+        <div className="md:hidden">
+          <p
+            className="font-semibold text-xl font-big-shoulders mb-2"
+            style={{
+              fontFamily: 'Big Shoulders Display, sans-serif',
+              color: '#231f20',
+            }}
+          >
+            {t.hero.date}
+          </p>
+          <p
+            className="font-bold text-lg font-big-shoulders"
+            style={{
+              fontFamily: 'Big Shoulders Display, sans-serif',
+              color: '#231f20',
+            }}
+          >
+            Győr • {t.hero.location}
+          </p>
+        </div>
       </div>
     </header>
   )
