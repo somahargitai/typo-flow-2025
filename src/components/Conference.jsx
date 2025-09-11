@@ -427,14 +427,11 @@ const HoverOverlay = ({
               className="text-white text-2xl font-bold uppercase tracking-wide mb-4"
               style={{
                 fontFamily: 'Big Shoulders Display, sans-serif',
-                color: '#ff5251',
               }}
             >
-              {firstName === 'MATEUSZ' && lastName === 'MACHALSKI'
-                ? `${firstName} ${lastName}`
-                : language === 'HU'
-                  ? `${lastName} ${firstName}`
-                  : `${firstName} ${lastName}`}
+              {language === 'HU'
+                ? `${lastName} ${firstName}`
+                : `${firstName} ${lastName}`}
             </h3>
 
             <p
