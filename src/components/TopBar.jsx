@@ -139,7 +139,7 @@ const TopBar = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-white hover:text-gray-600 transition-colors font-semibold text-xl md:text-2xl lg:text-[2.1rem] uppercase tracking-wider"
+                  className="text-white hover:text-gray-600 transition-colors font-semibold text-xl md:text-xl lg:text-[2.1rem] uppercase tracking-wider"
                   style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}
                 >
                   {item.label}
@@ -152,7 +152,7 @@ const TopBar = () => {
           <div className="flex items-center space-x-2">
             <button
               onClick={toggleLanguage}
-              className={`px-2 py-1 md:px-4 md:py-2 transition-colors font-medium border-gray-300 hover:text-gray-600 text-xl md:text-xl md:text-2xl lg:text-[2.1rem] tracking-wider ${
+              className={`px-2 py-1 md:px-4 md:py-2 transition-colors font-medium border-gray-300 hover:text-gray-600 text-xl md:text-xl lg:text-[2.1rem] tracking-wider ${
                 isScrolled
                   ? 'text-white border-white'
                   : 'text-white border-gray-300'
