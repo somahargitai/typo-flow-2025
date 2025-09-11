@@ -213,9 +213,12 @@ Her interest in type design began during her BA years, and last year she was adm
 
         {/* Conference Grid - No title tile, only presentations */}
         <div className="flex justify-center py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-32 max-w-6xl w-full lg:w-auto">
             {conference.map((speaker, index) => (
-              <div key={index} className="relative group flex gap-4 mx-auto">
+              <div
+                key={index}
+                className="relative group flex gap-0 lg:gap-4 mx-auto w-full lg:w-auto"
+              >
                 <PhotoOfTile
                   image={speaker.image}
                   firstName={speaker.firstName}
@@ -259,7 +262,7 @@ Her interest in type design began during her BA years, and last year she was adm
 const PhotoOfTile = ({ image, firstName, lastName }) => {
   const { language } = useLanguage()
   return (
-    <div className="w-48 h-48 xl:w-44 xl:h-44 2xl:w-40 2xl:h-40 overflow-hidden">
+    <div className="w-1/2 lg:w-48 lg:h-48 xl:w-44 xl:h-44 2xl:w-40 2xl:h-40 aspect-square lg:aspect-auto overflow-hidden">
       <img
         src={`/images/${image}`}
         alt={
@@ -290,7 +293,7 @@ const TextOfTile = ({
   const { language } = useLanguage()
   return (
     <div
-      className="w-96 h-48 xl:w-88 xl:h-44 2xl:w-80 2xl:h-40 flex flex-col justify-between pl-4 cursor-pointer md:cursor-default"
+      className="w-1/2 lg:w-96 lg:h-48 xl:w-88 xl:h-44 2xl:w-80 2xl:h-40 aspect-square lg:aspect-auto flex flex-col justify-top lg:justify-between p-6 lg:pl-4 lg:p-0 cursor-pointer md:cursor-default"
       style={{ backgroundColor: 'white' }}
       onClick={onTap}
     >
@@ -298,7 +301,7 @@ const TextOfTile = ({
       <div>
         {/* Name */}
         <h3
-          className="text-black text-[1.375rem] md:text-[1.5rem]  font-semibold uppercase tracking-wide mb-0 leading-8"
+          className="text-black text-lg lg:text-[1.375rem] xl:text-[1.5rem] font-semibold uppercase tracking-wide mb-0 leading-6 lg:leading-8"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#004bff',
@@ -312,7 +315,7 @@ const TextOfTile = ({
         </h3>
         {/* Role */}
         <p
-          className="text-black text-sm md:text-base font-normal mb-0 leading-4"
+          className="text-black text-xs lg:text-sm xl:text-base font-normal mb-0 leading-3 lg:leading-4"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#004bff',
@@ -331,7 +334,7 @@ const TextOfTile = ({
       {/* Bottom Section: Title and Lecture Time */}
       <div className="flex flex-col justify-end">
         <p
-          className="text-black text-sm md:text-xl font-bold mb-0 leading-5"
+          className="text-black text-xs lg:text-sm xl:text-xl font-bold mb-0 leading-4 lg:leading-5"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#ff5251',
@@ -340,7 +343,7 @@ const TextOfTile = ({
           {language === 'HU' ? presentationTitle_hu : presentationTitle_en}
         </p>
         <p
-          className="text-black text-sm md:text-base font-normal mb-0"
+          className="text-black text-xs lg:text-sm xl:text-base font-normal mb-0"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#004bff',
