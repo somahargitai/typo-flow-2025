@@ -650,17 +650,17 @@ const HoverOverlay = ({
 
       {/* Mobile fullscreen modal */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 z-50 flex flex-col justify-center px-6 py-8" style={{ backgroundColor: '#ff5251' }}>
+        <div className="md:hidden fixed inset-0 z-50 flex flex-col" style={{ backgroundColor: '#ff5251' }}>
           {/* Close button */}
           <button
             onClick={onTap}
-            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors"
+            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors z-10"
           >
             <X size={32} />
           </button>
 
-          {/* Content */}
-          <div className="flex-1 flex flex-col justify-center">
+          {/* Scrollable content */}
+          <div className="flex-1 overflow-y-auto px-6 pt-20 pb-8">
             <h3
               className="text-white text-3xl font-semibold uppercase tracking-wide mb-6"
               style={{ fontFamily: 'Geist, sans-serif' }}
