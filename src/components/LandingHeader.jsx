@@ -85,7 +85,7 @@ const LandingHeader = () => {
       </div>
 
       {/* Main Title and Date */}
-      <div id="main-title" className="container mx-auto px-4 text-center mt-20">
+      <div id="main-title" className="container mx-auto px-4 text-center mt-20 pb-8 md:pb-0">
         <h1
           className="text-white font-bold text-3xl sm:text-4xl md:text-6xl lg:text-[5rem] xl:text-[5rem] 2xl:text-[5rem] mb-4 uppercase tracking-wide font-big-shoulders"
           style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}
@@ -102,10 +102,10 @@ const LandingHeader = () => {
         >
           {t.hero.date}
         </p>
-        {/* Mobile date and location */}
-        <div className="md:hidden">
+        {/* Mobile and iPad date and location */}
+        <div className="lg:hidden">
           <p
-            className="font-semibold text-xl font-big-shoulders mb-2"
+            className="font-semibold text-xl md:text-2xl font-big-shoulders mb-2"
             style={{
               fontFamily: 'Big Shoulders Display, sans-serif',
               color: '#231f20',
@@ -114,7 +114,7 @@ const LandingHeader = () => {
             {t.hero.date}
           </p>
           <p
-            className="font-bold text-lg font-big-shoulders"
+            className="font-bold text-lg md:text-xl font-big-shoulders"
             style={{
               fontFamily: 'Big Shoulders Display, sans-serif',
               color: '#231f20',
