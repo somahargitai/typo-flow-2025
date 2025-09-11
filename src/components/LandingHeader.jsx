@@ -123,7 +123,7 @@ const LandingHeader = () => {
       {/* Main Title and Date */}
       <div id="main-title" className="container mx-auto px-4 text-center mt-20">
         <h1
-          className="text-white font-bold text-5xl sm:text-4xl md:text-6xl lg:text-[5rem] xl:text-[5rem] 2xl:text-[5rem] mb-4 uppercase tracking-wide"
+          className="text-white font-bold text-3xl sm:text-4xl md:text-6xl lg:text-[5rem] xl:text-[5rem] 2xl:text-[5rem] mb-4 uppercase tracking-wide"
           style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}
         >
           {t.hero.subtitle}
