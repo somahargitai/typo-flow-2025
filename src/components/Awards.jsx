@@ -1,32 +1,53 @@
-import React from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+import React from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 
 const Awards = () => {
-  const { t, language } = useLanguage();
+  const { t, language } = useLanguage()
 
   return (
     <section id="awards" className="py-16 bg-white rounded-2xl">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center px-8">
-          <h2 
-            className="text-4xl md:text-6xl font-bold text-black mb-8"
-            style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}
+        <div className="max-w-4xl mx-auto px-8">
+          {/* Title */}
+          <h2
+            className="text-4xl md:text-7xl font-bold mb-8 text-left"
+            style={{
+              fontFamily: 'Big Shoulders Display, sans-serif',
+              color: '#004bff',
+            }}
           >
-            {t.navigation.awards}
+            {t.awards.title}
           </h2>
-          <p 
-            className="text-lg md:text-xl font-light text-gray-700 leading-relaxed"
-            style={{ fontFamily: 'Geist, sans-serif' }}
-          >
-            {language === 'HU' 
-              ? 'Díjak és elismerések részletei hamarosan...'
-              : 'Awards and recognition details coming soon...'
-            }
-          </p>
+
+          {/* Awards List */}
+          <div className="space-y-10">
+            {t.awards.awards.map((award, index) => (
+              <div key={index} className="text-left">
+                <h3
+                  className="text-xl md:text-4xl font-bold mb-2"
+                  style={{
+                    fontFamily: 'Geist, sans-serif',
+                    color: '#004bff',
+                  }}
+                >
+                  {award.name}
+                </h3>
+                <p
+                  className="text-lg md:text-4xl font-normal"
+                  style={{
+                    fontFamily: 'Geist, sans-serif',
+                    color: '#004bff',
+                  }}
+                >
+                  {award.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Awards;
+export default Awards

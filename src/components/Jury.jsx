@@ -417,10 +417,10 @@ Her interest in type design began during her BA years, and last year she was adm
                 className="font-bold text-white uppercase tracking-wide"
                 style={{
                   fontFamily: 'Big Shoulders Display, sans-serif',
-                  fontSize: 'clamp(4rem, 12vw, 20rem)',
+                  fontSize: 'clamp(4rem, 10vw, 20rem)',
                 }}
               >
-                ZSŰRI
+                {language === 'HU' ? 'ZSŰRI' : 'JURY'}
               </h2>
             </div>
 
@@ -446,12 +446,10 @@ Her interest in type design began during her BA years, and last year she was adm
                 <HoverOverlay
                   firstName={member.firstName}
                   lastName={member.lastName}
-                  role={language === 'hu' ? member.role_hu : member.role_en}
-                  description={
-                    language === 'hu'
-                      ? member.description_hu
-                      : member.description_en
-                  }
+                  role_hu={member.role_hu}
+                  role_en={member.role_en}
+                  description_hu={member.description_hu}
+                  description_en={member.description_en}                  
                   isOpen={openOverlay === index}
                   onTap={() => handleTileTap(index)}
                 />
@@ -471,23 +469,19 @@ Her interest in type design began during her BA years, and last year she was adm
                 <TextOfTile
                   firstName={member.firstName}
                   lastName={member.lastName}
-                  role={language === 'hu' ? member.role_hu : member.role_en}
-                  description={
-                    language === 'hu'
-                      ? member.description_hu
-                      : member.description_en
-                  }
+                  role_hu={member.role_hu}
+                  role_en={member.role_en}
+                  description_hu={member.description_hu}
+                  description_en={member.description_en}
                   onTap={() => handleTileTap(index + 6)}
                 />
                 <HoverOverlay
                   firstName={member.firstName}
                   lastName={member.lastName}
-                  role={language === 'hu' ? member.role_hu : member.role_en}
-                  description={
-                    language === 'hu'
-                      ? member.description_hu
-                      : member.description_en
-                  }
+                  role_hu={member.role_hu}
+                  role_en={member.role_en}
+                  description_hu={member.description_hu}
+                  description_en={member.description_en}
                   isOpen={openOverlay === index + 6}
                   onTap={() => handleTileTap(index + 6)}
                 />
@@ -519,7 +513,7 @@ const PhotoOfTile = ({ image, firstName, lastName }) => {
 }
 
 /* TEXT OF TILE */
-const TextOfTile = ({ firstName, lastName, role, description, onTap }) => {
+const TextOfTile = ({ firstName, lastName, role_hu, role_en, description_hu, description_en, onTap }) => {
   const { language } = useLanguage()
   return (
     <div
@@ -531,7 +525,13 @@ const TextOfTile = ({ firstName, lastName, role, description, onTap }) => {
         className="text-white text-lg md:text-xl xl:text-4xl font-semibold uppercase tracking-wide mb-2"
         style={{ fontFamily: 'Geist, sans-serif' }}
       >
-        {language === 'HU' ? (
+        {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
+          <>
+            {firstName}
+            <br />
+            {lastName}
+          </>
+        ) : language === 'HU' ? (
           <>
             {lastName}
             <br />
@@ -552,7 +552,7 @@ const TextOfTile = ({ firstName, lastName, role, description, onTap }) => {
           color: '#00caff',
         }}
       >
-        {role}
+        {language === 'HU' ? role_hu : role_en}
       </p>
       {/* Decorative lines */}
       <img
@@ -568,8 +568,10 @@ const TextOfTile = ({ firstName, lastName, role, description, onTap }) => {
 const HoverOverlay = ({
   firstName,
   lastName,
-  role,
-  description,
+  role_hu,
+  role_en,
+  description_hu,
+  description_en,
   isOpen,
   onTap,
 }) => {
@@ -588,7 +590,11 @@ const HoverOverlay = ({
           className="text-white text-4xl font-semibold uppercase tracking-wide mb-3"
           style={{ fontFamily: 'Geist, sans-serif' }}
         >
-          {language === 'HU' ? (
+          {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
+            <>
+              {firstName} {lastName}
+            </>
+          ) : language === 'HU' ? (
             <>
               {lastName} {firstName}
             </>
@@ -606,7 +612,7 @@ const HoverOverlay = ({
             fontSize: 'clamp(1.125rem, 1.35rem, 1.75rem)',
           }}
         >
-          {description}
+          {language === 'HU' ? description_hu : description_en}
         </p>
       </div>
 
@@ -630,7 +636,11 @@ const HoverOverlay = ({
               className="text-white text-3xl font-semibold uppercase tracking-wide mb-6"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >
-              {language === 'HU' ? (
+              {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
+                <>
+                  {firstName} {lastName}
+                </>
+              ) : language === 'HU' ? (
                 <>
                   {lastName} {firstName}
                 </>
@@ -645,7 +655,7 @@ const HoverOverlay = ({
               className="text-white text-lg font-normal leading-relaxed"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >
-              {description}
+              {language === 'HU' ? description_hu : description_en}
             </p>
           </div>
         </div>

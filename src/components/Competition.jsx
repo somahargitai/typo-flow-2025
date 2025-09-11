@@ -10,7 +10,7 @@ const Competition = () => {
         <div className="max-w-4xl mx-auto px-8">
           {/* Title */}
           <h2
-            className="text-4xl md:text-7xl font-bold mb-8 text-center"
+            className="text-4xl md:text-7xl font-bold mb-8 text-left"
             style={{
               fontFamily: 'Big Shoulders Display, sans-serif',
               color: '#004bff',

@@ -72,6 +72,27 @@ export const LanguageProvider = ({ children }) => {
         locationValue: 'Széchenyi Egyetem\nDesign Campus, Győr',
         participation: 'RÉSZTVÉTEL',
       },
+      awards: {
+        title: 'DÍJAK',
+        awards: [
+          {
+            name: 'A MAGYAR MŰVÉSZETI AKADÉMIA FŐDÍJA',
+            description: 'MMA oklevél és 250 000 Ft'
+          },
+          {
+            name: 'KÁLMÁN TÜNDE DÍJ',
+            description: 'Oklevél'
+          },
+          {
+            name: 'A SZÉCHENYI ISTVÁN EGYETEM DESIGN CAMPUSÁNAK KÜLÖNDÍJA',
+            description: 'Oklevél'
+          },
+          {
+            name: 'BRANDGUIDE KÜLÖNDÍJ',
+            description: 'Yellow Designer közösség 3 havi előfizetés'
+          }
+        ]
+      },
       footer: {
         copyright: '© 2025 Typo Flow - I. országos tipográfiai biennálé',
       },
@@ -129,6 +150,27 @@ export const LanguageProvider = ({ children }) => {
         location: 'Location',
         locationValue: 'Széchenyi University\nDesign Campus, Győr',
         participation: 'PARTICIPATE',
+      },
+      awards: {
+        title: 'AWARDS',
+        awards: [
+          {
+            name: 'GRAND PRIZE OF THE HUNGARIAN ACADEMY OF ARTS',
+            description: 'MMA certificate and 250,000 HUF'
+          },
+          {
+            name: 'TÜNDE KÁLMÁN AWARD',
+            description: 'Certificate'
+          },
+          {
+            name: 'SPECIAL AWARD OF THE SZÉCHENYI ISTVÁN UNIVERSITY DESIGN CAMPUS',
+            description: 'Certificate'
+          },
+          {
+            name: 'BRANDGUIDE SPECIAL AWARD',
+            description: 'YELLOW Designer Community 3-month subscription'
+          }
+        ]
       },
       footer: {
         copyright: '© 2025 Typo Flow - 1st National Typography Biennale',
