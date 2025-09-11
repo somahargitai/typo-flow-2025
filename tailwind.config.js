@@ -1,4 +1,11 @@
 export default {
+  theme: {
+    extend: {
+      fontFamily: {
+        "big-shoulders": ["Big Shoulders Display", "sans-serif"],
+      },
+    },
+  },
   content: [
     './index.html',
     './src/**/*.{js,jsx,ts,tsx}',
@@ -22,5 +29,6 @@ export default {
     'grid-cols-3',
     'lg:grid-cols-4',
     'xl:grid-cols-5',
+    'font-big-shoulders',
   ],
 }
