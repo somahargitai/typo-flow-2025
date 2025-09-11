@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 
 const Jury = () => {
   const { language } = useLanguage()
+  const [openOverlay, setOpenOverlay] = useState(null)
+
+  const handleTileTap = index => {
+    if (openOverlay === index) {
+      setOpenOverlay(null) // Close if already open
+    } else {
+      setOpenOverlay(index) // Open this one and close others
+    }
+  }
 
   /* JURY MEMBERS */
   const jury = [
@@ -469,6 +478,7 @@ idén átvette a betűtervező diplomáját. Jelenleg szabadúszóként dolgozik
                       ? member.description_hu
                       : member.description_en
                   }
+                  onTap={() => handleTileTap(index)}
                 />
                 <HoverOverlay
                   firstName={member.firstName}
@@ -479,6 +489,8 @@ idén átvette a betűtervező diplomáját. Jelenleg szabadúszóként dolgozik
                       ? member.description_hu
                       : member.description_en
                   }
+                  isOpen={openOverlay === index}
+                  onTap={() => handleTileTap(index)}
                 />
               </div>
             ))}
@@ -502,6 +514,7 @@ idén átvette a betűtervező diplomáját. Jelenleg szabadúszóként dolgozik
                       ? member.description_hu
                       : member.description_en
                   }
+                  onTap={() => handleTileTap(index + 6)}
                 />
                 <HoverOverlay
                   firstName={member.firstName}
@@ -512,6 +525,8 @@ idén átvette a betűtervező diplomáját. Jelenleg szabadúszóként dolgozik
                       ? member.description_hu
                       : member.description_en
                   }
+                  isOpen={openOverlay === index + 6}
+                  onTap={() => handleTileTap(index + 6)}
                 />
               </div>
             ))}
@@ -541,12 +556,13 @@ const PhotoOfTile = ({ image, firstName, lastName }) => {
 }
 
 /* TEXT OF TILE */
-const TextOfTile = ({ firstName, lastName, role, description }) => {
+const TextOfTile = ({ firstName, lastName, role, description, onTap }) => {
   const { language } = useLanguage()
   return (
     <div
-      className="w-1/2  flex flex-col justify-top p-6 aspect-square"
+      className="w-1/2 flex flex-col justify-top p-6 aspect-square cursor-pointer md:cursor-default"
       style={{ backgroundColor: '#004bff' }}
+      onClick={onTap}
     >
       <h3
         className="text-white text-lg md:text-xl xl:text-4xl font-semibold uppercase tracking-wide mb-2"
@@ -586,12 +602,22 @@ const TextOfTile = ({ firstName, lastName, role, description }) => {
 }
 
 /* HOVER OVERLAY */
-const HoverOverlay = ({ firstName, lastName, role, description }) => {
+const HoverOverlay = ({
+  firstName,
+  lastName,
+  role,
+  description,
+  isOpen,
+  onTap,
+}) => {
   const { language } = useLanguage()
   return (
     <div
-      className="absolute inset-0 flex flex-col justify-top px-8 pt-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      className={`absolute inset-0 flex flex-col justify-top px-8 pt-12 transition-opacity duration-300 cursor-pointer md:cursor-default ${
+        isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+      }`}
       style={{ backgroundColor: '#ff5251' }}
+      onClick={onTap}
     >
       <h3
         className="text-white text-xl md:text-4xl font-semibold uppercase tracking-wide mb-3"
@@ -609,10 +635,10 @@ const HoverOverlay = ({ firstName, lastName, role, description }) => {
       </h3>
 
       <p
-        className="text-white text-lg font-normal leading-tight"
+        className="text-white text-sm md:text-lg font-normal leading-tight"
         style={{
           fontFamily: 'Geist, sans-serif',
-          fontSize: 'clamp(1.125rem, 1.35rem, 1.75rem)',
+          fontSize: 'clamp(0.875rem, 0.35rem, 1.75rem)',
         }}
       >
         {description}
