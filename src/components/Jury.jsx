@@ -594,7 +594,7 @@ const TextOfTile = ({ firstName, lastName, role, description }) => {
       </p>
       {/* Decorative lines */}
       <img
-        src="/lines-button.svg"
+        src="/public/lines-button.svg"
         alt="Decorative lines"
         className="w-16 h-16"
       />

@@ -152,7 +152,7 @@ const TopBar = () => {
           <div className="flex items-center space-x-2">
             <button
               onClick={toggleLanguage}
-              className={`px-4 py-2 transition-colors font-medium border-gray-300 hover:text-gray-600 text-[2.1rem] tracking-wider ${
+              className={`px-2 py-1 md:px-4 md:py-2 transition-colors font-medium border-gray-300 hover:text-gray-600 text-xl md:text-[2.1rem] tracking-wider ${
                 isScrolled
                   ? 'text-white border-white'
                   : 'text-white border-gray-300'
