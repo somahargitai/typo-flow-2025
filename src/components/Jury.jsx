@@ -616,7 +616,7 @@ const HoverOverlay = ({
     <>
       {/* Desktop hover overlay */}
       <div
-        className={`hidden md:flex absolute inset-0 flex-col justify-top px-8 pt-12 transition-opacity duration-300 cursor-default ${
+        className={`hidden lg:flex absolute inset-0 flex-col justify-top px-8 pt-12 transition-opacity duration-300 cursor-default ${
           isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
         }`}
         style={{ backgroundColor: '#ff5251' }}
@@ -648,9 +648,9 @@ const HoverOverlay = ({
         </p>
       </div>
 
-      {/* Mobile fullscreen modal */}
+      {/* Mobile and iPad fullscreen modal */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 z-50 flex flex-col" style={{ backgroundColor: '#ff5251' }}>
+        <div className="lg:hidden fixed inset-0 z-50 flex flex-col" style={{ backgroundColor: '#ff5251' }}>
           {/* Close button */}
           <button
             onClick={onTap}
