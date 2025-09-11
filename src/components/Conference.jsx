@@ -212,7 +212,7 @@ Her interest in type design began during her BA years, and last year she was adm
         </div>
 
         {/* Conference Grid - No title tile, only presentations */}
-        <div className="flex justify-center py-20">
+        <div className="flex justify-center py-0 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-32 max-w-6xl w-full lg:w-auto">
             {conference.map((speaker, index) => (
               <div
