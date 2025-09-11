@@ -255,8 +255,6 @@ graphic design in recent years.`,
     },
   ]
 
- 
-
   return (
     <section id="jury" className="py-0" style={{ backgroundColor: '#004bff' }}>
       <div className="w-full">
@@ -291,7 +289,8 @@ graphic design in recent years.`,
                 <TextOfTile
                   firstName={member.firstName}
                   lastName={member.lastName}
-                  role={language === 'hu' ? member.role_hu : member.role_en}
+                  role_hu={member.role_hu}
+                  role_en={member.role_en}
                   description={
                     language === 'hu'
                       ? member.description_hu
@@ -305,7 +304,7 @@ graphic design in recent years.`,
                   role_hu={member.role_hu}
                   role_en={member.role_en}
                   description_hu={member.description_hu}
-                  description_en={member.description_en}                  
+                  description_en={member.description_en}
                   isOpen={openOverlay === index}
                   onTap={() => handleTileTap(index)}
                 />
@@ -369,7 +368,15 @@ const PhotoOfTile = ({ image, firstName, lastName }) => {
 }
 
 /* TEXT OF TILE */
-const TextOfTile = ({ firstName, lastName, role_hu, role_en, description_hu, description_en, onTap }) => {
+const TextOfTile = ({
+  firstName,
+  lastName,
+  role_hu,
+  role_en,
+  description_hu,
+  description_en,
+  onTap,
+}) => {
   const { language } = useLanguage()
   return (
     <div
@@ -377,6 +384,7 @@ const TextOfTile = ({ firstName, lastName, role_hu, role_en, description_hu, des
       style={{ backgroundColor: '#004bff' }}
       onClick={onTap}
     >
+      {/* Name */}
       <h3
         className="text-white text-lg md:text-xl xl:text-4xl font-semibold uppercase tracking-wide mb-2"
         style={{ fontFamily: 'Geist, sans-serif' }}
@@ -401,6 +409,7 @@ const TextOfTile = ({ firstName, lastName, role_hu, role_en, description_hu, des
           </>
         )}
       </h3>
+      {/* Role */}
       <p
         className="text-white text-lg md:text-2xl font-normal mb-0"
         style={{
@@ -436,7 +445,7 @@ const HoverOverlay = ({
     <>
       {/* Desktop hover overlay */}
       <div
-        className={`hidden xl:flex absolute inset-0 flex-col justify-top px-8 pt-12 transition-opacity duration-300 cursor-default ${
+        className={`hidden xl:flex absolute inset-0 flex-col justify-top px-8 pt-10 transition-opacity duration-300 cursor-default ${
           isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
         }`}
         style={{ backgroundColor: '#ff5251' }}
@@ -465,7 +474,7 @@ const HoverOverlay = ({
           className="text-white text-lg font-normal leading-tight"
           style={{
             fontFamily: 'Geist, sans-serif',
-            fontSize: 'clamp(1.125rem, 1.35rem, 1.75rem)',
+            fontSize: 'clamp(1.125rem, 1.2rem, 1.75rem)',
           }}
         >
           {language === 'HU' ? description_hu : description_en}

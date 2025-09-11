@@ -173,7 +173,7 @@ Her interest in type design began during her BA years, and last year she was adm
               color: '#ff5251',
             }}
           >
-            {language === 'hu' ? 'TYPOFLOW KONFERENCIA' : 'TYPOFLOW CONFERENCE'}
+            {language === 'HU' ? 'TYPOFLOW KONFERENCIA' : 'TYPOFLOW CONFERENCE'}
           </h1>
           <p
             className=" text-center mb-8"
@@ -183,7 +183,7 @@ Her interest in type design began during her BA years, and last year she was adm
               color: '#ff5251',
             }}
           >
-            {language === 'hu' ? '2025. október 22.' : '2025. October 22.'}
+            {language === 'HU' ? '2025. október 22.' : '2025. October 22.'}
           </p>
           <div className="text-center">
             <p
@@ -194,7 +194,7 @@ Her interest in type design began during her BA years, and last year she was adm
                 color: '#004bff',
               }}
             >
-              {language === 'hu'
+              {language === 'HU'
                 ? 'Helyszín: Széchenyi Egyetem, Menedzsment Campus'
                 : 'Location: Széchenyi University, Management Campus'}
             </p>
@@ -212,11 +212,10 @@ Her interest in type design began during her BA years, and last year she was adm
         </div>
 
         {/* Conference Grid - No title tile, only presentations */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-16 py-20">
-          {/* Left Column */}
-          <div className="space-y-0">
-            {conference.slice(0, 4).map((speaker, index) => (
-              <div key={index} className="relative group flex my-8">
+        <div className="flex justify-center py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 max-w-6xl">
+            {conference.map((speaker, index) => (
+              <div key={index} className="relative group flex gap-4 mx-auto">
                 <PhotoOfTile
                   image={speaker.image}
                   firstName={speaker.firstName}
@@ -225,85 +224,27 @@ Her interest in type design began during her BA years, and last year she was adm
                 <TextOfTile
                   firstName={speaker.firstName}
                   lastName={speaker.lastName}
-                  role={language === 'hu' ? speaker.role_hu : speaker.role_en}
-                  presentationTitle={
-                    language === 'hu'
-                      ? speaker.presentationTitle_hu
-                      : speaker.presentationTitle_en
-                  }
+                  role_hu={speaker.role_hu}
+                  role_en={speaker.role_en}
+                  presentationTitle_hu={speaker.presentationTitle_hu}
+                  presentationTitle_en={speaker.presentationTitle_en}
                   presentationTime={speaker.presentationTime}
-                  description={
-                    language === 'hu'
-                      ? speaker.description_hu
-                      : speaker.description_en
-                  }
+                  description_en={speaker.description_en}
+                  description_hu={speaker.description_hu}
                   onTap={() => handleTileTap(index)}
                 />
                 <HoverOverlay
                   firstName={speaker.firstName}
                   lastName={speaker.lastName}
-                  role={language === 'hu' ? speaker.role_hu : speaker.role_en}
-                  presentationTitle={
-                    language === 'hu'
-                      ? speaker.presentationTitle_hu
-                      : speaker.presentationTitle_en
-                  }
+                  role_hu={speaker.role_hu}
+                  role_en={speaker.role_en}
+                  presentationTitle_hu={speaker.presentationTitle_hu}
+                  presentationTitle_en={speaker.presentationTitle_en}
                   presentationTime={speaker.presentationTime}
-                  description={
-                    language === 'hu'
-                      ? speaker.description_hu
-                      : speaker.description_en
-                  }
+                  description_hu={speaker.description_hu}
+                  description_en={speaker.description_en}
                   isOpen={openOverlay === index}
                   onTap={() => handleTileTap(index)}
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Right Column */}
-          <div className="space-y-0">
-            {conference.slice(4).map((speaker, index) => (
-              <div key={index} className="relative group flex my-8">
-                <PhotoOfTile
-                  image={speaker.image}
-                  firstName={speaker.firstName}
-                  lastName={speaker.lastName}
-                />
-                <TextOfTile
-                  firstName={speaker.firstName}
-                  lastName={speaker.lastName}
-                  role={language === 'hu' ? speaker.role_hu : speaker.role_en}
-                  presentationTitle={
-                    language === 'hu'
-                      ? speaker.presentationTitle_hu
-                      : speaker.presentationTitle_en
-                  }
-                  presentationTime={speaker.presentationTime}
-                  description={
-                    language === 'hu'
-                      ? speaker.description_hu
-                      : speaker.description_en
-                  }
-                  onTap={() => handleTileTap(index + 4)}
-                />
-                <HoverOverlay
-                  firstName={speaker.firstName}
-                  lastName={speaker.lastName}
-                  role={language === 'hu' ? speaker.role_hu : speaker.role_en}
-                  presentationTitle={
-                    language === 'hu'
-                      ? speaker.presentationTitle_hu
-                      : speaker.presentationTitle_en
-                  }
-                  presentationTime={speaker.presentationTime}
-                  description={
-                    language === 'hu'
-                      ? speaker.description_hu
-                      : speaker.description_en
-                  }
-                  isOpen={openOverlay === index + 4}
-                  onTap={() => handleTileTap(index + 4)}
                 />
               </div>
             ))}
@@ -318,11 +259,11 @@ Her interest in type design began during her BA years, and last year she was adm
 const PhotoOfTile = ({ image, firstName, lastName }) => {
   const { language } = useLanguage()
   return (
-    <div className="w-1/2 aspect-square overflow-hidden">
+    <div className="w-48 h-48 xl:w-44 xl:h-44 2xl:w-40 2xl:h-40 overflow-hidden">
       <img
         src={`/images/${image}`}
         alt={
-          language === 'hu'
+          language === 'HU'
             ? `${lastName} ${firstName}`
             : `${firstName} ${lastName}`
         }
@@ -336,79 +277,79 @@ const PhotoOfTile = ({ image, firstName, lastName }) => {
 const TextOfTile = ({
   firstName,
   lastName,
-  role,
-  presentationTitle,
+  role_hu,
+  role_en,
+  presentationTitle_hu,
+  presentationTitle_en,
   presentationTime,
-  description,
+  description_hu,
+  description_en,
+
   onTap,
 }) => {
   const { language } = useLanguage()
   return (
     <div
-      className="w-1/2 flex flex-col justify-start p-6 aspect-square cursor-pointer md:cursor-default"
+      className="w-96 h-48 xl:w-88 xl:h-44 2xl:w-80 2xl:h-40 flex flex-col justify-between pl-4 cursor-pointer md:cursor-default"
       style={{ backgroundColor: 'white' }}
       onClick={onTap}
     >
-      <h3
-        className="text-black text-xl md:text-2xl xl:text-3xl font-bold uppercase tracking-wide mb-3"
-        style={{
-          fontFamily: 'Big Shoulders Display, sans-serif',
-          color: '#ff5251',
-        }}
-      >
-        {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
-          <>
-            {firstName}
-            <br />
-            {lastName}
-          </>
-        ) : language === 'HU' ? (
-          <>
-            {lastName}
-            <br />
-            {firstName}
-          </>
-        ) : (
-          <>
-            {firstName}
-            <br />
-            {lastName}
-          </>
-        )}
-      </h3>
-      <p
-        className="text-black text-sm md:text-base font-normal mb-2"
-        style={{
-          fontFamily: 'Geist, sans-serif',
-          color: '#004bff',
-        }}
-      >
-        {role}
-      </p>
-      {/* Decorative lines */}
-      <img
-        src="/lines-button-blue.svg"
-        alt="Decorative lines"
-        className="w-8 h-8 md:w-16 md:h-16"
-      />
-      <p
-        className="text-black text-sm md:text-base font-bold mb-2"
-        style={{
-          fontFamily: 'Geist, sans-serif',
-          color: '#ff5251',
-        }}
-      >
-        {presentationTitle}
-      </p>
-      <p
-        className="text-black text-sm md:text-base font-normal mb-0"
-        style={{
-          fontFamily: 'Geist, sans-serif',
-          color: '#004bff',
-        }}
-      >
-        Előadás időpontja: {presentationTime}
-      </p>
+      {/* Top Section: Name, Role, SVG */}
+      <div>
+        {/* Name */}
+        <h3
+          className="text-black text-[1.375rem] md:text-[1.5rem]  font-semibold uppercase tracking-wide mb-0 leading-8"
+          style={{
+            fontFamily: 'Geist, sans-serif',
+            color: '#004bff',
+          }}
+        >
+          {firstName === 'MATEUSZ' && lastName === 'MACHALSKI'
+            ? `${firstName} ${lastName}`
+            : language === 'HU'
+              ? `${firstName} ${lastName}`
+              : `${lastName} ${firstName}`}
+        </h3>
+        {/* Role */}
+        <p
+          className="text-black text-sm md:text-base font-normal mb-0 leading-4"
+          style={{
+            fontFamily: 'Geist, sans-serif',
+            color: '#004bff',
+          }}
+        >
+          {language === 'HU' ? role_hu : role_en}
+        </p>
+        {/* Decorative lines */}
+        <img
+          src="/lines-button-blue.svg"
+          alt="Decorative lines"
+          className="w-8 h-8 md:w-8 md:h-8"
+        />
+      </div>
+
+      {/* Bottom Section: Title and Lecture Time */}
+      <div className="flex flex-col justify-end">
+        <p
+          className="text-black text-sm md:text-xl font-bold mb-0 leading-5"
+          style={{
+            fontFamily: 'Geist, sans-serif',
+            color: '#ff5251',
+          }}
+        >
+          {language === 'HU' ? presentationTitle_hu : presentationTitle_en}
+        </p>
+        <p
+          className="text-black text-sm md:text-base font-normal mb-0"
+          style={{
+            fontFamily: 'Geist, sans-serif',
+            color: '#004bff',
+          }}
+        >
+          {language === 'HU' ? 'Előadás időpontja:' : 'Lecture time:'}{' '}
+          {presentationTime}
+        </p>
+      </div>
     </div>
   )
 }
@@ -417,10 +358,13 @@ const TextOfTile = ({
 const HoverOverlay = ({
   firstName,
   lastName,
-  role,
-  presentationTitle,
+  role_hu,
+  role_en,
+  presentationTitle_hu,
+  presentationTitle_en,
   presentationTime,
-  description,
+  description_hu,
+  description_en,
   isOpen,
   onTap,
 }) => {
@@ -429,42 +373,34 @@ const HoverOverlay = ({
     <>
       {/* Desktop hover overlay */}
       <div
-        className={`hidden xl:flex absolute inset-0 flex-col justify-start px-8 pt-12 transition-opacity duration-300 cursor-default ${
+        className={`hidden xl:flex absolute inset-0 flex-col justify-start px-8 pt-0 transition-opacity duration-300 cursor-default ${
           isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
         }`}
         style={{ backgroundColor: 'white' }}
         onClick={onTap}
       >
         <h3
-          className="text-white text-3xl font-bold uppercase tracking-wide mb-4"
+          className="text-white text-3xl font-bold uppercase tracking-wide mb-2"
           style={{
             fontFamily: 'Big Shoulders Display, sans-serif',
             color: '#004bff',
           }}
         >
-          {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
-            <>
-              {firstName} {lastName}
-            </>
-          ) : language === 'HU' ? (
-            <>
-              {lastName} {firstName}
-            </>
-          ) : (
-            <>
-              {firstName} {lastName}
-            </>
-          )}
+          {firstName === 'MATEUSZ' && lastName === 'MACHALSKI'
+            ? `${firstName} ${lastName}`
+            : language === 'HU'
+              ? `${firstName} ${lastName}`
+              : `${lastName} ${firstName}`}
         </h3>
 
         <p
-          className=" text-base font-normal leading-relaxed"
+          className=" text-base font-normal leading-4"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#004bff',
           }}
         >
-          {description}
+          {language === 'HU' ? description_hu : description_en}
         </p>
       </div>
 
@@ -491,26 +427,18 @@ const HoverOverlay = ({
                 color: '#ff5251',
               }}
             >
-              {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
-                <>
-                  {firstName} {lastName}
-                </>
-              ) : language === 'HU' ? (
-                <>
-                  {lastName} {firstName}
-                </>
-              ) : (
-                <>
-                  {firstName} {lastName}
-                </>
-              )}
+              {firstName === 'MATEUSZ' && lastName === 'MACHALSKI'
+                ? `${firstName} ${lastName}`
+                : language === 'HU'
+                  ? `${lastName} ${firstName}`
+                  : `${firstName} ${lastName}`}
             </h3>
 
             <p
               className="text-white text-base font-normal leading-relaxed"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >
-              {description}
+              {language === 'HU' ? description_hu : description_en}
             </p>
           </div>
         </div>
