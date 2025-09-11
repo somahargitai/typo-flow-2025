@@ -164,9 +164,9 @@ Her interest in type design began during her BA years, and last year she was adm
     <section id="conference" className="py-0 bg-white">
       <div className="w-full">
         {/* Conference Title Section - Separate from grid */}
-        <div className="w-full flex flex-col items-center justify-center py-16 px-8">
+        <div className="w-full items-center justify-center py-16 px-8">
           <h1
-            className="font-bold uppercase tracking-wide text-center mb-4"
+            className="font-bold uppercase tracking-wide text-center mb-0"
             style={{
               fontFamily: 'Big Shoulders Display, sans-serif',
               fontSize: 'clamp(3rem, 8vw, 12rem)',
@@ -176,10 +176,10 @@ Her interest in type design began during her BA years, and last year she was adm
             {language === 'HU' ? 'TYPOFLOW KONFERENCIA' : 'TYPOFLOW CONFERENCE'}
           </h1>
           <p
-            className=" text-center mb-8"
+            className=" text-center mb-12 leading-8 font-semibold"
             style={{
               fontFamily: 'Big Shoulders Display, sans-serif',
-              fontSize: 'clamp(1.5rem, 3vw, 3rem)',
+              fontSize: 'clamp(2rem, 6vw, 5rem)',
               color: '#ff5251',
             }}
           >

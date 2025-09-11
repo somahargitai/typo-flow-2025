@@ -109,7 +109,7 @@ const Competition = () => {
               {t.competition.categories.map((category, index) => (
                 <div key={index} className="flex items-center">
                   <span
-                    className="text-lg mr-2"
+                    className="text-2xl mr-2"
                     style={{
                       fontFamily: 'Geist, sans-serif',
                       color: '#004bff',
@@ -118,7 +118,7 @@ const Competition = () => {
                     /
                   </span>
                   <span
-                    className="text-lg"
+                    className="text-2xl"
                     style={{
                       fontFamily: 'Geist, sans-serif',
                       color: '#004bff',

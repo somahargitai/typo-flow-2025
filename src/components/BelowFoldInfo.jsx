@@ -33,37 +33,35 @@ const BelowFoldInfo = () => {
             </p>
 
             <div className="text-white">
-                <h3
-                  className="text-4xl sm:text-6xl md:text-9xl font-bold mb-1 text-white"
-                  style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}
-                >
-                  {language === 'HU' ? 'MEGNYITÓ' : 'OPENING'}
-                </h3>
-                <p
-                  className="text-4xl md:text-7xl font-medium text-white mb-6"
-                  style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}
-                >
-                  2025. október 22. 19.00
-                </p>
+              <h3
+                className="text-4xl sm:text-6xl md:text-9xl font-bold mb-1 text-white"
+                style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}
+              >
+                {language === 'HU' ? 'MEGNYITÓ' : 'OPENING'}
+              </h3>
               <p
-                className="text-lg md:text-xl font-light text-white leading-relaxed"
+                className="text-4xl md:text-7xl font-semibold text-white mb-10"
+                style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}
+              >
+                {language === 'HU'
+                  ? '2025. október 22. 19.00'
+                  : '2025. October 22. 19.00'}
+              </p>
+              <p
+                className="text-lg md:text-3xl font-light text-white leading-relaxed"
                 style={{ fontFamily: 'Geist, sans-serif' }}
               >
-                {language === 'HU' ? (
-                  <>
-                    Helyszín: Science Park – Design Campus, Győr, Töltésszer u.
-                    13.
-                    <br />A kiállítást 1 napos szakmai konferencia kíséri.
-                  </>
-                ) : (
-                  <>
-                    Location: Science Park – Design Campus, Győr, Töltésszer u.
-                    13.
-                    <br />
-                    The exhibition is accompanied by a 1-day professional
-                    conference.
-                  </>
-                )}
+                {language === 'HU'
+                  ? 'Helyszín: Science Park – Design Campus, Győr, Töltésszer u.13.'
+                  : 'Location: Science Park – Design Campus, Győr, Töltésszer u. 13.'}
+              </p>
+              <p
+                className="text-lg md:text-4xl font-semibold text-white leading-relaxed"
+                style={{ fontFamily: 'Geist, sans-serif' }}
+              >
+                {language === 'HU'
+                  ? 'A kiállítást 1 napos szakmai konferencia kíséri.'
+                  : 'The exhibition is accompanied by a 1-day professional conference.'}
               </p>
             </div>
           </div>
