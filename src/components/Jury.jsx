@@ -2,7 +2,6 @@ import React from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 
 const Jury = () => {
-
   const { language } = useLanguage()
 
   /* JURY MEMBERS */
@@ -464,11 +463,7 @@ idén átvette a betűtervező diplomáját. Jelenleg szabadúszóként dolgozik
                 <TextOfTile
                   firstName={member.firstName}
                   lastName={member.lastName}
-                  role={
-                    language === 'hu'
-                      ? member.role_hu
-                      : member.role_en
-                  }
+                  role={language === 'hu' ? member.role_hu : member.role_en}
                   description={
                     language === 'hu'
                       ? member.description_hu
@@ -478,11 +473,7 @@ idén átvette a betűtervező diplomáját. Jelenleg szabadúszóként dolgozik
                 <HoverOverlay
                   firstName={member.firstName}
                   lastName={member.lastName}
-                  role={
-                    language === 'hu'
-                      ? member.role_hu
-                      : member.role_en
-                  }
+                  role={language === 'hu' ? member.role_hu : member.role_en}
                   description={
                     language === 'hu'
                       ? member.description_hu
@@ -505,11 +496,7 @@ idén átvette a betűtervező diplomáját. Jelenleg szabadúszóként dolgozik
                 <TextOfTile
                   firstName={member.firstName}
                   lastName={member.lastName}
-                  role={
-                    language === 'hu'
-                      ? member.role_hu
-                      : member.role_en
-                  }
+                  role={language === 'hu' ? member.role_hu : member.role_en}
                   description={
                     language === 'hu'
                       ? member.description_hu
@@ -519,11 +506,7 @@ idén átvette a betűtervező diplomáját. Jelenleg szabadúszóként dolgozik
                 <HoverOverlay
                   firstName={member.firstName}
                   lastName={member.lastName}
-                  role={
-                    language === 'hu'
-                      ? member.role_hu
-                      : member.role_en
-                  }
+                  role={language === 'hu' ? member.role_hu : member.role_en}
                   description={
                     language === 'hu'
                       ? member.description_hu
@@ -594,9 +577,9 @@ const TextOfTile = ({ firstName, lastName, role, description }) => {
       </p>
       {/* Decorative lines */}
       <img
-        src="/public/lines-button.svg"
+        src="/lines-button.svg"
         alt="Decorative lines"
-        className="w-16 h-16"
+        className="w-8 h-8 md:w-16 md:h-16"
       />
     </div>
   )
