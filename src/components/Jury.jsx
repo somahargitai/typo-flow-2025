@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
+import { X } from 'lucide-react'
 
 const Jury = () => {
   const { language } = useLanguage()
@@ -612,38 +613,79 @@ const HoverOverlay = ({
 }) => {
   const { language } = useLanguage()
   return (
-    <div
-      className={`absolute inset-0 flex flex-col justify-top px-8 pt-12 transition-opacity duration-300 cursor-pointer md:cursor-default ${
-        isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-      }`}
-      style={{ backgroundColor: '#ff5251' }}
-      onClick={onTap}
-    >
-      <h3
-        className="text-white text-xl md:text-4xl font-semibold uppercase tracking-wide mb-3"
-        style={{ fontFamily: 'Geist, sans-serif' }}
+    <>
+      {/* Desktop hover overlay */}
+      <div
+        className={`hidden md:flex absolute inset-0 flex-col justify-top px-8 pt-12 transition-opacity duration-300 cursor-default ${
+          isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+        }`}
+        style={{ backgroundColor: '#ff5251' }}
+        onClick={onTap}
       >
-        {language === 'HU' ? (
-          <>
-            {lastName} {firstName}
-          </>
-        ) : (
-          <>
-            {firstName} {lastName}
-          </>
-        )}
-      </h3>
+        <h3
+          className="text-white text-4xl font-semibold uppercase tracking-wide mb-3"
+          style={{ fontFamily: 'Geist, sans-serif' }}
+        >
+          {language === 'HU' ? (
+            <>
+              {lastName} {firstName}
+            </>
+          ) : (
+            <>
+              {firstName} {lastName}
+            </>
+          )}
+        </h3>
 
-      <p
-        className="text-white text-sm md:text-lg font-normal leading-tight"
-        style={{
-          fontFamily: 'Geist, sans-serif',
-          fontSize: 'clamp(0.875rem, 0.35rem, 1.75rem)',
-        }}
-      >
-        {description}
-      </p>
-    </div>
+        <p
+          className="text-white text-lg font-normal leading-tight"
+          style={{
+            fontFamily: 'Geist, sans-serif',
+            fontSize: 'clamp(1.125rem, 1.35rem, 1.75rem)',
+          }}
+        >
+          {description}
+        </p>
+      </div>
+
+      {/* Mobile fullscreen modal */}
+      {isOpen && (
+        <div className="md:hidden fixed inset-0 z-50 flex flex-col justify-center px-6 py-8" style={{ backgroundColor: '#ff5251' }}>
+          {/* Close button */}
+          <button
+            onClick={onTap}
+            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors"
+          >
+            <X size={32} />
+          </button>
+
+          {/* Content */}
+          <div className="flex-1 flex flex-col justify-center">
+            <h3
+              className="text-white text-3xl font-semibold uppercase tracking-wide mb-6"
+              style={{ fontFamily: 'Geist, sans-serif' }}
+            >
+              {language === 'HU' ? (
+                <>
+                  {lastName} {firstName}
+                </>
+              ) : (
+                <>
+                  {firstName} {lastName}
+                </>
+              )}
+            </h3>
+
+            <p
+              className="text-white text-lg font-normal leading-relaxed"
+              style={{ fontFamily: 'Geist, sans-serif' }}
+            >
+              {description}
+            </p>
+          </div>
+        </div>
+      )}
+    </>
   )
 }
 
