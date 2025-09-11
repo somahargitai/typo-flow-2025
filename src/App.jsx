@@ -1,6 +1,6 @@
 import React from 'react';
 import { LanguageProvider } from './contexts/LanguageContext';
-import TopBar from './components/TopBar';
+
 import LandingHeader from './components/LandingHeader';
 import BelowFoldInfo from './components/BelowFoldInfo';
 import Competition from './components/Competition';
@@ -14,8 +14,7 @@ function AppContent() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Top Bar */}
-      <TopBar />
+
       
       {/* Landing Header - Above the fold */}
       <LandingHeader />

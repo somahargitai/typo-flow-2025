@@ -5,7 +5,7 @@ const Awards = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section id="awards" className="py-16 bg-gray-50 rounded-2xl">
+    <section id="awards" className="py-16 bg-white rounded-2xl">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center px-8">
           <h2 
