@@ -34,7 +34,7 @@ const BelowFoldInfo = () => {
 
             <div className="text-white">
                 <h3
-                  className="text-6xl md:text-9xl font-bold mb-1 text-white"
+                  className="text-4xl sm:text-6xl md:text-9xl font-bold mb-1 text-white"
                   style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}
                 >
                   {language === 'HU' ? 'MEGNYITÓ' : 'OPENING'}
