@@ -8,7 +8,7 @@ const LandingHeader = () => {
   return (
     <header
       id="landing-header"
-      className="relative text-white h-screen flex flex-col pt-15 pb-10"
+      className="relative text-white h-screen flex flex-col pb-10"
       style={{ backgroundColor: '#ff5251' }}
     >
       {/* Top Bar */}

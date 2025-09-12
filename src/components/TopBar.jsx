@@ -51,7 +51,7 @@ const TopBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 md:top-9 left-0 right-0 z-50 transition-all duration-300 bg-transparent`}
+      className={`relative top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
@@ -152,13 +152,8 @@ const TopBar = () => {
           <div className="flex items-center space-x-2">
             <button
               onClick={toggleLanguage}
-              className={`px-2 py-1 md:px-4 md:py-2 transition-colors font-medium border-gray-300 hover:text-gray-600 text-xl md:text-xl lg:text-[2.1rem] tracking-wider ${
-                isScrolled
-                  ? 'text-white border-white'
-                  : 'text-white border-gray-300'
-              }`}
+              className="px-2 py-1 md:px-4 md:py-2 transition-colors font-medium text-white border-white hover:text-gray-300 text-xl md:text-xl lg:text-[2.1rem] tracking-wider"
               style={{
-                backgroundColor: isScrolled ? '#004bff' : 'transparent',
                 fontFamily: 'Big Shoulders Display, sans-serif',
               }}
             >
