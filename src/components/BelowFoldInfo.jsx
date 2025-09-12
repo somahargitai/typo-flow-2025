@@ -10,7 +10,8 @@ const BelowFoldInfo = () => {
         <div className="max-w-5xl mx-auto text-center">
           <div className="text-center max-w-4xl mx-auto">
             <p
-              className="text-lg md:text-3xl font-light text-white leading-relaxed mb-12"
+              className="text-lg md:text-3xl font-light text-white
+                leading-relaxed mb-12"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >
               {language === 'HU' ? (
@@ -34,7 +35,8 @@ const BelowFoldInfo = () => {
 
             <div className="text-white">
               <h3
-                className="text-4xl sm:text-6xl md:text-9xl font-bold mb-1 text-white"
+                className="text-4xl sm:text-6xl md:text-9xl font-bold mb-1
+                  text-white"
                 style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}
               >
                 {language === 'HU' ? 'MEGNYITÓ' : 'OPENING'}
@@ -48,7 +50,8 @@ const BelowFoldInfo = () => {
                   : '2025. October 22. 19.00'}
               </p>
               <p
-                className="text-lg md:text-3xl font-light text-white leading-relaxed"
+                className="text-lg md:text-3xl font-light text-white
+                  leading-relaxed"
                 style={{ fontFamily: 'Geist, sans-serif' }}
               >
                 {language === 'HU'
@@ -56,7 +59,8 @@ const BelowFoldInfo = () => {
                   : 'Location: Science Park – Design Campus, Győr, Töltésszer u. 13.'}
               </p>
               <p
-                className="text-lg md:text-4xl font-semibold text-white leading-relaxed"
+                className="text-lg md:text-4xl font-semibold text-white
+                  leading-relaxed"
                 style={{ fontFamily: 'Geist, sans-serif' }}
               >
                 {language === 'HU'

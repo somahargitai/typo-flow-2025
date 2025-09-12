@@ -8,13 +8,17 @@ const SupportersFooter = () => {
     <section className="py-16" style={{ backgroundColor: '#004bff' }}>
       <div className="container mx-auto px-4">
         <h2
-          className="text-3xl md:text-5xl font-bold text-center mb-12 text-white"
+          className="text-3xl md:text-5xl font-bold text-center mb-12
+            text-white"
           style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}
         >
           {translationsOfLanguage.partners.title}
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+        <div
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8
+            items-center justify-items-center"
+        >
           <div className="p-4">
             <img
               src="/images/brand-logo-05.svg"

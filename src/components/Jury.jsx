@@ -380,13 +380,15 @@ const TextOfTile = ({
   const { language } = useLanguage()
   return (
     <div
-      className="w-1/2 flex flex-col justify-top p-6 aspect-square cursor-pointer md:cursor-default"
+      className="w-1/2 flex flex-col justify-top p-6 aspect-square
+        cursor-pointer md:cursor-default"
       style={{ backgroundColor: '#004bff' }}
       onClick={onTap}
     >
       {/* Name */}
       <h3
-        className="text-white text-lg md:text-xl xl:text-4xl font-semibold uppercase tracking-wide mb-2"
+        className="text-white text-lg md:text-xl xl:text-4xl font-semibold
+          uppercase tracking-wide mb-2"
         style={{ fontFamily: 'Geist, sans-serif' }}
       >
         {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
@@ -445,14 +447,16 @@ const HoverOverlay = ({
     <>
       {/* Desktop hover overlay */}
       <div
-        className={`hidden xl:flex absolute inset-0 flex-col justify-top px-8 pt-10 transition-opacity duration-300 cursor-default ${
-          isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-        }`}
+        className={`hidden xl:flex absolute inset-0 flex-col justify-top px-8
+          pt-10 transition-opacity duration-300 cursor-default ${
+            isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+          }`}
         style={{ backgroundColor: '#ff5251' }}
         onClick={onTap}
       >
         <h3
-          className="text-white text-4xl font-semibold uppercase tracking-wide mb-3"
+          className="text-white text-4xl font-semibold uppercase tracking-wide
+            mb-3"
           style={{ fontFamily: 'Geist, sans-serif' }}
         >
           {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
@@ -490,7 +494,8 @@ const HoverOverlay = ({
           {/* Close button */}
           <button
             onClick={onTap}
-            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors z-10"
+            className="absolute top-6 right-6 text-white hover:text-gray-300
+              transition-colors z-10"
           >
             <X size={32} />
           </button>
@@ -498,7 +503,8 @@ const HoverOverlay = ({
           {/* Scrollable content */}
           <div className="flex-1 overflow-y-auto px-6 pt-20 pb-8">
             <h3
-              className="text-white text-3xl font-semibold uppercase tracking-wide mb-6"
+              className="text-white text-3xl font-semibold uppercase
+                tracking-wide mb-6"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >
               {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (

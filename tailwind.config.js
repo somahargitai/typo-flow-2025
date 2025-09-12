@@ -2,14 +2,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "big-shoulders": ["Big Shoulders Display", "sans-serif"],
+        'big-shoulders': ['Big Shoulders Display', 'sans-serif'],
       },
     },
   },
-  content: [
-    './index.html',
-    './src/**/*.{js,jsx,ts,tsx}',
-  ],
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   safelist: [
     'bg-blue-600',
     'bg-black',

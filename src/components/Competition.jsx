@@ -68,7 +68,8 @@ const Competition = () => {
             </h3>
             <a
               href={`mailto:${translationsOfLanguage.competition.email}`}
-              className="text-2xl md:text-3xl hover:underline transition-all duration-200"
+              className="text-2xl md:text-3xl hover:underline transition-all
+                duration-200"
               style={{
                 fontFamily: 'Geist, sans-serif',
                 color: '#004bff',
@@ -106,28 +107,30 @@ const Competition = () => {
               {translationsOfLanguage.competition.categoriesTitle}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-              {translationsOfLanguage.competition.categories.map((category, index) => (
-                <div key={index} className="flex items-center">
-                  <span
-                    className="text-2xl mr-2"
-                    style={{
-                      fontFamily: 'Geist, sans-serif',
-                      color: '#004bff',
-                    }}
-                  >
-                    /
-                  </span>
-                  <span
-                    className="text-2xl"
-                    style={{
-                      fontFamily: 'Geist, sans-serif',
-                      color: '#004bff',
-                    }}
-                  >
-                    {category}
-                  </span>
-                </div>
-              ))}
+              {translationsOfLanguage.competition.categories.map(
+                (category, index) => (
+                  <div key={index} className="flex items-center">
+                    <span
+                      className="text-2xl mr-2"
+                      style={{
+                        fontFamily: 'Geist, sans-serif',
+                        color: '#004bff',
+                      }}
+                    >
+                      /
+                    </span>
+                    <span
+                      className="text-2xl"
+                      style={{
+                        fontFamily: 'Geist, sans-serif',
+                        color: '#004bff',
+                      }}
+                    >
+                      {category}
+                    </span>
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>

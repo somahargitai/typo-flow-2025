@@ -32,11 +32,13 @@ export const LanguageProvider = ({ children }) => {
       },
       competition: {
         title: 'PÁLYÁZAT',
-        description: 'A pályázatra olyan 2015 után készült munkákat várunk, melyek tipográfiai megoldásokra épülnek vagy a tipográfia értékelhető fókuszban van. A beválogatott versenymunkák plakát formában lesznek kiállítva. Tárgyak, termékek kiállítására nincs lehetőség. A pályázat ingyenes.',
+        description:
+          'A pályázatra olyan 2015 után készült munkákat várunk, melyek tipográfiai megoldásokra épülnek vagy a tipográfia értékelhető fókuszban van. A beválogatott versenymunkák plakát formában lesznek kiállítva. Tárgyak, termékek kiállítására nincs lehetőség. A pályázat ingyenes.',
         fileRequirements: 'Beküldendő fájl:',
         fileSize: '70 × 100 cm, CMYK PDF (max. 15 Mb)',
         fileOrientation: 'álló formátum',
-        fileNameRule: 'A fájlnévben szerepeljen a kategória és a pályázó neve ékezetek nélkül!',
+        fileNameRule:
+          'A fájlnévben szerepeljen a kategória és a pályázó neve ékezetek nélkül!',
         fileNameExample: 'Fájlnév minta: plakat_palyazoneve.pdf',
         emailLabel: 'A pályamunkákat erre az emailcímre várjuk:',
         email: 'info@typoflow.hu',
@@ -53,8 +55,8 @@ export const LanguageProvider = ({ children }) => {
           'csomagolás',
           'kalligráfia',
           'experimentális tipográfia',
-          'webdesign'
-        ]
+          'webdesign',
+        ],
       },
       hero: {
         title: 'TYPO FLOW',
@@ -82,21 +84,21 @@ export const LanguageProvider = ({ children }) => {
         awards: [
           {
             name: 'A MAGYAR MŰVÉSZETI AKADÉMIA FŐDÍJA',
-            description: 'MMA oklevél és 250 000 Ft'
+            description: 'MMA oklevél és 250 000 Ft',
           },
           {
             name: 'KÁLMÁN TÜNDE DÍJ',
-            description: 'Oklevél'
+            description: 'Oklevél',
           },
           {
             name: 'A SZÉCHENYI ISTVÁN EGYETEM DESIGN CAMPUSÁNAK KÜLÖNDÍJA',
-            description: 'Oklevél'
+            description: 'Oklevél',
           },
           {
             name: 'BRANDGUIDE KÜLÖNDÍJ',
-            description: 'Yellow Designer közösség 3 havi előfizetés'
-          }
-        ]
+            description: 'Yellow Designer közösség 3 havi előfizetés',
+          },
+        ],
       },
       footer: {
         copyright: '© 2025 Typo Flow - I. országos tipográfiai biennálé',
@@ -116,11 +118,13 @@ export const LanguageProvider = ({ children }) => {
       },
       competition: {
         title: 'COMPETITION',
-        description: 'We welcome works created after 2015 that are based on typographic solutions or have typography as a clearly appreciable focus. Selected competition works will be exhibited in poster format. There is no possibility to exhibit objects or products. Participation is free of charge.',
+        description:
+          'We welcome works created after 2015 that are based on typographic solutions or have typography as a clearly appreciable focus. Selected competition works will be exhibited in poster format. There is no possibility to exhibit objects or products. Participation is free of charge.',
         fileRequirements: 'File requirements:',
         fileSize: '70 × 100 cm, CMYK PDF (max. 15 Mb)',
         fileOrientation: 'portrait format',
-        fileNameRule: 'The file name must include the category and the applicant\'s name without accents!',
+        fileNameRule:
+          "The file name must include the category and the applicant's name without accents!",
         fileNameExample: 'File name example: plakat_applicantname.pdf',
         emailLabel: 'Send entries to:',
         email: 'info@typoflow.hu',
@@ -137,8 +141,8 @@ export const LanguageProvider = ({ children }) => {
           'packaging design',
           'calligraphy',
           'experimental typography',
-          'web design'
-        ]
+          'web design',
+        ],
       },
       hero: {
         title: 'TYPO FLOW',
@@ -166,21 +170,21 @@ export const LanguageProvider = ({ children }) => {
         awards: [
           {
             name: 'GRAND PRIZE OF THE HUNGARIAN ACADEMY OF ARTS',
-            description: 'MMA certificate and 250,000 HUF'
+            description: 'MMA certificate and 250,000 HUF',
           },
           {
             name: 'TÜNDE KÁLMÁN AWARD',
-            description: 'Certificate'
+            description: 'Certificate',
           },
           {
             name: 'SPECIAL AWARD OF THE SZÉCHENYI ISTVÁN UNIVERSITY DESIGN CAMPUS',
-            description: 'Certificate'
+            description: 'Certificate',
           },
           {
             name: 'BRANDGUIDE SPECIAL AWARD',
-            description: 'YELLOW Designer Community 3-month subscription'
-          }
-        ]
+            description: 'YELLOW Designer Community 3-month subscription',
+          },
+        ],
       },
       footer: {
         copyright: '© 2025 Typo Flow - 1st National Typography Biennale',
@@ -191,7 +195,9 @@ export const LanguageProvider = ({ children }) => {
   const translationsOfLanguage = translations[language]
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, translationsOfLanguage }}>
+    <LanguageContext.Provider
+      value={{ language, toggleLanguage, translationsOfLanguage }}
+    >
       {children}
     </LanguageContext.Provider>
   )

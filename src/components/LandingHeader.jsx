@@ -57,7 +57,8 @@ const LandingHeader = () => {
           <img
             src="/images/logo.svg"
             alt="Typo Flow Logo"
-            className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 md:top-auto md:bottom-0 md:translate-y-0"
+            className="absolute left-1/2 transform -translate-x-1/2 top-1/2
+              -translate-y-1/2 md:top-auto md:bottom-0 md:translate-y-0"
             style={{
               width: '100%',
               height: '100%',
@@ -70,10 +71,11 @@ const LandingHeader = () => {
           {/* Labels container with two text lines positioned at bottom - Desktop only */}
           <div
             id="labels"
-            className="absolute bottom-0 left-0 right-0 hidden lg:flex justify-center items-end px-4"
+            className="absolute bottom-0 left-0 right-0 hidden lg:flex
+              justify-center items-end px-4"
             style={{ paddingBottom: '0rem' }}
           >
-            <div className="flex w-full full-width ">
+            <div className="flex w-full full-width">
               {/* Left half */}
               <div
                 className="w-1/2 flex justify-end"

@@ -51,7 +51,8 @@ const LandingTopBar = () => {
 
   return (
     <nav
-      className={`relative top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent`}
+      className={`relative top-0 left-0 right-0 z-50 transition-all duration-300
+        bg-transparent`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
@@ -61,28 +62,36 @@ const LandingTopBar = () => {
               {/* Hamburger button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`p-2 transition-colors text-white`}
+                className={'p-2 transition-colors text-white'}
               >
                 <div className="w-8 h-8 flex flex-col justify-center space-y-1">
                   <span
-                    className={`block h-0.5 w-full transition-all duration-300 bg-white ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}
+                    className={`block h-0.5 w-full transition-all duration-300
+                      bg-white ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}
                   ></span>
                   <span
-                    className={`block h-0.5 w-full transition-all duration-300  bg-white ${isMenuOpen ? 'opacity-0' : ''}`}
+                    className={`block h-0.5 w-full transition-all duration-300
+                      bg-white ${isMenuOpen ? 'opacity-0' : ''}`}
                   ></span>
                   <span
-                    className={`block h-0.5 w-full transition-all duration-300 bg-white  ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}
+                    className={`block h-0.5 w-full transition-all duration-300
+                      bg-white
+                      ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}
                   ></span>
                 </div>
               </button>
 
               {/* Mobile Menu - Full Screen */}
               {isMenuOpen && isMobile && (
-                <div className="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-8">
+                <div
+                  className="fixed inset-0 bg-white z-40 flex flex-col
+                    items-center justify-center space-y-8"
+                >
                   {/* Close button */}
                   <button
                     onClick={() => setIsMenuOpen(false)}
-                    className="absolute top-6 right-6 p-2 text-gray-800 hover:text-gray-600 transition-colors"
+                    className="absolute top-6 right-6 p-2 text-gray-800
+                      hover:text-gray-600 transition-colors"
                   >
                     <svg
                       className="w-8 h-8"
@@ -103,7 +112,8 @@ const LandingTopBar = () => {
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className="text-gray-800 font-semibold text-4xl uppercase tracking-wider hover:text-gray-600 transition-colors"
+                      className="text-gray-800 font-semibold text-4xl uppercase
+                        tracking-wider hover:text-gray-600 transition-colors"
                       style={{
                         fontFamily: 'Big Shoulders Display, sans-serif',
                       }}
@@ -116,12 +126,17 @@ const LandingTopBar = () => {
 
               {/* Desktop Menu - Dropdown */}
               {isMenuOpen && !isMobile && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-lg py-4 z-40">
+                <div
+                  className="absolute top-full left-0 mt-2 w-64 bg-white
+                    shadow-lg rounded-lg py-4 z-40"
+                >
                   {navigationItems.map(item => (
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className="block w-full text-left px-6 py-3 text-gray-800 font-semibold text-lg uppercase tracking-wider hover:bg-gray-100 transition-colors"
+                      className="block w-full text-left px-6 py-3 text-gray-800
+                        font-semibold text-lg uppercase tracking-wider
+                        hover:bg-gray-100 transition-colors"
                       style={{
                         fontFamily: 'Big Shoulders Display, sans-serif',
                       }}
@@ -139,7 +154,9 @@ const LandingTopBar = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-white hover:text-gray-600 transition-colors font-semibold text-xl md:text-xl lg:text-[2.1rem] uppercase tracking-wider"
+                  className="text-white hover:text-gray-600 transition-colors
+                    font-semibold text-xl md:text-xl lg:text-[2.1rem] uppercase
+                    tracking-wider"
                   style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}
                 >
                   {item.label}
@@ -152,7 +169,9 @@ const LandingTopBar = () => {
           <div className="flex items-center space-x-2">
             <button
               onClick={toggleLanguage}
-              className="px-2 py-1 md:px-4 md:py-2 transition-colors font-medium text-white border-white hover:text-gray-300 text-xl md:text-xl lg:text-[2.1rem] tracking-wider"
+              className="px-2 py-1 md:px-4 md:py-2 transition-colors font-medium
+                text-white border-white hover:text-gray-300 text-xl md:text-xl
+                lg:text-[2.1rem] tracking-wider"
               style={{
                 fontFamily: 'Big Shoulders Display, sans-serif',
               }}

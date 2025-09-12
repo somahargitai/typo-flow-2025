@@ -166,7 +166,8 @@ Her interest in type design began during her BA years, and last year she was adm
         {/* Conference Title Section - Separate from grid */}
         <div className="w-full items-center justify-center py-16 px-8">
           <h1
-            className="font-bold uppercase text-center text-4xl sm:text-6xl md:text-9xl mb-10"
+            className="font-bold uppercase text-center text-4xl sm:text-6xl
+              md:text-9xl mb-10"
             style={{
               fontFamily: 'Big Shoulders Display, sans-serif',
               color: '#ff5251',
@@ -175,7 +176,7 @@ Her interest in type design began during her BA years, and last year she was adm
             {translationsOfLanguage.conference.title}
           </h1>
           <p
-            className=" text-center mb-12 leading-8 font-semibold"
+            className="text-center mb-12 leading-8 font-semibold"
             style={{
               fontFamily: 'Big Shoulders Display, sans-serif',
               fontSize: 'clamp(2rem, 6vw, 5rem)',
@@ -210,11 +211,15 @@ Her interest in type design began during her BA years, and last year she was adm
 
         {/* Conference Grid - No title tile, only presentations */}
         <div className="flex justify-center py-0 lg:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-32 max-w-6xl w-full lg:w-auto">
+          <div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-32 w-full
+              lg:w-auto"
+          >
             {conference.map((speaker, index) => (
               <div
                 key={index}
-                className="relative group flex gap-0 lg:gap-4 mx-auto w-full lg:w-auto"
+                className="relative group flex gap-0 lg:gap-4 mx-auto w-full
+                  lg:w-auto"
               >
                 <PhotoOfTile
                   image={speaker.image}
@@ -259,7 +264,10 @@ Her interest in type design began during her BA years, and last year she was adm
 const PhotoOfTile = ({ image, firstName, lastName }) => {
   const { language } = useLanguage()
   return (
-    <div className="w-1/2 lg:w-48 lg:h-48 xl:w-44 xl:h-44 2xl:w-40 2xl:h-40 aspect-square lg:aspect-auto overflow-hidden">
+    <div
+      className="w-1/2 lg:w-48 lg:h-48 xl:w-44 xl:h-44 2xl:w-100 2xl:h-100
+        aspect-square lg:aspect-auto overflow-hidden"
+    >
       <img
         src={`/images/${image}`}
         alt={
@@ -290,7 +298,9 @@ const TextOfTile = ({
   const { language } = useLanguage()
   return (
     <div
-      className="w-1/2 lg:w-96 lg:h-48 xl:w-88 xl:h-44 2xl:w-80 2xl:h-40 aspect-square lg:aspect-auto flex flex-col justify-top lg:justify-between p-6 lg:pl-4 lg:p-0 cursor-pointer md:cursor-default"
+      className="w-1/2 lg:w-96 lg:h-48 xl:w-88 xl:h-44 2xl:w-80 2xl:h-40
+        aspect-square lg:aspect-auto flex flex-col justify-top
+        lg:justify-between p-6 lg:pl-4 lg:p-0 cursor-pointer md:cursor-default"
       style={{ backgroundColor: 'white' }}
       onClick={onTap}
     >
@@ -298,7 +308,8 @@ const TextOfTile = ({
       <div>
         {/* Name */}
         <h3
-          className="text-black text-lg lg:text-[1.375rem] xl:text-[1.5rem] font-semibold uppercase tracking-wide mb-0 leading-6 lg:leading-8"
+          className="text-black text-lg lg:text-[1.375rem] xl:text-[1.5rem]
+            font-semibold uppercase tracking-wide mb-0 leading-6 lg:leading-8"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#004bff',
@@ -312,7 +323,8 @@ const TextOfTile = ({
         </h3>
         {/* Role */}
         <p
-          className="text-black text-xs lg:text-sm xl:text-base font-normal mb-0 leading-3 lg:leading-4"
+          className="text-black text-xs lg:text-sm xl:text-base font-normal mb-0
+            leading-3 lg:leading-4"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#004bff',
@@ -331,7 +343,8 @@ const TextOfTile = ({
       {/* Bottom Section: Title and Lecture Time */}
       <div className="flex flex-col justify-end">
         <p
-          className="text-black text-xs lg:text-xl xl:text-xl font-bold mb-0 leading-4 lg:leading-5"
+          className="text-black text-xs lg:text-xl xl:text-xl font-bold mb-0
+            leading-4 lg:leading-5"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#ff5251',
@@ -340,7 +353,8 @@ const TextOfTile = ({
           {language === 'HU' ? presentationTitle_hu : presentationTitle_en}
         </p>
         <p
-          className="text-black text-xs lg:text-sm xl:text-base font-normal mb-0"
+          className="text-black text-xs lg:text-sm xl:text-base font-normal
+            mb-0"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#004bff',
@@ -373,9 +387,10 @@ const HoverOverlay = ({
     <>
       {/* Desktop hover overlay */}
       <div
-        className={`hidden xl:flex absolute inset-0 flex-col justify-start px-8 pt-0 transition-opacity duration-300 cursor-default ${
-          isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-        }`}
+        className={`hidden xl:flex absolute inset-0 flex-col justify-start px-8
+          pt-0 transition-opacity duration-300 cursor-default ${
+            isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+          }`}
         style={{ backgroundColor: 'white' }}
         onClick={onTap}
       >
@@ -394,7 +409,7 @@ const HoverOverlay = ({
         </h3>
 
         <p
-          className=" text-base font-normal leading-4"
+          className="text-base font-normal leading-4"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#004bff',
@@ -413,7 +428,8 @@ const HoverOverlay = ({
           {/* Close button */}
           <button
             onClick={onTap}
-            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors z-10"
+            className="absolute top-6 right-6 text-white hover:text-gray-300
+              transition-colors z-10"
           >
             <X size={32} />
           </button>
@@ -421,7 +437,8 @@ const HoverOverlay = ({
           {/* Scrollable content */}
           <div className="flex-1 overflow-y-auto px-6 pt-20 pb-8">
             <h3
-              className="text-white text-2xl font-bold uppercase tracking-wide mb-4"
+              className="text-white text-2xl font-bold uppercase tracking-wide
+                mb-4"
               style={{
                 fontFamily: 'Big Shoulders Display, sans-serif',
               }}
