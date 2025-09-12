@@ -2,7 +2,7 @@ import React from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 
 const Awards = () => {
-  const { t, language } = useLanguage()
+  const { translationsOfLanguage, language } = useLanguage()
 
   return (
     <section id="awards" className="py-16 bg-white rounded-2xl">
@@ -16,12 +16,12 @@ const Awards = () => {
               color: '#004bff',
             }}
           >
-            {t.awards.title}
+            {translationsOfLanguage.awards.title}
           </h2>
 
           {/* Awards List */}
           <div className="space-y-10">
-            {t.awards.awards.map((award, index) => (
+            {translationsOfLanguage.awards.awards.map((award, index) => (
               <div key={index} className="text-left">
                 <h3
                   className="text-xl md:text-4xl font-bold mb-2"

@@ -19,6 +19,11 @@ export const LanguageProvider = ({ children }) => {
 
   const translations = {
     HU: {
+      conference: {
+        title: 'TYPOFLOW KONFERENCIA',
+        date: '2025. október 22.',
+        location: 'Helyszín: Széchenyi Egyetem, Menedzsment Campus',
+      },
       navigation: {
         competition: 'Pályázat',
         awards: 'Díjak',
@@ -54,7 +59,7 @@ export const LanguageProvider = ({ children }) => {
       hero: {
         title: 'TYPO FLOW',
         year: '2025',
-        subtitle: 'I. országos tipográfiai biennálé',
+        eventTitle: 'I. országos tipográfiai biennálé',
         date: '2025 október 22-november 9',
         location: 'Széchenyi Egyetem, Design Campus',
       },
@@ -98,6 +103,11 @@ export const LanguageProvider = ({ children }) => {
       },
     },
     EN: {
+      conference: {
+        title: 'TYPOFLOW CONFERENCE',
+        date: '2025. October 22.',
+        location: 'Location: Széchenyi University, Management Campus',
+      },
       navigation: {
         competition: 'Competition',
         awards: 'Awards',
@@ -133,7 +143,7 @@ export const LanguageProvider = ({ children }) => {
       hero: {
         title: 'TYPO FLOW',
         year: '2025',
-        subtitle: '1st National Typography Biennale',
+        eventTitle: '1st National Typography Biennale',
         date: 'October 22 - November 9, 2025',
         location: 'Széchenyi University, Design Campus',
       },
@@ -178,10 +188,10 @@ export const LanguageProvider = ({ children }) => {
     },
   }
 
-  const t = translations[language]
+  const translationsOfLanguage = translations[language]
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage, translationsOfLanguage }}>
       {children}
     </LanguageContext.Provider>
   )

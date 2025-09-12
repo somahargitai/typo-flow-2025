@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 
-const TopBar = () => {
-  const { t, toggleLanguage, language } = useLanguage()
+const LandingTopBar = () => {
+  const { translationsOfLanguage, toggleLanguage, language } = useLanguage()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
@@ -43,10 +43,10 @@ const TopBar = () => {
   const shouldShowHamburger = isMobile || isScrolled
 
   const navigationItems = [
-    { id: 'competition', label: t.navigation.competition },
-    { id: 'awards', label: t.navigation.awards },
-    { id: 'jury', label: t.navigation.jury },
-    { id: 'conference', label: t.navigation.conference },
+    { id: 'competition', label: translationsOfLanguage.navigation.competition },
+    { id: 'awards', label: translationsOfLanguage.navigation.awards },
+    { id: 'jury', label: translationsOfLanguage.navigation.jury },
+    { id: 'conference', label: translationsOfLanguage.navigation.conference },
   ]
 
   return (
@@ -166,4 +166,4 @@ const TopBar = () => {
   )
 }
 
-export default TopBar
+export default LandingTopBar

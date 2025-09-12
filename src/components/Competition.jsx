@@ -2,7 +2,7 @@ import React from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 
 const Competition = () => {
-  const { t, language } = useLanguage()
+  const { translationsOfLanguage, language } = useLanguage()
 
   return (
     <section id="competition" className="py-16 bg-white rounded-2xl">
@@ -16,7 +16,7 @@ const Competition = () => {
               color: '#004bff',
             }}
           >
-            {t.competition.title}
+            {translationsOfLanguage.competition.title}
           </h2>
 
           {/* Description */}
@@ -27,7 +27,7 @@ const Competition = () => {
               color: '#004bff',
             }}
           >
-            {t.competition.description}
+            {translationsOfLanguage.competition.description}
           </p>
 
           {/* File Requirements Section */}
@@ -39,7 +39,7 @@ const Competition = () => {
                 color: '#004bff',
               }}
             >
-              {t.competition.fileRequirements}
+              {translationsOfLanguage.competition.fileRequirements}
             </h3>
             <p
               className="text-lg md:text-2xl leading-normal mb-2"
@@ -48,10 +48,10 @@ const Competition = () => {
                 color: '#004bff',
               }}
             >
-              {t.competition.fileSize} <br />
-              {t.competition.fileOrientation} <br />
-              {t.competition.fileNameRule} <br />
-              {t.competition.fileNameExample}
+              {translationsOfLanguage.competition.fileSize} <br />
+              {translationsOfLanguage.competition.fileOrientation} <br />
+              {translationsOfLanguage.competition.fileNameRule} <br />
+              {translationsOfLanguage.competition.fileNameExample}
             </p>
           </div>
 
@@ -64,17 +64,17 @@ const Competition = () => {
                 color: '#004bff',
               }}
             >
-              {t.competition.emailLabel}
+              {translationsOfLanguage.competition.emailLabel}
             </h3>
             <a
-              href={`mailto:${t.competition.email}`}
+              href={`mailto:${translationsOfLanguage.competition.email}`}
               className="text-2xl md:text-3xl hover:underline transition-all duration-200"
               style={{
                 fontFamily: 'Geist, sans-serif',
                 color: '#004bff',
               }}
             >
-              {t.competition.email}
+              {translationsOfLanguage.competition.email}
             </a>
           </div>
 
@@ -84,13 +84,13 @@ const Competition = () => {
               className="text-xl md:text-2xl font-semibold text-red-600 mb-2"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >
-              {t.competition.deadlineLabel}
+              {translationsOfLanguage.competition.deadlineLabel}
             </h3>
             <p
               className="text-2xl md:text-3xl text-red-600"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >
-              {t.competition.deadline}
+              {translationsOfLanguage.competition.deadline}
             </p>
           </div>
 
@@ -103,10 +103,10 @@ const Competition = () => {
                 color: '#004bff',
               }}
             >
-              {t.competition.categoriesTitle}
+              {translationsOfLanguage.competition.categoriesTitle}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-              {t.competition.categories.map((category, index) => (
+              {translationsOfLanguage.competition.categories.map((category, index) => (
                 <div key={index} className="flex items-center">
                   <span
                     className="text-2xl mr-2"

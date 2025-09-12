@@ -2,7 +2,7 @@ import React from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 
 const BelowFoldInfo = () => {
-  const { t, language } = useLanguage()
+  const { translationsOfLanguage, language } = useLanguage()
 
   return (
     <section className="py-20" style={{ backgroundColor: '#004bff' }}>

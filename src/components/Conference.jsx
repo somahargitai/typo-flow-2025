@@ -3,7 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext'
 import { X } from 'lucide-react'
 
 const Conference = () => {
-  const { t, language } = useLanguage()
+  const { translationsOfLanguage, language } = useLanguage()
   const [openOverlay, setOpenOverlay] = useState(null)
 
   const handleTileTap = index => {
@@ -173,7 +173,7 @@ Her interest in type design began during her BA years, and last year she was adm
               color: '#ff5251',
             }}
           >
-            {language === 'HU' ? 'TYPOFLOW KONFERENCIA' : 'TYPOFLOW CONFERENCE'}
+            {translationsOfLanguage.conference.title}
           </h1>
           <p
             className=" text-center mb-12 leading-8 font-semibold"
@@ -183,7 +183,7 @@ Her interest in type design began during her BA years, and last year she was adm
               color: '#ff5251',
             }}
           >
-            {language === 'HU' ? '2025. október 22.' : '2025. October 22.'}
+            {translationsOfLanguage.conference.date}
           </p>
           <div className="text-center">
             <p
@@ -194,9 +194,7 @@ Her interest in type design began during her BA years, and last year she was adm
                 color: '#004bff',
               }}
             >
-              {language === 'HU'
-                ? 'Helyszín: Széchenyi Egyetem, Menedzsment Campus'
-                : 'Location: Széchenyi University, Management Campus'}
+              {translationsOfLanguage.conference.location}
             </p>
             <p
               className="font-normal"
