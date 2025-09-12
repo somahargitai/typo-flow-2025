@@ -166,10 +166,9 @@ Her interest in type design began during her BA years, and last year she was adm
         {/* Conference Title Section - Separate from grid */}
         <div className="w-full items-center justify-center py-16 px-8">
           <h1
-            className="font-bold uppercase tracking-wide text-center mb-0"
+            className="font-bold uppercase text-center text-4xl sm:text-6xl md:text-9xl mb-10"
             style={{
               fontFamily: 'Big Shoulders Display, sans-serif',
-              fontSize: 'clamp(3rem, 8vw, 12rem)',
               color: '#ff5251',
             }}
           >
@@ -332,7 +331,7 @@ const TextOfTile = ({
       {/* Bottom Section: Title and Lecture Time */}
       <div className="flex flex-col justify-end">
         <p
-          className="text-black text-xs lg:text-sm xl:text-xl font-bold mb-0 leading-4 lg:leading-5"
+          className="text-black text-xs lg:text-xl xl:text-xl font-bold mb-0 leading-4 lg:leading-5"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#ff5251',
