@@ -164,10 +164,14 @@ Her interest in type design began during her BA years, and last year she was adm
     <section id="conference" className="py-0 bg-white">
       <div className="w-full">
         {/* Conference Title Section - Separate from grid */}
-        <div className="w-full items-center justify-center py-16 px-8">
+        <div
+          className="w-full items-center justify-center pt-14 pb-14 sm:pt-16
+            sm:pb-16 md:pt-26 md:pb-24 lg:pt-30 lg:pb-25 xl:pt-32 xl:pb-28
+            2xl:pt-40 2xl:pb-36 px-8"
+        >
           <h1
             className="font-bold uppercase text-center text-4xl sm:text-6xl
-              md:text-9xl mb-10"
+              md:text-9xl mb-2 lg:mb-8 xl:mb-10"
             style={{
               fontFamily: 'Big Shoulders Display, sans-serif',
               color: '#ff5251',
@@ -185,7 +189,7 @@ Her interest in type design began during her BA years, and last year she was adm
           >
             {translationsOfLanguage.conference.date}
           </p>
-          <div className="text-center">
+          <div className="text-center mb-0">
             <p
               className="font-normal"
               style={{
@@ -210,7 +214,7 @@ Her interest in type design began during her BA years, and last year she was adm
         </div>
 
         {/* Conference Grid - No title tile, only presentations */}
-        <div className="flex justify-center py-0 lg:py-20">
+        <div className="flex justify-center pb-0 md:pb-30 lg:pb-34 xl:pb-30 2xl:pb-42">
           <div
             className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-32 w-full
               lg:w-auto"
