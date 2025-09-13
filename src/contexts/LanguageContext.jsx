@@ -99,6 +99,14 @@ export const LanguageProvider = ({ children }) => {
             name: 'BRANDGUIDE KÜLÖNDÍJ',
             description: 'Yellow Designer közösség 3 havi előfizetés',
           },
+          {
+            name: 'ARTHUNGRY KÜLÖNDÍJ',
+            description: 'Oklevél',
+          },
+          {
+            name: 'FONTFRONT KÜLÖNDÍJ',
+            description: 'Oklevél',
+          },
         ],
       },
       footer: {
