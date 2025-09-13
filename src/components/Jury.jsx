@@ -264,8 +264,9 @@ graphic design in recent years.`,
           <div className="space-y-0">
             {/* Section Title */}
             <div
-              className="w-full flex items-center justify-center"
-              style={{ height: '25vw', backgroundColor: '#004bff' }}
+              className="w-full flex items-center justify-center h-[35vw]
+                lg:h-[25vw]"
+              style={{ backgroundColor: '#004bff' }}
             >
               <h2
                 className="font-bold text-white uppercase tracking-wide"
@@ -298,7 +299,7 @@ graphic design in recent years.`,
                   }
                   onTap={() => handleTileTap(index)}
                 />
-                 <HoverOverlay
+                <HoverOverlay
                   firstName={member.firstName}
                   lastName={member.lastName}
                   role_hu={member.role_hu}
@@ -308,7 +309,6 @@ graphic design in recent years.`,
                   isOpen={openOverlay === index}
                   onTap={() => handleTileTap(index)}
                 />
-                
               </div>
             ))}
           </div>
@@ -466,12 +466,80 @@ const TextOfTile = ({
                   50% { transform: translateX(8px) scaleX(1.3); }
                   75% { transform: translateX(4px) scaleX(1.15); }
                 }
+                
+                /* Custom description text sizing with proper breakpoints */
+                .custom-description-size {
+                  font-size: 1.125rem; /* 18px - base mobile */
+                }
+                
+                /* sm: 640px */
+                @media (min-width: 640px) {
+                  .custom-description-size {
+                    font-size: 1.5rem; /* 24px */
+                  }
+                }
+                
+                /* md: 768px */
+                @media (min-width: 768px) {
+                  .custom-description-size {
+                    font-size: 1.75rem; /* 28px */
+                  }
+                }
+                
+                /* lg: 1024px */
+                @media (min-width: 1024px) {
+                  .custom-description-size {
+                    font-size: 2rem; /* 32px */
+                  }
+                }
+                
+                /* xl: 1280px */
+                @media (min-width: 1280px) {
+                  .custom-description-size {
+                    font-size: 1.1rem; /* 26px */
+                  }
+                }
+
+                /* 1.5 xl: 1440px */
+                @media (min-width: 1440px) {
+                  .custom-description-size {
+                    font-size: 1.2rem; /* 26px */
+                  }
+                }
+                
+                // /* 2xl: 1536px */
+                // @media (min-width: 1536px) {
+                //   .custom-description-size {
+                //     font-size: 1.25rem; /* 28px */
+                //   }
+                // }
+                
+                /* 3xl: 1920px */
+                @media (min-width: 1920px) {
+                  .custom-description-size {
+                    font-size: 1.5rem; /* 32px */
+                  }
+                }
+                
+                /* 4xl: 2560px */
+                @media (min-width: 2560px) {
+                  .custom-description-size {
+                    font-size: 2.15rem; /* 36px */
+                  }
+                }
+                
+                /* 5xl: 3440px */
+                @media (min-width: 3440px) {
+                  .custom-description-size {
+                    font-size: 2.5rem; /* 40px */
+                  }
+                }
               `}
             </style>
           </defs>
-          <line className="line-1" y1="1.51" x2="36.99" y2="1.51"/>
-          <line className="line-2" y1="18.48" x2="27.68" y2="18.48"/>
-          <line className="line-3" y1="10" x2="44.85" y2="10"/>
+          <line className="line-1" y1="1.51" x2="36.99" y2="1.51" />
+          <line className="line-2" y1="18.48" x2="27.68" y2="18.48" />
+          <line className="line-3" y1="10" x2="44.85" y2="10" />
         </svg>
       </div>
     </div>
@@ -496,39 +564,40 @@ const HoverOverlay = ({
       {isOpen && (
         <div
           className="hidden xl:flex absolute inset-0 flex-col justify-top px-8
-            pt-10 transition-opacity duration-300 cursor-default opacity-100"
+            pt-8 2xl:px-16 2xl:pt-16 transition-opacity duration-300
+            cursor-default opacity-100"
           style={{ backgroundColor: '#ff5251' }}
           onClick={onTap}
         >
-        <h3
-          className="text-white text-4xl font-semibold uppercase tracking-wide
-            mb-3"
-          style={{ fontFamily: 'Geist, sans-serif' }}
-        >
-          {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
-            <>
-              {firstName} {lastName}
-            </>
-          ) : language === 'HU' ? (
-            <>
-              {lastName} {firstName}
-            </>
-          ) : (
-            <>
-              {firstName} {lastName}
-            </>
-          )}
-        </h3>
+          <h3
+            className="text-white text-4xl font-semibold uppercase tracking-wide
+              mb-3 2xl:mb-6"
+            style={{ fontFamily: 'Geist, sans-serif' }}
+          >
+            {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
+              <>
+                {firstName} {lastName}
+              </>
+            ) : language === 'HU' ? (
+              <>
+                {lastName} {firstName}
+              </>
+            ) : (
+              <>
+                {firstName} {lastName}
+              </>
+            )}
+          </h3>
 
-        <p
-          className="text-white text-lg font-normal leading-tight"
-          style={{
-            fontFamily: 'Geist, sans-serif',
-            fontSize: 'clamp(1.125rem, 1.2rem, 1.75rem)',
-          }}
-        >
-          {language === 'HU' ? description_hu : description_en}
-        </p>
+          <p
+            className="text-white font-normal leading-tight
+              custom-description-size"
+            style={{
+              fontFamily: 'Geist, sans-serif',
+            }}
+          >
+            {language === 'HU' ? description_hu : description_en}
+          </p>
         </div>
       )}
 
@@ -554,23 +623,16 @@ const HoverOverlay = ({
                 tracking-wide mb-6"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >
-              {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
-                <>
-                  {firstName} {lastName}
-                </>
-              ) : language === 'HU' ? (
-                <>
-                  {lastName} {firstName}
-                </>
-              ) : (
-                <>
-                  {firstName} {lastName}
-                </>
-              )}
+              {firstName === 'MATEUSZ' && lastName === 'MACHALSKI'
+                ? `${firstName} ${lastName}`
+                : language === 'HU'
+                  ? `${lastName} ${firstName}`
+                  : `${firstName} ${lastName}`}
             </h3>
 
             <p
-              className="text-white text-lg font-normal leading-relaxed"
+              className="text-white font-normal leading-relaxed
+                custom-description-size"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >
               {language === 'HU' ? description_hu : description_en}
