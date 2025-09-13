@@ -298,7 +298,7 @@ graphic design in recent years.`,
                   }
                   onTap={() => handleTileTap(index)}
                 />
-                <HoverOverlay
+                 <HoverOverlay
                   firstName={member.firstName}
                   lastName={member.lastName}
                   role_hu={member.role_hu}
@@ -308,6 +308,7 @@ graphic design in recent years.`,
                   isOpen={openOverlay === index}
                   onTap={() => handleTileTap(index)}
                 />
+                
               </div>
             ))}
           </div>
@@ -422,11 +423,57 @@ const TextOfTile = ({
         {language === 'HU' ? role_hu : role_en}
       </p>
       {/* Decorative lines */}
-      <img
-        src="/lines-button.svg"
-        alt="Decorative lines"
-        className="w-8 h-8 md:w-16 md:h-16"
-      />
+      <div className="w-8 h-8 md:w-16 md:h-16 group/lines">
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 46.54 20.76"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <style>
+              {`
+                .line-1, .line-2, .line-3 {
+                  stroke: #fff;
+                  stroke-miterlimit: 10;
+                  stroke-width: 2.53px;
+                  fill: none;
+                  transition: all 0.3s ease;
+                }
+                .group\\/lines:hover .line-1 {
+                  animation: wave1 0.8s ease-in-out infinite;
+                }
+                .group\\/lines:hover .line-2 {
+                  animation: wave2 0.8s ease-in-out infinite 0.2s;
+                }
+                .group\\/lines:hover .line-3 {
+                  animation: wave3 0.8s ease-in-out infinite 0.4s;
+                }
+                @keyframes wave1 {
+                  0%, 100% { transform: translateX(0) scaleX(1); }
+                  25% { transform: translateX(3px) scaleX(1.1); }
+                  50% { transform: translateX(6px) scaleX(1.2); }
+                  75% { transform: translateX(3px) scaleX(1.1); }
+                }
+                @keyframes wave2 {
+                  0%, 100% { transform: translateX(0) scaleX(1); }
+                  25% { transform: translateX(-2px) scaleX(0.9); }
+                  50% { transform: translateX(-4px) scaleX(0.8); }
+                  75% { transform: translateX(-2px) scaleX(0.9); }
+                }
+                @keyframes wave3 {
+                  0%, 100% { transform: translateX(0) scaleX(1); }
+                  25% { transform: translateX(4px) scaleX(1.15); }
+                  50% { transform: translateX(8px) scaleX(1.3); }
+                  75% { transform: translateX(4px) scaleX(1.15); }
+                }
+              `}
+            </style>
+          </defs>
+          <line className="line-1" y1="1.51" x2="36.99" y2="1.51"/>
+          <line className="line-2" y1="18.48" x2="27.68" y2="18.48"/>
+          <line className="line-3" y1="10" x2="44.85" y2="10"/>
+        </svg>
+      </div>
     </div>
   )
 }
@@ -445,15 +492,14 @@ const HoverOverlay = ({
   const { language } = useLanguage()
   return (
     <>
-      {/* Desktop hover overlay */}
-      <div
-        className={`hidden xl:flex absolute inset-0 flex-col justify-top px-8
-          pt-10 transition-opacity duration-300 cursor-default ${
-            isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-          }`}
-        style={{ backgroundColor: '#ff5251' }}
-        onClick={onTap}
-      >
+      {/* Desktop click overlay */}
+      {isOpen && (
+        <div
+          className="hidden xl:flex absolute inset-0 flex-col justify-top px-8
+            pt-10 transition-opacity duration-300 cursor-default opacity-100"
+          style={{ backgroundColor: '#ff5251' }}
+          onClick={onTap}
+        >
         <h3
           className="text-white text-4xl font-semibold uppercase tracking-wide
             mb-3"
@@ -483,7 +529,8 @@ const HoverOverlay = ({
         >
           {language === 'HU' ? description_hu : description_en}
         </p>
-      </div>
+        </div>
+      )}
 
       {/* Mobile and iPad fullscreen modal */}
       {isOpen && (

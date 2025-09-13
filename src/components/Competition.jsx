@@ -7,7 +7,7 @@ const Competition = () => {
   return (
     <section id="competition" className="py-16 bg-white rounded-2xl">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto px-8">
+        <div className="max-w-4xl mx-auto px-4">
           {/* Title */}
           <h2
             className="text-4xl md:text-7xl font-bold mb-8 text-left"
@@ -68,7 +68,7 @@ const Competition = () => {
             </h3>
             <a
               href={`mailto:${translationsOfLanguage.competition.email}`}
-              className="text-2xl md:text-3xl hover:underline transition-all
+              className="text-2xl md:text-4xl hover:underline transition-all
                 duration-200"
               style={{
                 fontFamily: 'Geist, sans-serif',
@@ -82,17 +82,12 @@ const Competition = () => {
           {/* Deadline Section */}
           <div className="mb-8">
             <h3
-              className="text-xl md:text-2xl font-semibold text-red-600 mb-2"
+              className="text-xl md:text-4xl font-semibold text-red-600 mb-2"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >
-              {translationsOfLanguage.competition.deadlineLabel}
-            </h3>
-            <p
-              className="text-2xl md:text-3xl text-red-600"
-              style={{ fontFamily: 'Geist, sans-serif' }}
-            >
+              {translationsOfLanguage.competition.deadlineLabel}{' '}
               {translationsOfLanguage.competition.deadline}
-            </p>
+            </h3>
           </div>
 
           {/* Categories Section */}

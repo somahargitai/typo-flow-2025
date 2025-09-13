@@ -237,6 +237,7 @@ Her interest in type design began during her BA years, and last year she was adm
                   description_en={speaker.description_en}
                   description_hu={speaker.description_hu}
                   onTap={() => handleTileTap(index)}
+                  index={index}
                 />
                 <HoverOverlay
                   firstName={speaker.firstName}
@@ -250,6 +251,7 @@ Her interest in type design began during her BA years, and last year she was adm
                   description_en={speaker.description_en}
                   isOpen={openOverlay === index}
                   onTap={() => handleTileTap(index)}
+                  index={index}
                 />
               </div>
             ))}
@@ -265,7 +267,7 @@ const PhotoOfTile = ({ image, firstName, lastName }) => {
   const { language } = useLanguage()
   return (
     <div
-      className="w-1/2 lg:w-48 lg:h-48 xl:w-44 xl:h-44 2xl:w-100 2xl:h-100
+      className="w-1/2 lg:w-48 lg:h-48 xl:w-44 xl:h-44 2xl:w-80 2xl:h-80
         aspect-square lg:aspect-auto overflow-hidden"
     >
       <img
@@ -292,20 +294,20 @@ const TextOfTile = ({
   presentationTime,
   description_hu,
   description_en,
-
   onTap,
+  index,
 }) => {
   const { language } = useLanguage()
   return (
     <div
-      className="w-1/2 lg:w-96 lg:h-48 xl:w-88 xl:h-44 2xl:w-80 2xl:h-40
-        aspect-square lg:aspect-auto flex flex-col justify-top
-        lg:justify-between p-6 lg:pl-4 lg:p-0 cursor-pointer md:cursor-default"
+      id="text-of-tile"
+      className="w-1/2 lg:w-96 xl:w-88 2xl:w-80 2xl:h-80 aspect-square
+        lg:aspect-auto flex flex-col justify-top lg:justify-between p-6 lg:pl-4
+        lg:p-0 cursor-pointer md:cursor-default"
       style={{ backgroundColor: 'white' }}
       onClick={onTap}
     >
-      {/* Top Section: Name, Role, SVG */}
-      <div>
+      <div id={`top-section-${index}`}>
         {/* Name */}
         <h3
           className="text-black text-lg lg:text-[1.375rem] xl:text-[1.5rem]
@@ -321,7 +323,7 @@ const TextOfTile = ({
               ? `${firstName} ${lastName}`
               : `${lastName} ${firstName}`}
         </h3>
-        {/* Role */}
+
         <p
           className="text-black text-xs lg:text-sm xl:text-base font-normal mb-0
             leading-3 lg:leading-4"
@@ -332,19 +334,21 @@ const TextOfTile = ({
         >
           {language === 'HU' ? role_hu : role_en}
         </p>
-        {/* Decorative lines */}
+
         <img
+          id={`decorativeLines-${index}`}
           src="/lines-button-blue.svg"
           alt="Decorative lines"
           className="w-8 h-8 md:w-8 md:h-8"
         />
       </div>
 
-      {/* Bottom Section: Title and Lecture Time */}
-      <div className="flex flex-col justify-end">
+      <div id={`bottom-section-${index}`} className="flex flex-col justify-end">
         <p
-          className="text-black text-xs lg:text-xl xl:text-xl font-bold mb-0
-            leading-4 lg:leading-5"
+          id={`presentationTitle-${index}`}
+          className="text-black font-bold text-xs leading-4 lg:text-xl
+            lg:leading-5 xl:text-xl xl:leading-5 2xl:text-2xl 2xl:leading-7
+            mb-0"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#ff5251',
@@ -353,8 +357,9 @@ const TextOfTile = ({
           {language === 'HU' ? presentationTitle_hu : presentationTitle_en}
         </p>
         <p
-          className="text-black text-xs lg:text-sm xl:text-base font-normal
-            mb-0"
+          id={`presentationTime-${index}`}
+          className="text-black text-xs lg:text-sm xl:text-base 2xl:text-xl
+            font-normal mb-0 2xl:mt-2"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#004bff',
@@ -381,13 +386,14 @@ const HoverOverlay = ({
   description_en,
   isOpen,
   onTap,
+  index,
 }) => {
   const { language } = useLanguage()
   return (
     <>
       {/* Desktop hover overlay */}
       <div
-        className={`hidden xl:flex absolute inset-0 flex-col justify-start px-8
+        className={`hidden xl:flex absolute inset-0 flex-col justify-start px-0
           pt-0 transition-opacity duration-300 cursor-default ${
             isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
           }`}
@@ -395,9 +401,9 @@ const HoverOverlay = ({
         onClick={onTap}
       >
         <h3
-          className="text-white text-3xl font-bold uppercase tracking-wide mb-2"
+          className="text-white text-2xl font-bold uppercase tracking-wide mb-2"
           style={{
-            fontFamily: 'Big Shoulders Display, sans-serif',
+            fontFamily: 'Geist, sans-serif',
             color: '#004bff',
           }}
         >
@@ -409,7 +415,7 @@ const HoverOverlay = ({
         </h3>
 
         <p
-          className="text-base font-normal leading-4"
+          className="text-base font-normal leading-6 2xl:text-xl"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#004bff',
