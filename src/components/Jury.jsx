@@ -39,7 +39,7 @@ of design practice. She is the author of self-published artists’ books and gra
     {
       firstName: 'OSZKÁR',
       lastName: 'BOSKOVITZ',
-      image: 'Oszi2_static.webp',
+      image: 'Oszi2.webp',
       role_hu: 'tervezőgrafikus, tipográfus',
       role_en: 'graphic designer, typographer',
       description_hu: `A professzionális betűtervezésben és annak oktatásában látja a hazai
@@ -59,7 +59,7 @@ and the Golden Drawing Pin Award.`,
     {
       firstName: 'GERGŐ',
       lastName: 'CUBA',
-      image: 'Cuba_Gergo2_static.webp',
+      image: 'Cuba_Gergo2.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
       description_hu: `15+ éve dolgozom szabadúszó tervezőgrafikusként, közel 5 éve egy brit
@@ -77,7 +77,7 @@ I have been teaching in higher education for more than 10 years; alongside brand
     {
       firstName: 'ANNA',
       lastName: 'FARKAS',
-      image: 'Farkasanna2_static.webp',
+      image: 'Farkasanna2.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
       description_hu: `Red Dot: Grand Prix-, Ferenczy Noémi-, valamint többszörös Red Dot
@@ -95,7 +95,7 @@ University of Fine Arts. More than 25 years ago, she founded her own studio unde
     {
       firstName: 'ZOLTÁN',
       lastName: 'HALASI',
-      image: 'Halasi_Zoltan2_static.webp',
+      image: 'Halasi_Zoltan2.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
       description_hu: `Ferenczy Noémi-díjas, többszörös Országos Tervezőgrafikai Biennálé és
@@ -112,7 +112,7 @@ University, and the founder of the FontFront typography competition.`,
     {
       firstName: 'NÓRA',
       lastName: 'KASZANYI',
-      image: 'kaszanyi_nora2_static.webp',
+      image: 'kaszanyi_nora2.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
       description_hu: `World Brand Design Society & DNA Paris díjas, többszörös
@@ -131,7 +131,7 @@ and packaging design.`,
     {
       firstName: 'MATEUSZ',
       lastName: 'MACHALSKI',
-      image: 'Machalski2_static.webp',
+      image: 'Machalski2.webp',
       role_hu: 'tervezőgrafikus, zsűrielnök',
       role_en: `graphic designer, chair of the jury`,
       description_hu: `Díjnyertes grafikusművész, munkássága fókuszában a tipográfia és
@@ -147,7 +147,7 @@ of Polish design worldwide.
     {
       firstName: 'JÁNOS',
       lastName: 'KŐRÖS',
-      image: 'Koros_Janos2_static.webp',
+      image: 'Koros_Janos2.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
       description_hu: `2004-2009, Zirc, III. Béla Gimnázium, Művészeti Szakgimnázium és
@@ -163,7 +163,7 @@ a member of Halisten Studio.`,
     {
       firstName: 'DOROTTYA',
       lastName: 'NAGY',
-      image: 'nagydorottya2_static.webp',
+      image: 'nagydorottya2.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
       description_hu: `Alap- és mesterdiplomámat a Moholy-Nagy Művészeti Egyetem
@@ -183,7 +183,7 @@ Communications. In addition to my permanent freelance graphic design work, I wor
     {
       firstName: 'LÁSZLÓ',
       lastName: 'NASKE',
-      image: 'Naske_Laci2_static.webp',
+      image: 'Naske_Laci2.webp',
       role_hu: 'betűtervező',
       role_en: 'graphic designer',
       description_hu: `Laci tervezőgrafikusként főként betűfókuszú arculatokat, logókat és
@@ -196,7 +196,7 @@ Currently, alongside his design work, he also teaches type design at the Design 
     {
       firstName: 'PÉTER',
       lastName: 'SERFŐZŐ',
-      image: 'Sese2_static.webp',
+      image: 'Sese2.webp',
       role_hu: 'brandstratéga',
       role_en: `brand strategist`,
       description_hu: `Gyermekkoromban kreatív környezetben nőttem fel. Szüleim
@@ -218,7 +218,7 @@ conviction—one that drives me not only to nurture the visual culture of my imm
     {
       firstName: 'JOSÉ',
       lastName: 'TÁBORI-SIMON',
-      image: 'Jose3_static.webp',
+      image: 'Jose3.webp',
       role_hu: 'tervezőgrafikus',
       role_en: `graphic designer`,
       description_hu: `Magyar Formatervezési Díjas, Arany Rajzszög Díjas, többszörös Országos
@@ -237,7 +237,7 @@ magyar gasztrocsomagolások című művészeti albumok szerkesztője.`,
     {
       firstName: 'SZABÓ',
       lastName: 'ANDREA',
-      image: 'Szabo_Andrea2_static.webp',
+      image: 'Szabo_Andrea.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
       description_hu: `Ferenczy Noémi-díjas grafikusművész, a Magyar Képzőművészeti
