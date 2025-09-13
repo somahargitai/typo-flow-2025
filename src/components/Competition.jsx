@@ -5,7 +5,7 @@ const Competition = () => {
   const { translationsOfLanguage, language } = useLanguage()
 
   return (
-    <section id="competition" className="py-16 bg-white rounded-2xl">
+    <section id="competition" className="mt-20 mb-20 bg-white rounded-2xl">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto px-4">
           {/* Title */}
@@ -48,6 +48,7 @@ const Competition = () => {
                 color: '#004bff',
               }}
             >
+              {translationsOfLanguage.competition.imageParameters} <br />
               {translationsOfLanguage.competition.fileSize} <br />
               {translationsOfLanguage.competition.fileOrientation} <br />
               {translationsOfLanguage.competition.fileNameRule} <br />
@@ -80,13 +81,20 @@ const Competition = () => {
           </div>
 
           {/* Deadline Section */}
-          <div className="mb-8">
+          <div className="mb-16">
             <h3
-              className="text-xl md:text-4xl font-semibold text-red-600 mb-2"
+              className="text-2xl md:text-4xl font-semibold text-red-600 mb-2"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >
-              {translationsOfLanguage.competition.deadlineLabel}{' '}
-              {translationsOfLanguage.competition.deadline}
+              <span className="lg:hidden">
+                {translationsOfLanguage.competition.deadlineLabel}
+                <br />
+                {translationsOfLanguage.competition.deadline}
+              </span>
+              <span className="hidden lg:inline">
+                {translationsOfLanguage.competition.deadlineLabel}{' '}
+                {translationsOfLanguage.competition.deadline}
+              </span>
             </h3>
           </div>
 
