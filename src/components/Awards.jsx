@@ -7,7 +7,7 @@ const Awards = () => {
   return (
     <section id="awards" className="mb-24 bg-white rounded-2xl">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto px-8">
+        <div className="max-w-4xl mx-auto px-4">
           {/* Title */}
           <h2
             className="text-4xl md:text-7xl font-bold mb-8 text-left"
