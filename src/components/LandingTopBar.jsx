@@ -6,6 +6,7 @@ const LandingTopBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [isAnimating, setIsAnimating] = useState(false)
 
   const scrollToSection = sectionId => {
     const element = document.getElementById(sectionId)
@@ -13,6 +14,16 @@ const LandingTopBar = () => {
       element.scrollIntoView({ behavior: 'smooth' })
     }
     setIsMenuOpen(false)
+  }
+
+  const handleLanguageToggle = () => {
+    setIsAnimating(true)
+    toggleLanguage()
+
+    // Reset animation state after animation completes
+    setTimeout(() => {
+      setIsAnimating(false)
+    }, 800)
   }
 
   useEffect(() => {
@@ -168,15 +179,18 @@ const LandingTopBar = () => {
           {/* Right side - Language switcher */}
           <div className="flex items-center space-x-2">
             <button
-              onClick={toggleLanguage}
-              className="px-2 py-1 md:px-4 md:py-2 transition-colors font-medium
-                text-white border-white hover:text-gray-300 text-xl md:text-xl
-                lg:text-[2.1rem] tracking-wider"
+              onClick={handleLanguageToggle}
+              className="px-2 py-1 md:px-4 md:py-2 font-medium text-white
+                border-white text-xl md:text-xl lg:text-[2.1rem] tracking-wider
+                transition-all duration-300 ease-in-out"
               style={{
                 fontFamily: 'Big Shoulders Display, sans-serif',
+                transform: isAnimating
+                  ? 'scale(1.8) rotateY(360deg)'
+                  : 'scale(1) rotateY(0deg)',
               }}
             >
-              EN / HU
+              {isAnimating ? language : 'EN / HU'}
             </button>
           </div>
         </div>
