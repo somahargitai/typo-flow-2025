@@ -101,7 +101,7 @@ export const LanguageProvider = ({ children }) => {
           },
           {
             name: 'ARTHUNGRY KÜLÖNDÍJ',
-            description: 'Oklevél',
+            description: 'Artbooks könyvcsomag',
           },
           {
             name: 'FONTFRONT KÜLÖNDÍJ',
@@ -193,6 +193,14 @@ export const LanguageProvider = ({ children }) => {
           {
             name: 'BRANDGUIDE SPECIAL AWARD',
             description: 'YELLOW Designer Community 3-month subscription',
+          },
+          {
+            name: 'ARTBOOKS SPECIAL AWARD',
+            description: 'Artbooks book package',
+          },
+          {
+            name: 'FONTFRONT SPECIAL AWARD',
+            description: 'Certificate',
           },
         ],
       },
