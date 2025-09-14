@@ -1,5 +1,7 @@
 # Typo Flow 2025
 
+![Typo Flow 2025 Logo](docs/assets/typoflow-readme-logo.jpg)
+
 I. országos tipográfiai biennálé  
 Győr, 2025 október 22-november 9  
 Széchenyi Egyetem, Design Campus
