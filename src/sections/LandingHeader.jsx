@@ -53,6 +53,15 @@ const LandingHeader = () => {
             placeItems: 'center',
           }}
         >
+          <style>
+            {`
+              @media (max-height: 599px) {
+                #logo-container {
+                  height: min(40vw, 40vh) !important;
+                }
+              }
+            `}
+          </style>
           {/* Logo - Mobile: centered, Desktop: bottom positioned */}
           <img
             src="/images/logo.svg"
