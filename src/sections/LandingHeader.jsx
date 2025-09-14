@@ -14,9 +14,12 @@ const LandingHeader = () => {
       const mainTitle = document.getElementById('main-title')
 
       if (topBar && mainTitle) {
-        const topBarHeight = topBar.offsetHeight
-        const mainTitleHeight = mainTitle.offsetHeight
-        const availableHeight = viewportHeight - topBarHeight - mainTitleHeight
+        const topBarHeight = topBar.offsetHeight;
+        const mainTitleHeight = mainTitle.offsetHeight;
+        let availableHeight = viewportHeight - topBarHeight - mainTitleHeight
+        if (viewportHeight < 600) {
+          availableHeight = viewportHeight
+        }
         setLogoWrapperHeight(`${availableHeight}px`)
       }
     }
@@ -38,7 +41,7 @@ const LandingHeader = () => {
       {/* Logo wrapper - calculated height with padding */}
       <div
         id="logo-wrapper"
-        className="w-full flex items-center justify-center pt-20"
+        className="w-full flex items-center justify-center pt-0 lg:pt-20"
         style={{
           height: logoWrapperHeight,
         }}

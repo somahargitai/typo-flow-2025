@@ -9,6 +9,15 @@ const LandingBottomBar = () => {
       id="main-title"
       className="container mx-auto px-4 text-center pt-20 mt-0 pb-12"
     >
+      <style>
+        {`
+          @media (max-height: 599px) {
+            #main-title {
+              display: none !important;
+            }
+          }
+        `}
+      </style>
       <h1
         className="text-white font-bold text-3xl sm:text-4xl md:text-6xl
           lg:text-[4.5rem] xl:text-[4.5rem] mb-4 uppercase tracking-wide
