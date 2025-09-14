@@ -1,14 +1,14 @@
 import React from 'react'
 import { LanguageProvider } from './contexts/LanguageContext'
 
-import LandingHeader from './components/LandingHeader'
-import BelowFoldInfo from './components/BelowFoldInfo'
-import Competition from './components/Competition'
-import Awards from './components/Awards'
-import Jury from './components/Jury'
-import Conference from './components/Conference'
-import SupportersFooter from './components/SupportersFooter'
-import ImpressumFooter from './components/ImpressumFooter'
+import LandingHeader from './sections/LandingHeader'
+import BelowFoldInfo from './sections/BelowFoldInfo'
+import Competition from './sections/Competition'
+import Awards from './sections/Awards'
+import Jury from './sections/Jury'
+import Conference from './sections/Conference'
+import SupportersFooter from './sections/SupportersFooter'
+import ImpressumFooter from './sections/ImpressumFooter'
 
 function AppContent() {
   return (

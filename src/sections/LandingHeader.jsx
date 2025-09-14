@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
-import LandingTopBar from './LandingTopBar'
-import LandingBottomBar from './LandingBottomBar'
+import LandingTopBar from '../components/LandingTopBar'
+import LandingBottomBar from '../components/LandingBottomBar'
 
 const LandingHeader = () => {
   const { translationsOfLanguage } = useLanguage()
