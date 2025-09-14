@@ -432,20 +432,20 @@ const TextOfTile = ({
           <defs>
             <style>
               {`
-                .line-1, .line-2, .line-3 {
-                  stroke: #fff;
+                .jury-line-1, .jury-line-2, .jury-line-3 {
+                  stroke: #fff !important;
                   stroke-miterlimit: 10;
                   stroke-width: 2.53px;
                   fill: none;
                   transition: all 0.3s ease;
                 }
-                .group\\/lines:hover .line-1 {
+                .group\\/lines:hover .jury-line-1 {
                   animation: wave1 0.8s ease-in-out infinite;
                 }
-                .group\\/lines:hover .line-2 {
+                .group\\/lines:hover .jury-line-2 {
                   animation: wave2 0.8s ease-in-out infinite 0.2s;
                 }
-                .group\\/lines:hover .line-3 {
+                .group\\/lines:hover .jury-line-3 {
                   animation: wave3 0.8s ease-in-out infinite 0.4s;
                 }
                 @keyframes wave1 {
@@ -466,80 +466,36 @@ const TextOfTile = ({
                   50% { transform: translateX(8px) scaleX(1.3); }
                   75% { transform: translateX(4px) scaleX(1.15); }
                 }
-                
-                /* Custom description text sizing with proper breakpoints */
-                .custom-description-size {
-                  font-size: 1.125rem; /* 18px - base mobile */
-                }
-                
-                /* sm: 640px */
-                @media (min-width: 640px) {
-                  .custom-description-size {
-                    font-size: 1.5rem; /* 24px */
-                  }
-                }
-                
-                /* md: 768px */
-                @media (min-width: 768px) {
-                  .custom-description-size {
-                    font-size: 1.75rem; /* 28px */
-                  }
-                }
-                
-                /* lg: 1024px */
-                @media (min-width: 1024px) {
-                  .custom-description-size {
-                    font-size: 2rem; /* 32px */
-                  }
-                }
-                
-                /* xl: 1280px */
-                @media (min-width: 1280px) {
-                  .custom-description-size {
-                    font-size: 1.1rem; /* 26px */
-                  }
-                }
-
-                /* 1.5 xl: 1440px */
-                @media (min-width: 1440px) {
-                  .custom-description-size {
-                    font-size: 1.2rem; /* 26px */
-                  }
-                }
-                
-                // /* 2xl: 1536px */
-                // @media (min-width: 1536px) {
-                //   .custom-description-size {
-                //     font-size: 1.25rem; /* 28px */
-                //   }
-                // }
-                
-                /* 3xl: 1920px */
-                @media (min-width: 1920px) {
-                  .custom-description-size {
-                    font-size: 1.5rem; /* 32px */
-                  }
-                }
-                
-                /* 4xl: 2560px */
-                @media (min-width: 2560px) {
-                  .custom-description-size {
-                    font-size: 2.15rem; /* 36px */
-                  }
-                }
-                
-                /* 5xl: 3440px */
-                @media (min-width: 3440px) {
-                  .custom-description-size {
-                    font-size: 2.5rem; /* 40px */
-                  }
-                }
               `}
             </style>
           </defs>
-          <line className="line-1" y1="1.51" x2="36.99" y2="1.51" />
-          <line className="line-2" y1="18.48" x2="27.68" y2="18.48" />
-          <line className="line-3" y1="10" x2="44.85" y2="10" />
+          <line 
+            className="jury-line-1" 
+            y1="1.51" 
+            x2="36.99" 
+            y2="1.51" 
+            stroke="#fff"
+            strokeWidth="2.53"
+            fill="none"
+          />
+          <line 
+            className="jury-line-2" 
+            y1="18.48" 
+            x2="27.68" 
+            y2="18.48" 
+            stroke="#fff"
+            strokeWidth="2.53"
+            fill="none"
+          />
+          <line 
+            className="jury-line-3" 
+            y1="10" 
+            x2="44.85" 
+            y2="10" 
+            stroke="#fff"
+            strokeWidth="2.53"
+            fill="none"
+          />
         </svg>
       </div>
     </div>

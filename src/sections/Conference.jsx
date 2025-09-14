@@ -348,23 +348,23 @@ const TextOfTile = ({
           >
             <defs>
               <style>
-                {`
-                  .line-1, .line-2, .line-3 {
-                    stroke: #004bff;
-                    stroke-miterlimit: 10;
-                    stroke-width: 2.53px;
-                    fill: none;
-                    transition: all 0.3s ease;
-                  }
-                  .group\\/lines:hover .line-1 {
-                    animation: wave1 0.8s ease-in-out infinite;
-                  }
-                  .group\\/lines:hover .line-2 {
-                    animation: wave2 0.8s ease-in-out infinite 0.2s;
-                  }
-                  .group\\/lines:hover .line-3 {
-                    animation: wave3 0.8s ease-in-out infinite 0.4s;
-                  }
+              {`
+                .conference-line-1, .conference-line-2, .conference-line-3 {
+                  stroke: #004bff;
+                  stroke-miterlimit: 10;
+                  stroke-width: 2.53px;
+                  fill: none;
+                  transition: all 0.3s ease;
+                }
+                .group\\/lines:hover .conference-line-1 {
+                  animation: wave1 0.8s ease-in-out infinite;
+                }
+                .group\\/lines:hover .conference-line-2 {
+                  animation: wave2 0.8s ease-in-out infinite 0.2s;
+                }
+                .group\\/lines:hover .conference-line-3 {
+                  animation: wave3 0.8s ease-in-out infinite 0.4s;
+                }
                   @keyframes wave1 {
                     0%, 100% { transform: translateX(0) scaleX(1); }
                     25% { transform: translateX(3px) scaleX(1.1); }
@@ -386,9 +386,9 @@ const TextOfTile = ({
                 `}
               </style>
             </defs>
-            <line className="line-1" y1="1.51" x2="36.99" y2="1.51" />
-            <line className="line-2" y1="18.48" x2="27.68" y2="18.48" />
-            <line className="line-3" y1="10" x2="44.85" y2="10" />
+            <line className="conference-line-1" y1="1.51" x2="36.99" y2="1.51" />
+            <line className="conference-line-2" y1="18.48" x2="27.68" y2="18.48" />
+            <line className="conference-line-3" y1="10" x2="44.85" y2="10" />
           </svg>
         </div>
       </div>
