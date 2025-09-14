@@ -81,7 +81,7 @@ of the Hungarian Book Design Award. Father of Soma and Léna, husband of Zita.`,
       image: 'Mateusz_Anna.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
-      presentationTitle:
+      presentationTitle_hu:
         'CONNECTING THE DOTS. TYPOTEKA – A LENGYEL TIPOGRÁFIA TÖRTÉNETE',
       presentationTitle_en:
         'CONNECTING THE DOTS. TYPOTEKA – HISTORY OF POLISH TYPOGRAPHY',
@@ -339,12 +339,58 @@ const TextOfTile = ({
           {language === 'HU' ? role_hu : role_en}
         </p>
 
-        <img
-          id={`decorativeLines-${index}`}
-          src="/lines-button-blue.svg"
-          alt="Decorative lines"
-          className="w-8 h-8 md:w-8 md:h-8"
-        />
+        {/* Decorative lines */}
+        <div className="w-8 h-8 md:w-16 md:h-16 group/lines">
+          <svg
+            className="w-full h-full"
+            viewBox="0 0 46.54 20.76"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <style>
+                {`
+                  .line-1, .line-2, .line-3 {
+                    stroke: #004bff;
+                    stroke-miterlimit: 10;
+                    stroke-width: 2.53px;
+                    fill: none;
+                    transition: all 0.3s ease;
+                  }
+                  .group\\/lines:hover .line-1 {
+                    animation: wave1 0.8s ease-in-out infinite;
+                  }
+                  .group\\/lines:hover .line-2 {
+                    animation: wave2 0.8s ease-in-out infinite 0.2s;
+                  }
+                  .group\\/lines:hover .line-3 {
+                    animation: wave3 0.8s ease-in-out infinite 0.4s;
+                  }
+                  @keyframes wave1 {
+                    0%, 100% { transform: translateX(0) scaleX(1); }
+                    25% { transform: translateX(3px) scaleX(1.1); }
+                    50% { transform: translateX(6px) scaleX(1.2); }
+                    75% { transform: translateX(3px) scaleX(1.1); }
+                  }
+                  @keyframes wave2 {
+                    0%, 100% { transform: translateX(0) scaleX(1); }
+                    25% { transform: translateX(-2px) scaleX(0.9); }
+                    50% { transform: translateX(-4px) scaleX(0.8); }
+                    75% { transform: translateX(-2px) scaleX(0.9); }
+                  }
+                  @keyframes wave3 {
+                    0%, 100% { transform: translateX(0) scaleX(1); }
+                    25% { transform: translateX(4px) scaleX(1.15); }
+                    50% { transform: translateX(8px) scaleX(1.3); }
+                    75% { transform: translateX(4px) scaleX(1.15); }
+                  }
+                `}
+              </style>
+            </defs>
+            <line className="line-1" y1="1.51" x2="36.99" y2="1.51" />
+            <line className="line-2" y1="18.48" x2="27.68" y2="18.48" />
+            <line className="line-3" y1="10" x2="44.85" y2="10" />
+          </svg>
+        </div>
       </div>
 
       <div id={`bottom-section-${index}`} className="flex flex-col justify-end">
@@ -395,15 +441,14 @@ const HoverOverlay = ({
   const { language } = useLanguage()
   return (
     <>
-      {/* Desktop hover overlay */}
-      <div
-        className={`hidden xl:flex absolute inset-0 flex-col justify-start px-0
-          pt-0 transition-opacity duration-300 cursor-default ${
-            isOpen ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-          }`}
-        style={{ backgroundColor: 'white' }}
-        onClick={onTap}
-      >
+      {/* Desktop click overlay */}
+      {isOpen && (
+        <div
+          className="hidden xl:flex absolute inset-0 flex-col justify-start px-0
+            pt-0 transition-opacity duration-300 cursor-default opacity-100"
+          style={{ backgroundColor: 'white' }}
+          onClick={onTap}
+        >
         <h3
           className="text-white text-2xl font-bold uppercase tracking-wide mb-2"
           style={{
@@ -427,7 +472,8 @@ const HoverOverlay = ({
         >
           {language === 'HU' ? description_hu : description_en}
         </p>
-      </div>
+        </div>
+      )}
 
       {/* Mobile and iPad fullscreen modal */}
       {isOpen && (
