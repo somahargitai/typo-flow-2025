@@ -63,7 +63,7 @@ export const LanguageProvider = ({ children }) => {
         title: 'TYPO FLOW',
         year: '2025',
         eventTitle: 'I. országos tipográfiai biennálé',
-        date: '2025 október 22-november 9',
+        date: '2025 október 22. – november 9.',
         location: 'Széchenyi Egyetem, Design Campus',
       },
       participants: {
@@ -75,7 +75,7 @@ export const LanguageProvider = ({ children }) => {
       eventInfo: {
         title: 'ESEMÉNY INFORMÁCIÓK',
         date: 'Időpont',
-        dateValue: '2025. október 22. - november 9.',
+        dateValue: '2025. október 22. – november 9.',
         location: 'Helyszín',
         locationValue: 'Széchenyi Egyetem\nDesign Campus, Győr',
         participation: 'RÉSZTVÉTEL',
