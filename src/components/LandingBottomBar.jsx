@@ -7,7 +7,7 @@ const LandingBottomBar = () => {
   return (
     <div
       id="main-title"
-      className="container mx-auto px-4 text-center mt-20 pt-0 pb-12 mmd:pb-0"
+      className="container mx-auto px-4 text-center pt-20 mt-0 pb-12"
     >
       <h1
         className="text-white font-bold text-3xl sm:text-4xl md:text-6xl
