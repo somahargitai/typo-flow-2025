@@ -235,8 +235,8 @@ magyar gasztrocsomagolások című művészeti albumok szerkesztője.`,
       description_en: `An award-winning graphic designer and artist, recipient of the Hungarian Design Award, the Golden Drawing Pin Award, and multiple prizes at the National Graphic Design Biennale. Since 1999, he has specialized in visual identity design, branding, packaging, and publication design. He has been the driving force behind numerous creative collectives and projects; founder of Grotesque Design and later Simon Says Graphic Studio, art director of the community art platform ArtHungry.com and the online pop culture magazine Phenom.hu, as well as co-founder of Bäse – Creative Clubhouse, a venue for contemporary art events. He is also the editor of the art books TypoHungry – Typography in Hungary in the 21st Century and STANC – Creative Hungarian Food Packaging.`,
     },
     {
-      firstName: 'SZABÓ',
-      lastName: 'ANDREA',
+      firstName: 'ANDREA',
+      lastName: 'SZABÓ',
       image: 'Szabo_Andrea.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
@@ -327,15 +327,11 @@ graphic design in recent years.`,
                   lastName={member.lastName}
                   role_hu={member.role_hu}
                   role_en={member.role_en}
-                  description_hu={member.description_hu}
-                  description_en={member.description_en}
                   onTap={() => handleTileTap(index + 6)}
                 />
                 <HoverOverlay
                   firstName={member.firstName}
                   lastName={member.lastName}
-                  role_hu={member.role_hu}
-                  role_en={member.role_en}
                   description_hu={member.description_hu}
                   description_en={member.description_en}
                   isOpen={openOverlay === index + 6}
@@ -374,25 +370,74 @@ const TextOfTile = ({
   lastName,
   role_hu,
   role_en,
-  description_hu,
-  description_en,
   onTap,
+  index,
 }) => {
   const { language } = useLanguage()
   return (
     <div
-      className="w-1/2 flex flex-col justify-top p-6 aspect-square
-        cursor-pointer md:cursor-default"
+      className="w-1/2 
+      aspect-square
+      cursor-pointer 
+      flex flex-col 
+      justify-top      
+      
+      py-4
+      px-4
+
+      sm:px-10
+      sm:py-10
+
+      md:px-8
+      md:py-8
+      md:cursor-default
+
+      lg:px-6
+      lg:py-6
+
+      xl:px-10
+      xl:py-10
+
+      2xl:px-14 
+      2xl:py-12
+      
+      "
       style={{ backgroundColor: '#004bff' }}
       onClick={onTap}
     >
+
       {/* Name */}
       <h3
-        className="text-white text-lg md:text-xl xl:text-4xl font-semibold
-          uppercase tracking-wide mb-2"
+        className="text-white 
+        
+        font-semibold
+        uppercase
+        tracking-wide
+        
+        text-xl 
+        leading-6
+        mb-2        
+
+        sm:text-4xl 
+        sm:leading-10
+        
+        md:text-4xl 
+        md:leading-10
+
+        lg:text-2xl 
+        lg:leading-8        
+        
+        xl:text-4xl 
+        xl:leading-10
+        xl:mb-0
+
+        2xl:text-5xl 
+        2xl:leading-14
+             "
         style={{ fontFamily: 'Geist, sans-serif' }}
       >
-        {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
+        {firstName === 'MATEUSZ' && lastName === 'MACHALSKI'
+          ? (
           <>
             {firstName}
             <br />
@@ -412,9 +457,32 @@ const TextOfTile = ({
           </>
         )}
       </h3>
+
       {/* Role */}
       <p
-        className="text-white text-lg md:text-2xl font-normal mb-0"
+        className="text-white 
+        leading-tight
+        font-normal 
+        mb-0
+        
+        text-lg 
+        
+        sm:text-2xl 
+        sm:leading-8
+
+        md:text-3xl 
+        md:leading-8
+
+        lg:text-xl 
+        lg:leading-6
+        
+        xl:text-2xl 
+        xl:leading-8
+
+        2xl:text-4xl
+        2xl:leading-12
+
+        "
         style={{
           fontFamily: 'Geist, sans-serif',
           color: '#00caff',
@@ -423,7 +491,31 @@ const TextOfTile = ({
         {language === 'HU' ? role_hu : role_en}
       </p>
       {/* Decorative lines */}
-      <div className="w-8 h-8 md:w-16 md:h-16 group/lines">
+      <div className="
+      
+      group/lines
+      
+      w-8
+      h-8 
+
+      sm:w-14 
+      sm:h-14
+
+      md:w-16 
+      md:h-16
+
+      lg:w-12 
+      lg:h-12
+
+      xl:w-16 
+      xl:h-16
+
+
+      2xl:w-24 
+      2xl:h-24
+      
+      
+      ">
         <svg
           className="w-full h-full"
           viewBox="0 0 46.54 20.76"
@@ -469,29 +561,29 @@ const TextOfTile = ({
               `}
             </style>
           </defs>
-          <line 
-            className="jury-line-1" 
-            y1="1.51" 
-            x2="36.99" 
-            y2="1.51" 
+          <line
+            className="jury-line-1"
+            y1="1.51"
+            x2="36.99"
+            y2="1.51"
             stroke="#fff"
             strokeWidth="2.53"
             fill="none"
           />
-          <line 
-            className="jury-line-2" 
-            y1="18.48" 
-            x2="27.68" 
-            y2="18.48" 
+          <line
+            className="jury-line-2"
+            y1="18.48"
+            x2="27.68"
+            y2="18.48"
             stroke="#fff"
             strokeWidth="2.53"
             fill="none"
           />
-          <line 
-            className="jury-line-3" 
-            y1="10" 
-            x2="44.85" 
-            y2="10" 
+          <line
+            className="jury-line-3"
+            y1="10"
+            x2="44.85"
+            y2="10"
             stroke="#fff"
             strokeWidth="2.53"
             fill="none"
@@ -506,8 +598,6 @@ const TextOfTile = ({
 const HoverOverlay = ({
   firstName,
   lastName,
-  role_hu,
-  role_en,
   description_hu,
   description_en,
   isOpen,
