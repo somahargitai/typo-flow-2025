@@ -21,7 +21,7 @@ const Competition = () => {
 
           {/* Description */}
           <p
-            className="text-lg md:text-2xl leading-normal mb-2"
+            className="text-lg md:text-2xl leading-normal mb-4"
             style={{
               fontFamily: 'Geist, sans-serif',
               color: '#004bff',
@@ -32,13 +32,24 @@ const Competition = () => {
 
           <p
             className="text-sm sm:text-sm md:text-lg lg:text-lg xl:text-xl
-              2xl:text-xl leading-normal mb-8"
+              2xl:text-xl leading-normal mb-4"
             style={{
               fontFamily: 'Geist, sans-serif',
               color: '#004bff',
             }}
           >
             {translationsOfLanguage.competition.exception}
+          </p>
+
+          <p
+            className="text-sm sm:text-sm md:text-lg lg:text-lg xl:text-xl
+              2xl:text-xl leading-normal mb-8"
+            style={{
+              fontFamily: 'Geist, sans-serif',
+              color: '#004bff',
+            }}
+          >
+            {translationsOfLanguage.competition.noCheating}
           </p>
 
           {/* File Requirements Section */}

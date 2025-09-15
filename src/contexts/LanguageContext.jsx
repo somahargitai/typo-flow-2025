@@ -36,6 +36,8 @@ export const LanguageProvider = ({ children }) => {
           'A pályázatra olyan 2015 után készült munkákat várunk, melyek tipográfiai megoldásokra épülnek vagy a tipográfia értékelhető fókuszban van. A beválogatott versenymunkák plakát formában lesznek kiállítva. Tárgyak, termékek kiállítására nincs lehetőség. A pályázat ingyenes.',
         exception:
           'A pályázaton nem vehetnek részt a szervezők,  zsűritagok, előadók és ezek hozzátartozói.',
+        noCheating:
+          'A pályázat egy tipográfiai verseny, ami az egyéni látásmódot és kimagasló tervezői készségeket hivatott támogatni, ezért kérjük, hogy csak teljes mértékben saját készítésű munkákkal jelentkezzenek a pályázók (AI kizárva).',
         fileRequirements: 'Beküldendő fájl:',
         imageParameters: '70 × 100 cm',
         fileSize: 'CMYK PDF (max. 15 Mb)',
@@ -116,7 +118,8 @@ export const LanguageProvider = ({ children }) => {
       },
       dataProtection: {
         title: 'Adatkezelési tájékoztató',
-        content: 'A pályázat egy tipográfiai verseny, ami az egyéni látásmódot és kimagasló tervezői készségeket hivatott támogatni, ezért kérjük, hogy csak teljes mértékben saját készítésű munkákkal jelentkezzenek a pályázók (AI kizárva).\n\nA pályázatra jelentkezők vállalják, hogy a pályázatra benyújtott tervek kiállításra kerülhetnek, a Széchenyi István Egyetem és/vagy a Design Campus kommunikációs felületein megjelenhetnek. A pályázók elfogadják, hogy pályázatuk részeként megadott adataikat a TypoFlow szervezői megismerik és a TypoFlow 2025 projekthez felhasználják.\n\nAz oldal használatával elfogadod a sütihasználatot. A sütiket azért használjuk, hogy hatékonyabb legyen az oldal működése.\n\nCopyright © 2025 — Minden jog fenntartva',
+        content:
+          'A pályázatra jelentkezők vállalják, hogy a pályázatra benyújtott tervek kiállításra kerülhetnek, a Széchenyi István Egyetem és/vagy a Design Campus kommunikációs felületein megjelenhetnek. A pályázók elfogadják, hogy pályázatuk részeként megadott adataikat a TypoFlow szervezői megismerik és a TypoFlow 2025 projekthez felhasználják.\n\nAz oldal használatával elfogadod a sütihasználatot. A sütiket azért használjuk, hogy hatékonyabb legyen az oldal működése.\n\nCopyright © 2025 — Minden jog fenntartva',
       },
     },
     EN: {
@@ -137,6 +140,8 @@ export const LanguageProvider = ({ children }) => {
           'We welcome works created after 2015 that are based on typographic solutions or have typography as a clearly appreciable focus. Selected competition works will be exhibited in poster format. There is no possibility to exhibit objects or products. Participation is free of charge.',
         exception:
           'The competition is not open to organizers, jury members, speakers and their associated persons.',
+        noCheating:
+          'The competition is a typography contest designed to support individual vision and outstanding design skills, therefore we ask that applicants only submit works that are entirely their own creation (AI excluded).',
         fileRequirements: 'File requirements:',
         imageParameters: '70 × 100 cm',
         fileSize: 'CMYK PDF (max. 15 Mb)',
@@ -217,7 +222,8 @@ export const LanguageProvider = ({ children }) => {
       },
       dataProtection: {
         title: 'Data Protection Information',
-        content: 'The competition is a typography contest designed to support individual vision and outstanding design skills, therefore we ask that applicants only submit works that are entirely their own creation (AI excluded).\n\nApplicants agree that the designs submitted for the competition may be exhibited and may appear on the communication channels of Széchenyi István University and/or Design Campus. Applicants accept that the data provided as part of their application will be known by the TypoFlow organizers and used for the TypoFlow 2025 project.\n\nBy using this site, you accept the use of cookies. We use cookies to make the site more efficient.\n\nCopyright © 2025 — All rights reserved',
+        content:
+          'Applicants agree that the designs submitted for the competition may be exhibited and may appear on the communication channels of Széchenyi István University and/or Design Campus. Applicants accept that the data provided as part of their application will be known by the TypoFlow organizers and used for the TypoFlow 2025 project.\n\nBy using this site, you accept the use of cookies. We use cookies to make the site more efficient.\n\nCopyright © 2025 — All rights reserved',
       },
     },
   }
