@@ -612,7 +612,8 @@ const HoverOverlay = ({
       {/* Mobile and iPad fullscreen modal */}
       {isOpen && (
         <div
-          className="xl:hidden fixed inset-0 z-50 flex flex-col"
+          className="xl:hidden fixed inset-0 z-50 flex flex-col sm:px-6 md:px-8
+            lg:px-10"
           style={{ backgroundColor: '#ff5251' }}
         >
           {/* Close button */}
@@ -627,10 +628,11 @@ const HoverOverlay = ({
           {/* Scrollable content */}
           <div className="flex-1 overflow-y-auto px-6 pt-20 pb-8">
             <h3
-              className="text-white text-2xl font-bold uppercase tracking-wide
-                mb-4"
+             className="text-white text-3xl sm:text-4xl sm:leading-12
+             md:text-5xl md:leading-14 lg:text-6xl lg:leading-16
+             font-semibold uppercase tracking-wide mb-6"
               style={{
-                fontFamily: 'Big Shoulders Display, sans-serif',
+                fontFamily: 'Geist, sans-serif',
               }}
             >
               {language === 'HU'
@@ -639,8 +641,10 @@ const HoverOverlay = ({
             </h3>
 
             <p
-              className="text-white text-base font-normal leading-relaxed"
-              style={{ fontFamily: 'Geist, sans-serif' }}
+              className="text-white font-normal leading-relaxed sm:text-2xl
+              sm:leading-8 md:text-3xl md:leading-10 lg:text-3xl lg:leading-10
+              custom-description-size"
+            style={{ fontFamily: 'Geist, sans-serif' }}
             >
               {language === 'HU' ? description_hu : description_en}
             </p>
