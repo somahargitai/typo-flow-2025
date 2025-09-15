@@ -52,6 +52,17 @@ const Competition = () => {
             {translationsOfLanguage.competition.noCheating}
           </p>
 
+          <p
+            className="text-sm sm:text-sm md:text-lg lg:text-lg xl:text-xl
+              2xl:text-xl leading-normal mb-8"
+            style={{
+              fontFamily: 'Geist, sans-serif',
+              color: '#004bff',
+            }}
+          >
+            {translationsOfLanguage.competition.multipleEntries}
+          </p>
+
           {/* File Requirements Section */}
           <div className="mb-8">
             <h3

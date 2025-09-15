@@ -38,6 +38,7 @@ export const LanguageProvider = ({ children }) => {
           'A pályázaton nem vehetnek részt a szervezők,  zsűritagok, előadók és ezek hozzátartozói.',
         noCheating:
           'A pályázat egy tipográfiai verseny, ami az egyéni látásmódot és kimagasló tervezői készségeket hivatott támogatni, ezért kérjük, hogy csak teljes mértékben saját készítésű munkákkal jelentkezzenek a pályázók (AI kizárva).',
+        multipleEntries: 'Egy alkotó több pályaművet is beadhat.',
         fileRequirements: 'Beküldendő fájl:',
         imageParameters: '70 × 100 cm',
         fileSize: 'CMYK PDF (max. 15 Mb)',
@@ -142,6 +143,7 @@ export const LanguageProvider = ({ children }) => {
           'The competition is not open to organizers, jury members, speakers and their associated persons.',
         noCheating:
           'The competition is a typography contest designed to support individual vision and outstanding design skills, therefore we ask that applicants only submit works that are entirely their own creation (AI excluded).',
+        multipleEntries: 'An applicant can submit multiple entries.',
         fileRequirements: 'File requirements:',
         imageParameters: '70 × 100 cm',
         fileSize: 'CMYK PDF (max. 15 Mb)',
