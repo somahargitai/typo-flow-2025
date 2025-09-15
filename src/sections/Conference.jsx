@@ -165,27 +165,9 @@ Her interest in type design began during her BA years, and last year she was adm
       <div className="w-full">
         {/* Conference Title Section - Separate from grid */}
         <div
-          className="w-full items-center justify-center 
-          px-8
-          
-          pt-14 
-          pb-14 
-          
-          sm:pt-16
-          sm:pb-16 
-          
-          md:pt-26 
-          md:pb-24 
-          
-          lg:pt-30 
-          lg:pb-25 
-          
-          xl:pt-32 
-          xl:pb-28
-            
-          2xl:pt-40 
-          2xl:pb-36 
-          "
+          className="w-full items-center justify-center px-8 pt-14 pb-14
+            sm:pt-16 sm:pb-16 md:pt-26 md:pb-24 lg:pt-30 lg:pb-25 xl:pt-32
+            xl:pb-28 2xl:pt-40 2xl:pb-36"
         >
           <h1
             className="font-bold uppercase text-center text-4xl sm:text-6xl
@@ -232,14 +214,13 @@ Her interest in type design began during her BA years, and last year she was adm
         </div>
 
         {/* Conference Grid - No title tile, only presentations */}
-        <div className="flex justify-center pb-0 md:pb-30 lg:pb-34 xl:pb-30 2xl:pb-42">
+        <div
+          className="flex justify-center pb-0 md:pb-30 lg:pb-34 xl:pb-30
+            2xl:pb-42"
+        >
           <div
-            className="grid grid-cols-1 lg:grid-cols-2 
-            
-            gap-0 lg:gap-10 xl:gap-10 2xl:gap-32 
-            
-            w-full
-              lg:w-auto"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-10 xl:gap-10
+              2xl:gap-32 w-full lg:w-auto"
           >
             {conference.map((speaker, index) => (
               <div
@@ -286,24 +267,8 @@ const PhotoOfTile = ({ image, firstName, lastName }) => {
   const { language } = useLanguage()
   return (
     <div
-      className="w-1/2 
-      aspect-square 
-      overflow-hidden
-      
-      
-      lg:w-62       
-      lg:h-62 
-      lg:aspect-auto
-      
-      xl:w-62 
-      xl:h-62 
-      
-      2xl:w-80 
-      2xl:h-80
-      
-      "
-        
-        
+      className="w-1/2 aspect-square overflow-hidden lg:w-62 lg:h-62
+        lg:aspect-auto xl:w-62 xl:h-62 2xl:w-80 2xl:h-80"
     >
       <img
         src={`/images/${image}`}
@@ -334,67 +299,19 @@ const TextOfTile = ({
   return (
     <div
       id="text-of-tile"
-      className="w-1/2 
-      aspect-square
-      cursor-pointer 
-      flex flex-col 
-      justify-between
-      
-      px-4      
-      py-2      
-      
-      sm:px-6
-      sm:py-4
-      
-      md:cursor-default      
-      md:px-6 
-      md:py-4
-      
-      lg:aspect-auto 
-      lg:w-60 
-      lg:p-0 
-
-      xl:w-88 
-
-      2xl:w-80 
-      2xl:h-80 
-        "
+      className="w-1/2 aspect-square cursor-pointer flex flex-col
+        justify-between px-4 py-2 sm:px-6 sm:py-4 md:cursor-default md:px-6
+        md:py-4 lg:aspect-auto lg:w-60 lg:p-0 xl:w-88 2xl:w-80 2xl:h-80"
       style={{ backgroundColor: 'white' }}
       onClick={onTap}
     >
       <div id={`top-section-${index}`}>
         {/* Name */}
         <h3
-          className="text-black  
-
-          text-lg
-          leading-4.5
-          mb-0
-          
-          sm:text-3xl
-          sm:leading-8
-          
-
-          md:text-3xl
-          md:leading-8
-          md:mb-2 
-          
-          lg:text-[1.375rem] 
-          lg:leading-6
-          lg:mb-1 
-          
-          xl:text-[1.5rem]
-          xl:leading-7
-          xl:mb-0 
-          
-          2xl:mb-0
-          
-          font-semibold uppercase 
-            
-               
-            
-            tracking-wide 
-            " 
+          className="text-black text-lg leading-4.5 mb-0 sm:text-3xl
+            sm:leading-8 md:text-3xl md:leading-8 md:mb-2 lg:text-[1.375rem]
+            lg:leading-6 lg:mb-1 xl:text-[1.5rem] xl:leading-7 xl:mb-0 2xl:mb-0
+            font-semibold uppercase tracking-wide"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#004bff',
@@ -408,28 +325,9 @@ const TextOfTile = ({
         </h3>
 
         <p
-          className="text-black 
-          text-normal 
-          leading-4.5
-          mb-0
-
-          sm:text-xl
-          sm:leading-6          
-
-          md:text-xl
-          md:leading-5
-          
-          lg:text-sm 
-          lg:leading-4
-          
-          xl:text-base 
-          xl:leading-5
-          
-          2xl:text-2xl
-          
-          font-normal 
-          
-             "
+          className="text-black text-normal leading-4.5 mb-0 sm:text-xl
+            sm:leading-6 md:text-xl md:leading-5 lg:text-sm lg:leading-4
+            xl:text-base xl:leading-5 2xl:text-2xl font-normal"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#004bff',
@@ -439,14 +337,10 @@ const TextOfTile = ({
         </p>
 
         {/* Decorative lines */}
-        <div className="
-        w-8 h-8 
-        sm:w-12 sm:h-12 
-        md:w-12 md:h-12 
-        lg:w-10 lg:h-10 
-        xl:w-14 xl:h-14 
-        2xl:w-16 2xl:h-16
-        group/lines">
+        <div
+          className="w-8 h-8 sm:w-12 sm:h-12 md:w-12 md:h-12 lg:w-10 lg:h-10
+            xl:w-14 xl:h-14 2xl:w-16 2xl:h-16 group/lines"
+        >
           <svg
             className="w-full h-full"
             viewBox="0 0 46.54 20.76"
@@ -454,7 +348,7 @@ const TextOfTile = ({
           >
             <defs>
               <style>
-              {`
+                {`
                 .conference-line-1, .conference-line-2, .conference-line-3 {
                   stroke: #004bff;
                   stroke-miterlimit: 10;
@@ -492,8 +386,18 @@ const TextOfTile = ({
                 `}
               </style>
             </defs>
-            <line className="conference-line-1" y1="1.51" x2="36.99" y2="1.51" />
-            <line className="conference-line-2" y1="18.48" x2="27.68" y2="18.48" />
+            <line
+              className="conference-line-1"
+              y1="1.51"
+              x2="36.99"
+              y2="1.51"
+            />
+            <line
+              className="conference-line-2"
+              y1="18.48"
+              x2="27.68"
+              y2="18.48"
+            />
             <line className="conference-line-3" y1="10" x2="44.85" y2="10" />
           </svg>
         </div>
@@ -502,26 +406,9 @@ const TextOfTile = ({
       <div id={`bottom-section-${index}`} className="flex flex-col justify-end">
         <p
           id={`presentationTitle-${index}`}
-          className="text-black font-bold text-xs 
-          
-          leading-4 
-
-          sm:text-2xl
-          sm:leading-6
-          sm:mb-2 
-
-          md:text-2xl
-          md:leading-6
-          md:mb-2 
-          
-          lg:text-lg
-          lg:leading-5 
-          
-          xl:text-xl
-          xl:leading-6
-          
-          2xl:text-2xl
-          2xl:leading-7
+          className="text-black font-bold text-xs leading-4 sm:text-2xl
+            sm:leading-6 sm:mb-2 md:text-2xl md:leading-6 md:mb-2 lg:text-lg
+            lg:leading-5 xl:text-xl xl:leading-6 2xl:text-2xl 2xl:leading-7
             mb-0"
           style={{
             fontFamily: 'Geist, sans-serif',
@@ -532,23 +419,8 @@ const TextOfTile = ({
         </p>
         <p
           id={`presentationTime-${index}`}
-          className="text-black 
-          font-normal 
-          mb-0 
-          
-          text-xs 
-
-          sm:text-xl
-          
-          md:text-xl
-
-          lg:text-sm 
-          
-          xl:text-xl
-          
-          2xl:text-xl
-          2xl:mt-2"
-            
+          className="text-black font-normal mb-0 text-xs sm:text-xl md:text-xl
+            lg:text-sm xl:text-xl 2xl:text-xl 2xl:mt-2"
           style={{
             fontFamily: 'Geist, sans-serif',
             color: '#004bff',
@@ -583,29 +455,30 @@ const HoverOverlay = ({
           style={{ backgroundColor: 'white' }}
           onClick={onTap}
         >
-        <h3
-          className="text-white text-2xl font-bold uppercase tracking-wide mb-2"
-          style={{
-            fontFamily: 'Geist, sans-serif',
-            color: '#004bff',
-          }}
-        >
-          {firstName === 'MATEUSZ' && lastName === 'MACHALSKI'
-            ? `${firstName} ${lastName}`
-            : language === 'HU'
+          <h3
+            className="text-white text-2xl font-bold uppercase tracking-wide
+              mb-2"
+            style={{
+              fontFamily: 'Geist, sans-serif',
+              color: '#004bff',
+            }}
+          >
+            {firstName === 'MATEUSZ' && lastName === 'MACHALSKI'
               ? `${firstName} ${lastName}`
-              : `${lastName} ${firstName}`}
-        </h3>
+              : language === 'HU'
+                ? `${firstName} ${lastName}`
+                : `${lastName} ${firstName}`}
+          </h3>
 
-        <p
-          className="text-base font-normal leading-6 2xl:text-xl"
-          style={{
-            fontFamily: 'Geist, sans-serif',
-            color: '#004bff',
-          }}
-        >
-          {language === 'HU' ? description_hu : description_en}
-        </p>
+          <p
+            className="text-base font-normal leading-5 2xl:text-xl"
+            style={{
+              fontFamily: 'Geist, sans-serif',
+              color: '#004bff',
+            }}
+          >
+            {language === 'HU' ? description_hu : description_en}
+          </p>
         </div>
       )}
 
@@ -628,9 +501,9 @@ const HoverOverlay = ({
           {/* Scrollable content */}
           <div className="flex-1 overflow-y-auto px-6 pt-20 pb-8">
             <h3
-             className="text-white text-3xl sm:text-4xl sm:leading-12
-             md:text-5xl md:leading-14 lg:text-6xl lg:leading-16
-             font-semibold uppercase tracking-wide mb-6"
+              className="text-white text-3xl sm:text-4xl sm:leading-12
+                md:text-5xl md:leading-14 lg:text-6xl lg:leading-16
+                font-semibold uppercase tracking-wide mb-6"
               style={{
                 fontFamily: 'Geist, sans-serif',
               }}
@@ -642,9 +515,9 @@ const HoverOverlay = ({
 
             <p
               className="text-white font-normal leading-relaxed sm:text-2xl
-              sm:leading-8 md:text-3xl md:leading-10 lg:text-3xl lg:leading-10
-              custom-description-size"
-            style={{ fontFamily: 'Geist, sans-serif' }}
+                sm:leading-8 md:text-3xl md:leading-10 lg:text-3xl lg:leading-10
+                custom-description-size"
+              style={{ fontFamily: 'Geist, sans-serif' }}
             >
               {language === 'HU' ? description_hu : description_en}
             </p>

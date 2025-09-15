@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 /* Custom styles for huge screens beyond Tailwind breakpoints */
-@media (min-width: 1920px) {
+@media (min-width: 2000px) {
   .jury-name-huge {
     font-size: 4rem; /* 64px */
     line-height: 1.1;
