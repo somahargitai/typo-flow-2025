@@ -376,68 +376,21 @@ const TextOfTile = ({
   const { language } = useLanguage()
   return (
     <div
-      className="w-1/2 
-      aspect-square
-      cursor-pointer 
-      flex flex-col 
-      justify-top      
-      
-      py-4
-      px-4
-
-      sm:px-10
-      sm:py-10
-
-      md:px-8
-      md:py-8
-      md:cursor-default
-
-      lg:px-6
-      lg:py-6
-
-      xl:px-10
-      xl:py-10
-
-      2xl:px-14 
-      2xl:py-12
-      
-      "
+      className="w-1/2 aspect-square cursor-pointer flex flex-col justify-top
+        py-4 px-4 sm:px-10 sm:py-10 md:px-8 md:py-8 md:cursor-default lg:px-6
+        lg:py-6 xl:px-10 xl:py-10 2xl:px-14 2xl:py-12"
       style={{ backgroundColor: '#004bff' }}
       onClick={onTap}
     >
-
       {/* Name */}
       <h3
-        className="text-white 
-        
-        font-semibold
-        uppercase
-        tracking-wide
-        
-        text-xl 
-        leading-6
-        mb-2        
-
-        sm:text-4xl 
-        sm:leading-10
-        
-        md:text-4xl 
-        md:leading-10
-
-        lg:text-2xl 
-        lg:leading-8        
-        
-        xl:text-4xl 
-        xl:leading-10
-        xl:mb-0
-
-        2xl:text-5xl 
-        2xl:leading-14
-             "
+        className="text-white font-semibold uppercase tracking-wide text-xl
+          leading-6 mb-2 sm:text-4xl sm:leading-10 md:text-4xl md:leading-10
+          lg:text-2xl lg:leading-8 xl:text-4xl xl:leading-10 xl:mb-0
+          2xl:text-5xl 2xl:leading-14"
         style={{ fontFamily: 'Geist, sans-serif' }}
       >
-        {firstName === 'MATEUSZ' && lastName === 'MACHALSKI'
-          ? (
+        {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
           <>
             {firstName}
             <br />
@@ -460,29 +413,9 @@ const TextOfTile = ({
 
       {/* Role */}
       <p
-        className="text-white 
-        leading-tight
-        font-normal 
-        mb-0
-        
-        text-lg 
-        
-        sm:text-2xl 
-        sm:leading-8
-
-        md:text-3xl 
-        md:leading-8
-
-        lg:text-xl 
-        lg:leading-6
-        
-        xl:text-2xl 
-        xl:leading-8
-
-        2xl:text-4xl
-        2xl:leading-12
-
-        "
+        className="text-white leading-tight font-normal mb-0 text-lg sm:text-2xl
+          sm:leading-8 md:text-3xl md:leading-8 lg:text-xl lg:leading-6
+          xl:text-2xl xl:leading-8 2xl:text-4xl 2xl:leading-12"
         style={{
           fontFamily: 'Geist, sans-serif',
           color: '#00caff',
@@ -491,31 +424,10 @@ const TextOfTile = ({
         {language === 'HU' ? role_hu : role_en}
       </p>
       {/* Decorative lines */}
-      <div className="
-      
-      group/lines
-      
-      w-8
-      h-8 
-
-      sm:w-14 
-      sm:h-14
-
-      md:w-16 
-      md:h-16
-
-      lg:w-12 
-      lg:h-12
-
-      xl:w-16 
-      xl:h-16
-
-
-      2xl:w-24 
-      2xl:h-24
-      
-      
-      ">
+      <div
+        className="group/lines w-8 h-8 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-12
+          lg:h-12 xl:w-16 xl:h-16 2xl:w-24 2xl:h-24"
+      >
         <svg
           className="w-full h-full"
           viewBox="0 0 46.54 20.76"
