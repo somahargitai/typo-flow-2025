@@ -17,6 +17,22 @@ const Jury = () => {
   /* JURY MEMBERS */
   const jury = [
     {
+      firstName: 'MATEUSZ',
+      lastName: 'MACHALSKI',
+      image: 'Machalski2.webp',
+      role_hu: 'tervezőgrafikus, zsűrielnök',
+      role_en: `graphic designer, chair of the jury`,
+      description_hu: `Díjnyertes grafikusművész, munkássága fókuszában a tipográfia és
+  a vizuális kommunikáció áll. A Varsói Képzőművészeti Akadémia
+  professzora és rektor helyettese. Tervezői munkája mellett kutatásokban
+  vesz részt, előadásokat tart, kiállítások kurátora és aktívan népszerűsíti
+  a lengyel tervezőgrafikát nemzetközi színtéren.`,
+      description_en: `An award-winning designer specializing in typography and visual 
+communication, he is a professor at the Academy of Fine Arts in Warsaw and the Rector's Representative. In addition to his design work, he is involved in research, lectures, exhibition curation, and the promotion 
+of Polish design worldwide.
+`,
+    },
+    {
       firstName: 'DÓRA',
       lastName: 'BALLA',
       image: 'Balla_D2.webp',
@@ -128,22 +144,7 @@ vizuális arculatok, kiadványok és csomagolások tervezésével foglalkozik.`,
 designer, multiple ArtHungry Award recipient, and winner of the Grand Prize of the Ministry of Human Capacities at the 22nd Graphic Design Biennial in 2020. Her work has been featured in several international books and magazines, including Novum, IdN, BranD, It’s Nice That, and Dieline magazine. She earned her master’s degree in graphic design from the Moholy-Nagy University of Art and Design in 2018, where her diploma project received the Rector’s Award. She currently works as a freelance graphic designer, focusing mainly on visual identities, publications, 
 and packaging design.`,
     },
-    {
-      firstName: 'MATEUSZ',
-      lastName: 'MACHALSKI',
-      image: 'Machalski2.webp',
-      role_hu: 'tervezőgrafikus, zsűrielnök',
-      role_en: `graphic designer, chair of the jury`,
-      description_hu: `Díjnyertes grafikusművész, munkássága fókuszában a tipográfia és
-  a vizuális kommunikáció áll. A Varsói Képzőművészeti Akadémia
-  professzora és rektor helyettese. Tervezői munkája mellett kutatásokban
-  vesz részt, előadásokat tart, kiállítások kurátora és aktívan népszerűsíti
-  a lengyel tervezőgrafikát nemzetközi színtéren.`,
-      description_en: `An award-winning designer specializing in typography and visual 
-communication, he is a professor at the Academy of Fine Arts in Warsaw and the Rector's Representative. In addition to his design work, he is involved in research, lectures, exhibition curation, and the promotion 
-of Polish design worldwide.
-`,
-    },
+
     {
       firstName: 'JÁNOS',
       lastName: 'KŐRÖS',
@@ -258,14 +259,44 @@ graphic design in recent years.`,
   return (
     <section id="jury" className="py-0" style={{ backgroundColor: '#004bff' }}>
       <div className="w-full">
-        {/* Two Column Layout - Each column has photo-text pairs */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-          {/* Left Column */}
+        {/* Mobile Layout - Single column with all members in array order */}
+        <div className="lg:hidden">
+          {/* Section Title */}
+          <div
+            className="w-full flex items-center justify-center h-[35vw]"
+            style={{ backgroundColor: '#004bff' }}
+          >
+            <h2
+              className="font-bold text-white uppercase tracking-wide"
+              style={{
+                fontFamily: 'Big Shoulders Display, sans-serif',
+                fontSize: 'clamp(4rem, 10vw, 20rem)',
+              }}
+            >
+              {language === 'HU' ? 'ZSŰRI' : 'JURY'}
+            </h2>
+          </div>
+
+          {/* All members in array order for mobile */}
+          {jury.map((member, index) => (
+            <JuryMember
+              key={index}
+              member={member}
+              index={index}
+              language={language}
+              isOpen={openOverlay === index}
+              onTap={() => handleTileTap(index)}
+            />
+          ))}
+        </div>
+
+        {/* Desktop Layout - Two columns with alternating order */}
+        <div className="hidden lg:grid grid-cols-2 gap-0">
+          {/* Left Column - odd indices: 1, 3, 5, 7, 9, 11 */}
           <div className="space-y-0">
             {/* Section Title */}
             <div
-              className="w-full flex items-center justify-center h-[35vw]
-                lg:h-[25vw]"
+              className="w-full flex items-center justify-center h-[25vw]"
               style={{ backgroundColor: '#004bff' }}
             >
               <h2
@@ -279,65 +310,29 @@ graphic design in recent years.`,
               </h2>
             </div>
 
-            {/*  Left Column */}
-            {jury.slice(0, 6).map((member, index) => (
-              <div key={index} className="relative group flex">
-                <PhotoOfTile
-                  image={member.image}
-                  firstName={member.firstName}
-                  lastName={member.lastName}
-                />
-                <TextOfTile
-                  firstName={member.firstName}
-                  lastName={member.lastName}
-                  role_hu={member.role_hu}
-                  role_en={member.role_en}
-                  description={
-                    language === 'hu'
-                      ? member.description_hu
-                      : member.description_en
-                  }
-                  onTap={() => handleTileTap(index)}
-                />
-                <HoverOverlay
-                  firstName={member.firstName}
-                  lastName={member.lastName}
-                  role_hu={member.role_hu}
-                  role_en={member.role_en}
-                  description_hu={member.description_hu}
-                  description_en={member.description_en}
-                  isOpen={openOverlay === index}
-                  onTap={() => handleTileTap(index)}
-                />
-              </div>
+            {[1, 3, 5, 7, 9, 11].map(index => (
+              <JuryMember
+                key={index}
+                member={jury[index]}
+                index={index}
+                language={language}
+                isOpen={openOverlay === index}
+                onTap={() => handleTileTap(index)}
+              />
             ))}
           </div>
 
-          {/* Right Column */}
+          {/* Right Column - even indices: 0, 2, 4, 6, 8, 10 */}
           <div className="space-y-0">
-            {jury.slice(6).map((member, index) => (
-              <div key={index} className="relative group flex">
-                <PhotoOfTile
-                  image={member.image}
-                  firstName={member.firstName}
-                  lastName={member.lastName}
-                />
-                <TextOfTile
-                  firstName={member.firstName}
-                  lastName={member.lastName}
-                  role_hu={member.role_hu}
-                  role_en={member.role_en}
-                  onTap={() => handleTileTap(index + 6)}
-                />
-                <HoverOverlay
-                  firstName={member.firstName}
-                  lastName={member.lastName}
-                  description_hu={member.description_hu}
-                  description_en={member.description_en}
-                  isOpen={openOverlay === index + 6}
-                  onTap={() => handleTileTap(index + 6)}
-                />
-              </div>
+            {[0, 2, 4, 6, 8, 10, 12].map(index => (
+              <JuryMember
+                key={index}
+                member={jury[index]}
+                index={index}
+                language={language}
+                isOpen={openOverlay === index}
+                onTap={() => handleTileTap(index)}
+              />
             ))}
           </div>
         </div>
@@ -599,6 +594,39 @@ const HoverOverlay = ({
         </div>
       )}
     </>
+  )
+}
+
+/* JURY MEMBER COMPONENT */
+const JuryMember = ({ member, index, language, isOpen, onTap }) => {
+  return (
+    <div className="relative group flex">
+      <PhotoOfTile
+        image={member.image}
+        firstName={member.firstName}
+        lastName={member.lastName}
+      />
+      <TextOfTile
+        firstName={member.firstName}
+        lastName={member.lastName}
+        role_hu={member.role_hu}
+        role_en={member.role_en}
+        description={
+          language === 'hu' ? member.description_hu : member.description_en
+        }
+        onTap={onTap}
+      />
+      <HoverOverlay
+        firstName={member.firstName}
+        lastName={member.lastName}
+        role_hu={member.role_hu}
+        role_en={member.role_en}
+        description_hu={member.description_hu}
+        description_en={member.description_en}
+        isOpen={isOpen}
+        onTap={onTap}
+      />
+    </div>
   )
 }
 
