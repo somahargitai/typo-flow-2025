@@ -72,7 +72,7 @@ export const LanguageProvider = ({ children }) => {
         title: 'RÉSZTVEVŐK',
       },
       partners: {
-        title: 'PARTNEREK',
+        title: 'PARTNEREINK',
       },
       eventInfo: {
         title: 'ESEMÉNY INFORMÁCIÓK',
@@ -113,6 +113,10 @@ export const LanguageProvider = ({ children }) => {
       },
       footer: {
         copyright: '© 2025 Typo Flow - I. országos tipográfiai biennálé',
+      },
+      dataProtection: {
+        title: 'Adatkezelési tájékoztató',
+        content: 'A pályázat egy tipográfiai verseny, ami az egyéni látásmódot és kimagasló tervezői készségeket hivatott támogatni, ezért kérjük, hogy csak teljes mértékben saját készítésű munkákkal jelentkezzenek a pályázók (AI kizárva).\n\nA pályázatra jelentkezők vállalják, hogy a pályázatra benyújtott tervek kiállításra kerülhetnek, a Széchenyi István Egyetem és/vagy a Design Campus kommunikációs felületein megjelenhetnek. A pályázók elfogadják, hogy pályázatuk részeként megadott adataikat a TypoFlow szervezői megismerik és a TypoFlow 2025 projekthez felhasználják.\n\nAz oldal használatával elfogadod a sütihasználatot. A sütiket azért használjuk, hogy hatékonyabb legyen az oldal működése.\n\nCopyright © 2025 — Minden jog fenntartva',
       },
     },
     EN: {
@@ -169,7 +173,7 @@ export const LanguageProvider = ({ children }) => {
         title: 'PARTICIPANTS',
       },
       partners: {
-        title: 'PARTNERS',
+        title: 'OUR PARTNERS',
       },
       eventInfo: {
         title: 'EVENT INFORMATION',
@@ -210,6 +214,10 @@ export const LanguageProvider = ({ children }) => {
       },
       footer: {
         copyright: '© 2025 Typo Flow - 1st National Typography Biennale',
+      },
+      dataProtection: {
+        title: 'Data Protection Information',
+        content: 'The competition is a typography contest designed to support individual vision and outstanding design skills, therefore we ask that applicants only submit works that are entirely their own creation (AI excluded).\n\nApplicants agree that the designs submitted for the competition may be exhibited and may appear on the communication channels of Széchenyi István University and/or Design Campus. Applicants accept that the data provided as part of their application will be known by the TypoFlow organizers and used for the TypoFlow 2025 project.\n\nBy using this site, you accept the use of cookies. We use cookies to make the site more efficient.\n\nCopyright © 2025 — All rights reserved',
       },
     },
   }

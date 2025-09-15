@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
+import DataProtectionModal from '../components/DataProtectionModal'
 
 const ImpressumFooter = () => {
   const { language } = useLanguage()
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
     <footer className="bg-white py-12">
@@ -20,7 +22,8 @@ const ImpressumFooter = () => {
                   transition-colors cursor-pointer group"
               >
                 <svg
-                  className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors"
+                  className="w-6 h-6 text-blue-600 group-hover:text-white
+                    transition-colors"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -36,7 +39,8 @@ const ImpressumFooter = () => {
                   transition-colors cursor-pointer group"
               >
                 <svg
-                  className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors"
+                  className="w-6 h-6 text-blue-600 group-hover:text-white
+                    transition-colors"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -96,13 +100,38 @@ const ImpressumFooter = () => {
                 style={{ fontFamily: 'Geist, sans-serif' }}
               >
                 {language === 'HU'
-                  ? 'Minden jog fenntartva. Adatkezelési tájékoztató'
+                  ? 'Minden jog fenntartva.'
                   : 'All rights reserved.'}
               </p>
+               {language === 'HU' ? (
+                 <button
+                   onClick={() => setIsModalOpen(true)}
+                   className="text-blue-600 text-base
+                     hover:text-blue-800 transition-colors cursor-pointer mt-1"
+                   style={{ fontFamily: 'Geist, sans-serif' }}
+                 >
+                   Adatkezelési tájékoztató
+                 </button>
+               ) : (
+                 <button
+                   onClick={() => setIsModalOpen(true)}
+                   className="text-blue-600 text-base
+                     hover:text-blue-800 transition-colors cursor-pointer mt-1"
+                   style={{ fontFamily: 'Geist, sans-serif' }}
+                 >
+                   Privacy Statement
+                 </button>
+               )}
             </div>
           </div>
         </div>
       </div>
+
+      {/* Data Protection Modal */}
+      <DataProtectionModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </footer>
   )
 }
