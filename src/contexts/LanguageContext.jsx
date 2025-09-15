@@ -91,11 +91,11 @@ export const LanguageProvider = ({ children }) => {
           },
           {
             name: 'KÁLMÁN TÜNDE DÍJ',
-            description: 'Oklevél',
+            description: '',
           },
           {
             name: 'A SZÉCHENYI ISTVÁN EGYETEM DESIGN CAMPUSÁNAK KÜLÖNDÍJA',
-            description: 'Oklevél',
+            description: '',
           },
           {
             name: 'BRANDGUIDE KÜLÖNDÍJ',
@@ -107,7 +107,7 @@ export const LanguageProvider = ({ children }) => {
           },
           {
             name: 'FONTFRONT KÜLÖNDÍJ',
-            description: 'Oklevél',
+            description: '',
           },
         ],
       },
@@ -188,11 +188,11 @@ export const LanguageProvider = ({ children }) => {
           },
           {
             name: 'TÜNDE KÁLMÁN AWARD',
-            description: 'Certificate',
+            description: '',
           },
           {
             name: 'SPECIAL AWARD OF THE SZÉCHENYI ISTVÁN UNIVERSITY DESIGN CAMPUS',
-            description: 'Certificate',
+            description: '',
           },
           {
             name: 'BRANDGUIDE SPECIAL AWARD',
@@ -204,7 +204,7 @@ export const LanguageProvider = ({ children }) => {
           },
           {
             name: 'FONTFRONT SPECIAL AWARD',
-            description: 'Certificate',
+            description: '',
           },
         ],
       },
