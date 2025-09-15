@@ -20,52 +20,94 @@ const SupportersFooter = () => {
             items-center justify-items-center"
         >
           <div className="p-4">
-            <img
-              src="/images/brand-logo-05.svg"
-              alt="Brand Logo 05"
-              className="h-16 w-auto object-contain"
-              style={{ width: 'auto', height: '64px' }}
-            />
+            <a
+              href="https://uni.sze.hu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/images/Szechenyi-Egyetem.svg"
+                alt="Széchenyi Egyetem"
+                className="h-16 w-auto object-contain"
+                style={{ width: 'auto', height: '64px' }}
+              />
+            </a>
           </div>
           <div className="p-4">
-            <img
-              src="/images/brand-logo-06.svg"
-              alt="Brand Logo 06"
-              className="h-16 w-auto object-contain"
-              style={{ width: 'auto', height: '64px' }}
-            />
+            <a
+              href="https://designcampus.hu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/images/Design-Campus.svg"
+                alt="Design Campus"
+                className="h-16 w-auto object-contain"
+                style={{ width: 'auto', height: '64px' }}
+              />
+            </a>
           </div>
           <div className="p-4">
-            <img
-              src="/images/brand-logo-07.svg"
-              alt="Brand Logo 07"
-              className="h-16 w-auto object-contain"
-              style={{ width: 'auto', height: '64px' }}
-            />
+            <a
+              href="https://www.fontfront.hu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/images/Font-Front.svg"
+                alt="Font Front"
+                className="h-16 w-auto object-contain"
+                style={{ width: 'auto', height: '64px' }}
+              />
+            </a>
           </div>
           <div className="p-4">
-            <img
-              src="/images/brand-logo-08.svg"
-              alt="Brand Logo 08"
-              className="h-16 w-auto object-contain"
-              style={{ width: 'auto', height: '64px' }}
-            />
+            <a
+              href="https://arthungry.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/images/Art-Hungry.svg"
+                alt="Art Hungry"
+                className="h-16 w-auto object-contain"
+                style={{ width: 'auto', height: '64px' }}
+              />
+            </a>
           </div>
           <div className="p-4">
-            <img
-              src="/images/brand-logo-09.svg"
-              alt="Brand Logo 09"
-              className="h-16 w-auto object-contain"
-              style={{ width: 'auto', height: '64px' }}
-            />
+            <a
+              href="https://phenom.hu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/images/Phenom.svg"
+                alt="Phenom"
+                className="h-16 w-auto object-contain"
+                style={{ width: 'auto', height: '64px' }}
+              />
+            </a>
           </div>
           <div className="p-4">
-            <img
-              src="/images/brand-logo-10.svg"
-              alt="Brand Logo 10"
-              className="h-16 w-auto object-contain"
-              style={{ width: 'auto', height: '64px' }}
-            />
+            <a
+              href="https://brandguide.hu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/images/Brandguide.svg"
+                alt="Brandguide"
+                className="h-16 w-auto object-contain"
+                style={{ width: 'auto', height: '64px' }}
+              />
+            </a>
           </div>
         </div>
       </div>

@@ -59,18 +59,24 @@ const ImpressumFooter = () => {
               >
                 {language === 'HU' ? 'FELHASZNÁLT BETŰTÍPUSOK' : 'FONTS USED'}
               </h3>
-              <p
-                className="text-blue-600 text-base mb-1"
+              <a
+                href="https://fonts.google.com/specimen/Big+Shoulders"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 text-base mb-1 hover:text-blue-800 transition-colors block"
                 style={{ fontFamily: 'Geist, sans-serif' }}
               >
                 Big Shoulders (Patric King)
-              </p>
-              <p
-                className="text-blue-600 text-base"
+              </a>
+              <a
+                href="https://vercel.com/font"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 text-base hover:text-blue-800 transition-colors block"
                 style={{ fontFamily: 'Geist, sans-serif' }}
               >
                 {language === 'HU' ? 'Geist (Vercel)' : 'Messina (Luzy Type)'}
-              </p>
+              </a>
             </div>
 
             {/* Column 3: Founder */}
@@ -81,12 +87,15 @@ const ImpressumFooter = () => {
               >
                 {language === 'HU' ? 'ALAPÍTÓ' : 'FOUNDER'}
               </h3>
-              <p
-                className="text-blue-600 text-base"
+              <a
+                href="https://www.instagram.com/zedocki/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 text-base hover:text-blue-800 transition-colors"
                 style={{ fontFamily: 'Geist, sans-serif' }}
               >
                 {language === 'HU' ? 'Halasi Zoltán' : 'Zoltán Halasi'}
-              </p>
+              </a>
             </div>
 
             {/* Column 4: Copyright */}
