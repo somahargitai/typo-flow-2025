@@ -34,6 +34,8 @@ export const LanguageProvider = ({ children }) => {
         title: 'PÁLYÁZAT',
         description:
           'A pályázatra olyan 2015 után készült munkákat várunk, melyek tipográfiai megoldásokra épülnek vagy a tipográfia értékelhető fókuszban van. A beválogatott versenymunkák plakát formában lesznek kiállítva. Tárgyak, termékek kiállítására nincs lehetőség. A pályázat ingyenes.',
+        exception:
+          'A pályázaton nem vehetnek részt a szervezők,  zsűritagok, előadók és ezek hozzátartozói.',
         fileRequirements: 'Beküldendő fájl:',
         imageParameters: '70 × 100 cm',
         fileSize: 'CMYK PDF (max. 15 Mb)',
@@ -129,6 +131,8 @@ export const LanguageProvider = ({ children }) => {
         title: 'COMPETITION',
         description:
           'We welcome works created after 2015 that are based on typographic solutions or have typography as a clearly appreciable focus. Selected competition works will be exhibited in poster format. There is no possibility to exhibit objects or products. Participation is free of charge.',
+        exception:
+          'The competition is not open to organizers, jury members, speakers and their associated persons.',
         fileRequirements: 'File requirements:',
         imageParameters: '70 × 100 cm',
         fileSize: 'CMYK PDF (max. 15 Mb)',

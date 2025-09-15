@@ -21,13 +21,24 @@ const Competition = () => {
 
           {/* Description */}
           <p
-            className="text-lg md:text-2xl leading-normal mb-8"
+            className="text-lg md:text-2xl leading-normal mb-2"
             style={{
               fontFamily: 'Geist, sans-serif',
               color: '#004bff',
             }}
           >
             {translationsOfLanguage.competition.description}
+          </p>
+
+          <p
+            className="text-sm sm:text-sm md:text-lg lg:text-lg xl:text-xl
+              2xl:text-xl leading-normal mb-8"
+            style={{
+              fontFamily: 'Geist, sans-serif',
+              color: '#004bff',
+            }}
+          >
+            {translationsOfLanguage.competition.exception}
           </p>
 
           {/* File Requirements Section */}
