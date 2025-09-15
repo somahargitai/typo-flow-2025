@@ -41,7 +41,7 @@ const LandingHeader = () => {
       {/* Logo wrapper - calculated height with padding */}
       <div
         id="logo-wrapper"
-        className="w-full flex items-center justify-center pt-0 lg:pt-20"
+        className="w-full flex items-center justify-center pt-0"
         style={{
           height: logoWrapperHeight,
         }}
@@ -115,6 +115,7 @@ const LandingHeader = () => {
                       position: 'relative',
                       top: '0.2em',
                       color: '#231f20',
+                      paddingBottom: '0.05em',
                     }}
                   >
                     {translationsOfLanguage.hero.location}
