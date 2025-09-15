@@ -516,35 +516,29 @@ const HoverOverlay = ({
       {/* Desktop click overlay */}
       {isOpen && (
         <div
-          className="hidden xl:flex absolute inset-0 flex-col justify-top px-8
-            pt-8 2xl:px-16 2xl:pt-16 transition-opacity duration-300
-            cursor-default opacity-100"
+          className="hidden absolute inset-0 flex-col justify-top
+            transition-opacity duration-300 cursor-default opacity-100 px-8 pt-8
+            xl:flex 2xl:px-10 2xl:pt-10"
           style={{ backgroundColor: '#ff5251' }}
           onClick={onTap}
         >
           <h3
-            className="text-white text-4xl font-semibold uppercase tracking-wide
-              mb-3 2xl:mb-6"
+            className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+              xl:text-4xl 2xl:text-4xl jury-name-huge font-semibold uppercase
+              tracking-wide mb-3 2xl:mb-4"
             style={{ fontFamily: 'Geist, sans-serif' }}
           >
-            {firstName === 'MATEUSZ' && lastName === 'MACHALSKI' ? (
-              <>
-                {firstName} {lastName}
-              </>
-            ) : language === 'HU' ? (
-              <>
-                {lastName} {firstName}
-              </>
-            ) : (
-              <>
-                {firstName} {lastName}
-              </>
-            )}
+            {firstName === 'MATEUSZ' && lastName === 'MACHALSKI'
+              ? `${firstName} ${lastName}`
+              : language === 'HU'
+                ? `${lastName} ${firstName}`
+                : `${firstName} ${lastName}`}
           </h3>
 
           <p
-            className="text-white font-normal leading-tight
-              custom-description-size"
+            className="text-white font-normal leading-tight text-sm sm:text-base
+              md:text-lg lg:text-xl xl:text-lg 2xl:text-xl
+              jury-description-huge"
             style={{
               fontFamily: 'Geist, sans-serif',
             }}
@@ -557,7 +551,8 @@ const HoverOverlay = ({
       {/* Mobile and iPad fullscreen modal */}
       {isOpen && (
         <div
-          className="xl:hidden fixed inset-0 z-50 flex flex-col"
+          className="xl:hidden fixed inset-0 z-50 flex flex-col sm:px-6 md:px-8
+            lg:px-10"
           style={{ backgroundColor: '#ff5251' }}
         >
           {/* Close button */}
@@ -572,8 +567,9 @@ const HoverOverlay = ({
           {/* Scrollable content */}
           <div className="flex-1 overflow-y-auto px-6 pt-20 pb-8">
             <h3
-              className="text-white text-3xl font-semibold uppercase
-                tracking-wide mb-6"
+              className="text-white text-3xl sm:text-4xl sm:leading-12
+                md:text-5xl md:leading-14 lg:text-6xl lg:leading-16
+                font-semibold uppercase tracking-wide mb-6"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >
               {firstName === 'MATEUSZ' && lastName === 'MACHALSKI'
@@ -584,7 +580,8 @@ const HoverOverlay = ({
             </h3>
 
             <p
-              className="text-white font-normal leading-relaxed
+              className="text-white font-normal leading-relaxed sm:text-2xl
+                sm:leading-8 md:text-3xl md:leading-10 lg:text-3xl lg:leading-10
                 custom-description-size"
               style={{ fontFamily: 'Geist, sans-serif' }}
             >

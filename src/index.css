@@ -1,1 +1,26 @@
 @import 'tailwindcss';
+
+/* Custom styles for huge screens beyond Tailwind breakpoints */
+@media (min-width: 1920px) {
+  .jury-name-huge {
+    font-size: 4rem; /* 72px */
+    line-height: 1.1;
+  }
+
+  .jury-description-huge {
+    font-size: 1.55rem; /* 30px */
+    line-height: 1.3;
+  }
+}
+
+@media (min-width: 2560px) {
+  .jury-name-huge {
+    font-size: 5rem; /* 96px */
+    line-height: 1.05;
+  }
+
+  .jury-description-huge {
+    font-size: 2rem; /* 36px */
+    line-height: 1.25;
+  }
+}
