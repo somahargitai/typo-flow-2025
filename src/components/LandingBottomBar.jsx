@@ -11,7 +11,7 @@ const LandingBottomBar = () => {
     >
       <style>
         {`
-          @media (max-height: 599px) {
+          @media (max-height: 768px) {
             #main-title {
               display: none !important;
             }

@@ -14,10 +14,10 @@ const LandingHeader = () => {
       const mainTitle = document.getElementById('main-title')
 
       if (topBar && mainTitle) {
-        const topBarHeight = topBar.offsetHeight;
-        const mainTitleHeight = mainTitle.offsetHeight;
+        const topBarHeight = topBar.offsetHeight
+        const mainTitleHeight = mainTitle.offsetHeight
         let availableHeight = viewportHeight - topBarHeight - mainTitleHeight
-        if (viewportHeight < 600) {
+        if (viewportHeight < 768) {
           availableHeight = viewportHeight
         }
         setLogoWrapperHeight(`${availableHeight}px`)
