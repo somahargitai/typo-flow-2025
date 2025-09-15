@@ -19,7 +19,7 @@ const Conference = () => {
     {
       firstName: 'GÁL',
       lastName: 'KRISZTIÁN',
-      image: 'Gal_Krisz4.webp',
+      image: 'Gal-Krisztian.webp',
       role_hu: 'képzőművész, tervezőgrafikus',
       role_en: `visual artistm graphic designer`,
       presentationTitle_hu: 'SOR- ÉS SZENTSÉGTÖRÉS',
@@ -40,7 +40,7 @@ and an active member of the Hungarian Poster Association. He regularly exhibits 
     {
       firstName: 'PETRUCZ',
       lastName: 'ÁGNES',
-      image: 'Petrucz_Agnes2.webp',
+      image: 'Petrucz-Agnes.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
       presentationTitle_hu:
@@ -63,7 +63,7 @@ interaction. His works have been showcased at numerous national and internationa
     {
       firstName: 'POLGÁRDI',
       lastName: 'ÁKOS',
-      image: 'Polgardi2.webp',
+      image: 'Polgardi-Akos.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
       presentationTitle_hu: 'A KÖZLEKEDÉSI MÚZEUM BETŰCSALÁDJA',
@@ -78,7 +78,7 @@ of the Hungarian Book Design Award. Father of Soma and Léna, husband of Zita.`,
     {
       firstName: 'ANNA WIELUŃSKA - MATEUSZ MACHALSKI',
       lastName: '',
-      image: 'Mateusz_Anna.webp',
+      image: 'Anna-Wielunska-Mateusz-Machalski.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
       presentationTitle_hu:
@@ -101,7 +101,7 @@ Mateusz an award-winning designer specializing in typography and visual communic
     {
       firstName: 'UGLY BUT USELESS',
       lastName: '',
-      image: 'UBU2.webp',
+      image: 'Ugly-But-Useless.webp',
       role_hu: 'Asztalos Ádám, Batke Bendegúz',
       role_en: 'Ádám Asztalos, Bendegúz Batke',
       presentationTitle_hu: 'SORJA',
@@ -121,7 +121,7 @@ graduation, we went our separate ways work-wise, but by 2024 we had fully pledge
     {
       firstName: 'ESZTER',
       lastName: 'MISZTARKA',
-      image: 'Misztarka_Eszter2.webp',
+      image: 'Misztarka-Eszter.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
       presentationTitle_hu: 'EZ CSAK EGY BETŰ',
@@ -142,7 +142,7 @@ conceptual and structural design, yet she also embraces experimental graphics an
     {
       firstName: 'REBEKA',
       lastName: 'OROSZ',
-      image: 'Rebeka_Orosz2.webp',
+      image: 'Rebeka-Orosz.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
       presentationTitle_hu: 'RECYCLING, REVIVING',

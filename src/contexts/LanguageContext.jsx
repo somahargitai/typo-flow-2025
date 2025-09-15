@@ -99,7 +99,7 @@ export const LanguageProvider = ({ children }) => {
           },
           {
             name: 'BRANDGUIDE KÜLÖNDÍJ',
-            description: 'Yellow Designer közösség 3 havi előfizetés',
+            description: 'Yellow Designer Közösség 3 havi előfizetés',
           },
           {
             name: 'ARTHUNGRY KÜLÖNDÍJ',
