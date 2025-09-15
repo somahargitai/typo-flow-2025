@@ -17,10 +17,10 @@ const ImpressumFooter = () => {
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full border-2 border-blue-600 flex
                   items-center justify-center hover:bg-blue-600
-                  transition-colors cursor-pointer"
+                  transition-colors cursor-pointer group"
               >
                 <svg
-                  className="w-6 h-6 text-blue-600 hover:text-white"
+                  className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -33,10 +33,10 @@ const ImpressumFooter = () => {
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full border-2 border-blue-600 flex
                   items-center justify-center hover:bg-blue-600
-                  transition-colors cursor-pointer"
+                  transition-colors cursor-pointer group"
               >
                 <svg
-                  className="w-6 h-6 text-blue-600 hover:text-white"
+                  className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -57,7 +57,7 @@ const ImpressumFooter = () => {
                 className="text-blue-600 text-base mb-1"
                 style={{ fontFamily: 'Geist, sans-serif' }}
               >
-                BigShoulders (Patric King)
+                Big Shoulders (Patric King)
               </p>
               <p
                 className="text-blue-600 text-base"
