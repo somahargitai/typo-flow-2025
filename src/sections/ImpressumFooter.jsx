@@ -10,9 +10,11 @@ const ImpressumFooter = () => {
     <footer className="bg-white py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div
+            className="grid grid-cols-1 md:grid-cols-4 gap-4 px-6 py-0 sm:px-0"
+          >
             {/* Column 1: Social Media Icons */}
-            <div className="flex gap-4 items-center justify-center">
+            <div className="flex gap-4 items-center justify-center mb-6 sm:mb-0">
               <a
                 href="https://www.facebook.com/profile.php?id=61580337218482"
                 target="_blank"
@@ -103,25 +105,25 @@ const ImpressumFooter = () => {
                   ? 'Minden jog fenntartva.'
                   : 'All rights reserved.'}
               </p>
-               {language === 'HU' ? (
-                 <button
-                   onClick={() => setIsModalOpen(true)}
-                   className="text-blue-600 text-base
-                     hover:text-blue-800 transition-colors cursor-pointer mt-1"
-                   style={{ fontFamily: 'Geist, sans-serif' }}
-                 >
-                   Adatkezelési tájékoztató
-                 </button>
-               ) : (
-                 <button
-                   onClick={() => setIsModalOpen(true)}
-                   className="text-blue-600 text-base
-                     hover:text-blue-800 transition-colors cursor-pointer mt-1"
-                   style={{ fontFamily: 'Geist, sans-serif' }}
-                 >
-                   Privacy Statement
-                 </button>
-               )}
+              {language === 'HU' ? (
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="text-blue-600 text-base hover:text-blue-800
+                    transition-colors cursor-pointer mt-1"
+                  style={{ fontFamily: 'Geist, sans-serif' }}
+                >
+                  Adatkezelési tájékoztató
+                </button>
+              ) : (
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="text-blue-600 text-base hover:text-blue-800
+                    transition-colors cursor-pointer mt-1"
+                  style={{ fontFamily: 'Geist, sans-serif' }}
+                >
+                  Privacy Statement
+                </button>
+              )}
             </div>
           </div>
         </div>
