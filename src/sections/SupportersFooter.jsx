@@ -16,7 +16,7 @@ const SupportersFooter = () => {
         </h2>
 
         <div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4
             items-center justify-items-center"
         >
           <div className="p-4">
@@ -106,6 +106,21 @@ const SupportersFooter = () => {
                 alt="Brandguide"
                 className="h-16 w-auto object-contain"
                 style={{ width: 'auto', height: '64px' }}
+              />
+            </a>
+          </div>
+          <div className="p-4">
+            <a
+              href="https://comicsense.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/images/Comicsense.png"
+                alt="Comic Sense Studio"
+                className="h-16 w-auto object-contain"
+                style={{ width: 'auto', height: '90px' }}
               />
             </a>
           </div>
