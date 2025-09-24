@@ -76,9 +76,9 @@ alapítója. Soma és Léna édesapja, Zita férje.`,
 of the Hungarian Book Design Award. Father of Soma and Léna, husband of Zita.`,
     },
     {
-      firstName: 'ANNA WIELUŃSKA - MATEUSZ MACHALSKI',
+      firstName: 'ANIA WIELUŃSKA - MATEUSZ MACHALSKI',
       lastName: '',
-      image: 'Anna-Wielunska-Mateusz-Machalski.webp',
+      image: 'Ania-Wielunska-Mateusz-Machalski.webp',
       role_hu: 'tervezőgrafikus',
       role_en: 'graphic designer',
       presentationTitle_hu:
@@ -86,7 +86,7 @@ of the Hungarian Book Design Award. Father of Soma and Léna, husband of Zita.`,
       presentationTitle_en:
         'CONNECTING THE DOTS. TYPOTEKA – HISTORY OF POLISH TYPOGRAPHY',
       presentationTime: '14:00',
-      description_hu: `Anna Tipográfus, tervezőgrafikus és a Varsói Képzőművészeti Akadémia tanára. Munkája
+      description_hu: `Ania Tipográfus, tervezőgrafikus és a Varsói Képzőművészeti Akadémia tanára. Munkája
 főként a tipográfia és annak a vizuális kommunikációra gyakorolt szerepének vizsgálatára
 irányul. Tervezői tevékenysége mellett előadásokat tart, és a lengyel tipográfia történetét
 kutatja.
@@ -94,7 +94,7 @@ Mateusz díjnyertes grafikusművész, munkássága fókuszában a tipográfia é
 kommunikáció áll. A Varsói Képzőművészeti Akadémia professzora és rektor helyettese.
 Tervezői munkája mellett kutatásokban vesz részt, előadásokat tart, kiállítások kurátora
 és aktívan népszerűsíti a lengyel tervezőgrafikát nemzetközi színtéren.`,
-      description_en: `Anna typographer, graphic designer, and lecturer at the Academy of Fine Arts in Warsaw. Her work focuses on typography and its influence on visual communication. In addition to her design work, she lectures and conducts research on the history of Polish typography.
+      description_en: `Ania typographer, graphic designer, and lecturer at the Academy of Fine Arts in Warsaw. Her work focuses on typography and its influence on visual communication. In addition to her design work, she lectures and conducts research on the history of Polish typography.
 
 Mateusz an award-winning designer specializing in typography and visual communication, he is a professor at the Academy of Fine Arts in Warsaw and the Rector's Representative. In addition to his design work, he is involved in research, lectures, exhibition curation, and the promotion of Polish design worldwide.`,
     },
