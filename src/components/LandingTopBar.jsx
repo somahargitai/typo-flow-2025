@@ -7,11 +7,43 @@ const LandingTopBar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [isAnimating, setIsAnimating] = useState(false)
+  const [isShaking, setIsShaking] = useState(false)
 
-  const scrollToSection = sectionId => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+  // Add shake animation styles
+  const shakeStyles = `
+    @keyframes shake {
+      0%, 100% { transform: rotate(-2deg) translateX(0); }
+      10% { transform: rotate(-2deg) translateX(-4px) translateY(-1px); }
+      20% { transform: rotate(-2deg) translateX(4px) translateY(1px); }
+      30% { transform: rotate(-2deg) translateX(-3px) translateY(-1px); }
+      40% { transform: rotate(-2deg) translateX(3px) translateY(1px); }
+      50% { transform: rotate(-2deg) translateX(-2px) translateY(-1px); }
+      60% { transform: rotate(-2deg) translateX(2px) translateY(1px); }
+      70% { transform: rotate(-2deg) translateX(-1px) translateY(-1px); }
+      80% { transform: rotate(-2deg) translateX(1px) translateY(1px); }
+      90% { transform: rotate(-2deg) translateX(0) translateY(0); }
+    }
+    .shake-animation {
+      animation: shake 0.6s ease-in-out;
+    }
+    .registration-button {
+      transform: rotate(-2deg);
+      transition: all 0.3s ease;
+    }
+    .registration-button:hover {
+      transform: rotate(-2deg) scale(1.05) translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+  `
+
+  const scrollToSection = item => {
+    if (item.isExternal && item.url) {
+      window.open(item.url, '_blank')
+    } else {
+      const element = document.getElementById(item.id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
     }
     setIsMenuOpen(false)
   }
@@ -27,6 +59,11 @@ const LandingTopBar = () => {
   }
 
   useEffect(() => {
+    // Add shake animation styles to document
+    const styleElement = document.createElement('style')
+    styleElement.textContent = shakeStyles
+    document.head.appendChild(styleElement)
+
     const handleScroll = () => {
       const scrollTop = window.scrollY
       const landingHeader = document.getElementById('landing-header')
@@ -41,6 +78,28 @@ const LandingTopBar = () => {
       setIsMobile(window.innerWidth < 768)
     }
 
+    // Shake animation logic
+    const startShakeAnimation = () => {
+      // First shake after 5 seconds
+      const firstShakeTimeout = setTimeout(() => {
+        setIsShaking(true)
+        setTimeout(() => setIsShaking(false), 500) // Shake for 0.5 seconds
+      }, 5000)
+
+      // Repeat shake every 15 seconds
+      const shakeInterval = setInterval(() => {
+        setIsShaking(true)
+        setTimeout(() => setIsShaking(false), 500) // Shake for 0.5 seconds
+      }, 15000)
+
+      return () => {
+        clearTimeout(firstShakeTimeout)
+        clearInterval(shakeInterval)
+      }
+    }
+
+    const cleanupShake = startShakeAnimation()
+
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('resize', handleResize)
     handleResize() // Check initial size
@@ -48,6 +107,8 @@ const LandingTopBar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('resize', handleResize)
+      cleanupShake()
+      document.head.removeChild(styleElement)
     }
   }, [])
 
@@ -58,6 +119,12 @@ const LandingTopBar = () => {
     { id: 'awards', label: translationsOfLanguage.navigation.awards },
     { id: 'jury', label: translationsOfLanguage.navigation.jury },
     { id: 'conference', label: translationsOfLanguage.navigation.conference },
+    {
+      id: 'registration',
+      label: translationsOfLanguage.navigation.registration,
+      isExternal: true,
+      url: 'https://docs.google.com/forms/d/e/1FAIpQLSepLK9MTlbs8c8jkbshG3csWF8cWmszOE8WzvfZwPE_UmhX5Q/viewform',
+    },
   ]
 
   return (
@@ -122,9 +189,16 @@ const LandingTopBar = () => {
                   {navigationItems.map(item => (
                     <button
                       key={item.id}
-                      onClick={() => scrollToSection(item.id)}
-                      className="text-gray-800 font-semibold text-4xl uppercase
-                        tracking-wider hover:text-gray-600 transition-colors"
+                      onClick={() => scrollToSection(item)}
+                       className={`font-semibold text-4xl uppercase
+                         tracking-wider ${
+                           item.id === 'registration'
+                             ? `bg-white text-gray-800 px-3 py-2 rounded-lg
+                               registration-button border-2 border-black
+                               ${isShaking ? 'shake-animation' : ''}`
+                             : `text-gray-800 hover:text-gray-600
+                               transition-colors`
+                         }`}
                       style={{
                         fontFamily: 'Big Shoulders Display, sans-serif',
                       }}
@@ -144,10 +218,15 @@ const LandingTopBar = () => {
                   {navigationItems.map(item => (
                     <button
                       key={item.id}
-                      onClick={() => scrollToSection(item.id)}
-                      className="block w-full text-left px-6 py-3 text-gray-800
-                        font-semibold text-lg uppercase tracking-wider
-                        hover:bg-gray-100 transition-colors"
+                      onClick={() => scrollToSection(item)}
+                      className={`block w-full text-left px-3 py-2 font-semibold
+                        text-lg uppercase tracking-wider ${
+                          item.id === 'registration'
+                            ? `bg-white text-gray-800 registration-button
+                              ${isShaking ? 'shake-animation' : ''}`
+                            : `text-gray-800 hover:bg-gray-100
+                              transition-colors`
+                        }`}
                       style={{
                         fontFamily: 'Big Shoulders Display, sans-serif',
                       }}
@@ -160,15 +239,22 @@ const LandingTopBar = () => {
             </div>
           ) : (
             /* Desktop Navigation - Full Menu */
-            <div className="flex space-x-12">
+            <div className="flex space-x-12 items-center">
               {navigationItems.map(item => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-white hover:text-gray-600 transition-colors
-                    font-semibold text-xl md:text-xl lg:text-[2.1rem] uppercase
-                    tracking-wider"
-                  style={{ fontFamily: 'Big Shoulders Display, sans-serif' }}
+                  onClick={() => scrollToSection(item)}
+                  className={`font-semibold text-xl md:text-xl lg:text-[2.1rem]
+                    uppercase tracking-wider ${
+                      item.id === 'registration'
+                        ? `bg-white text-gray-800 px-3 py-2 rounded-lg
+                          registration-button
+                          ${isShaking ? 'shake-animation' : ''}`
+                        : 'text-white hover:text-gray-600 transition-colors'
+                    }`}
+                  style={{
+                    fontFamily: 'Big Shoulders Display, sans-serif',
+                  }}
                 >
                   {item.label}
                 </button>

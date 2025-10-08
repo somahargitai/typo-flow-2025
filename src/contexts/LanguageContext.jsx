@@ -29,6 +29,7 @@ export const LanguageProvider = ({ children }) => {
         awards: 'Díjak',
         jury: 'Zsűri',
         conference: 'Konferencia',
+        registration: 'Regisztráció',
       },
       competition: {
         title: 'PÁLYÁZAT',
@@ -134,6 +135,7 @@ export const LanguageProvider = ({ children }) => {
         awards: 'Awards',
         jury: 'Jury',
         conference: 'Conference',
+        registration: 'Registration',
       },
       competition: {
         title: 'COMPETITION',
