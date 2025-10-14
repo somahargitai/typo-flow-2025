@@ -119,12 +119,12 @@ const LandingTopBar = () => {
     { id: 'awards', label: translationsOfLanguage.navigation.awards },
     { id: 'jury', label: translationsOfLanguage.navigation.jury },
     { id: 'conference', label: translationsOfLanguage.navigation.conference },
-    {
-      id: 'registration',
-      label: translationsOfLanguage.navigation.registration,
-      isExternal: true,
-      url: 'https://docs.google.com/forms/d/e/1FAIpQLSepLK9MTlbs8c8jkbshG3csWF8cWmszOE8WzvfZwPE_UmhX5Q/viewform',
-    },
+    // {
+    //   id: 'registration',
+    //   label: translationsOfLanguage.navigation.registration,
+    //   isExternal: true,
+    //   url: 'https://docs.google.com/forms/d/e/1FAIpQLSepLK9MTlbs8c8jkbshG3csWF8cWmszOE8WzvfZwPE_UmhX5Q/viewform',
+    // },
   ]
 
   return (
