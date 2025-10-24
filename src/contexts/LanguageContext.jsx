@@ -25,6 +25,8 @@ export const LanguageProvider = ({ children }) => {
         location: 'Helyszín: Széchenyi Egyetem, Menedzsment Campus',
       },
       navigation: {
+        home: 'Főoldal',
+        gallery: 'Galéria',
         competition: 'Pályázat',
         awards: 'Díjak',
         jury: 'Zsűri',
@@ -131,6 +133,8 @@ export const LanguageProvider = ({ children }) => {
         location: 'Location: Széchenyi University, Management Campus',
       },
       navigation: {
+        home: 'Home',
+        gallery: 'Gallery',
         competition: 'Competition',
         awards: 'Awards',
         jury: 'Jury',

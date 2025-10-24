@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useLanguage } from '../contexts/LanguageContext'
 
-const LandingTopBar = () => {
+const Navigation = () => {
   const { translationsOfLanguage, toggleLanguage, language } = useLanguage()
+  const navigate = useNavigate()
+  const location = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
@@ -36,13 +39,30 @@ const LandingTopBar = () => {
     }
   `
 
-  const scrollToSection = item => {
+  const handleNavigation = (item) => {
     if (item.isExternal && item.url) {
       window.open(item.url, '_blank')
+    } else if (item.id === 'gallery') {
+      navigate('/gallery')
+    } else if (item.id === 'home') {
+      navigate('/')
     } else {
-      const element = document.getElementById(item.id)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
+      // If we're on the gallery page, navigate to home first
+      if (location.pathname === '/gallery') {
+        navigate('/')
+        // Wait for navigation to complete, then scroll to section
+        setTimeout(() => {
+          const element = document.getElementById(item.id)
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+          }
+        }, 100)
+      } else {
+        // We're on the home page, just scroll to section
+        const element = document.getElementById(item.id)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
       }
     }
     setIsMenuOpen(false)
@@ -115,6 +135,8 @@ const LandingTopBar = () => {
   const shouldShowHamburger = isMobile || isScrolled
 
   const navigationItems = [
+    { id: 'home', label: translationsOfLanguage.navigation.home },
+    { id: 'gallery', label: translationsOfLanguage.navigation.gallery },
     { id: 'competition', label: translationsOfLanguage.navigation.competition },
     { id: 'awards', label: translationsOfLanguage.navigation.awards },
     { id: 'jury', label: translationsOfLanguage.navigation.jury },
@@ -129,8 +151,8 @@ const LandingTopBar = () => {
 
   return (
     <nav
-      className={`relative top-0 left-0 right-0 z-50 transition-all duration-300
-        bg-transparent`}
+      className={`relative top-0 left-0 right-0 z-50 transition-all duration-300`}
+      style={{ backgroundColor: '#ff5251' }}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
@@ -189,7 +211,7 @@ const LandingTopBar = () => {
                   {navigationItems.map(item => (
                     <button
                       key={item.id}
-                      onClick={() => scrollToSection(item)}
+                      onClick={() => handleNavigation(item)}
                        className={`font-semibold text-4xl uppercase
                          tracking-wider ${
                            item.id === 'registration'
@@ -218,7 +240,7 @@ const LandingTopBar = () => {
                   {navigationItems.map(item => (
                     <button
                       key={item.id}
-                      onClick={() => scrollToSection(item)}
+                      onClick={() => handleNavigation(item)}
                       className={`block w-full text-left px-3 py-2 font-semibold
                         text-lg uppercase tracking-wider ${
                           item.id === 'registration'
@@ -243,7 +265,7 @@ const LandingTopBar = () => {
               {navigationItems.map(item => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item)}
+                  onClick={() => handleNavigation(item)}
                   className={`font-semibold text-xl md:text-xl lg:text-[2.1rem]
                     uppercase tracking-wider ${
                       item.id === 'registration'
@@ -285,4 +307,4 @@ const LandingTopBar = () => {
   )
 }
 
-export default LandingTopBar
+export default Navigation

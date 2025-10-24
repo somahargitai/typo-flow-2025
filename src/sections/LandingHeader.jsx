@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
-import LandingTopBar from '../components/LandingTopBar'
+import Navigation from '../components/Navigation'
 import LandingBottomBar from '../components/LandingBottomBar'
 
 const LandingHeader = () => {
@@ -36,7 +36,7 @@ const LandingHeader = () => {
       className="relative text-white h-screen flex flex-col pb-10"
       style={{ backgroundColor: '#ff5251' }}
     >
-      <LandingTopBar />
+      {/* <Navigation /> */}
 
       {/* Logo wrapper - calculated height with padding */}
       <div
