@@ -85,3 +85,6 @@ dist
 tmp/
 temp/
 psd/
+
+# Photo Uploads Folder
+photo-uploads/

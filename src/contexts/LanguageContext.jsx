@@ -19,6 +19,9 @@ export const LanguageProvider = ({ children }) => {
 
   const translations = {
     HU: {
+      gallery: {
+        title: 'GALÉRIA',
+      },
       conference: {
         title: 'TYPOFLOW KONFERENCIA',
         date: '2025. október 22.',
@@ -127,6 +130,9 @@ export const LanguageProvider = ({ children }) => {
       },
     },
     EN: {
+      gallery: {
+        title: 'GALLERY',
+      },
       conference: {
         title: 'TYPOFLOW CONFERENCE',
         date: '2025. October 22.',
