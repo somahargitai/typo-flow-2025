@@ -7,6 +7,10 @@ const PhotoGallery = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [isZoomed, setIsZoomed] = useState(false)
+  const [zoomScale, setZoomScale] = useState(1)
+  const [position, setPosition] = useState({ x: 0, y: 0 })
+  const [isDragging, setIsDragging] = useState(false)
+  const dragRef = useRef({ startX: 0, startY: 0, originX: 0, originY: 0 })
   const imagesPerPage = 12
   const [isMobile, setIsMobile] = useState(false)
   const [itemsToShow, setItemsToShow] = useState(imagesPerPage)
@@ -51,6 +55,16 @@ const PhotoGallery = () => {
     }
   }, [isMobile, allImages.length])
 
+  // Reset zoom state when closing fullscreen
+  useEffect(() => {
+    if (!isFullscreen) {
+      setIsZoomed(false)
+      setZoomScale(1)
+      setPosition({ x: 0, y: 0 })
+      setIsDragging(false)
+    }
+  }, [isFullscreen])
+
   // Infinite scroll via IntersectionObserver
   useEffect(() => {
     if (!isMobile) return
@@ -85,6 +99,61 @@ const PhotoGallery = () => {
     setCurrentPage(page)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+
+  // Zoom toggle and drag handlers (fullscreen only)
+  const toggleZoom = useCallback(() => {
+    setIsZoomed(prev => {
+      const next = !prev
+      setZoomScale(next ? 3 : 1)
+      setPosition({ x: 0, y: 0 })
+      return next
+    })
+  }, [])
+
+  const onPointerDown = useCallback(
+    e => {
+      if (!isZoomed) return
+      e.preventDefault()
+      e.stopPropagation()
+      const pointerX = e.clientX ?? (e.touches && e.touches[0]?.clientX) ?? 0
+      const pointerY = e.clientY ?? (e.touches && e.touches[0]?.clientY) ?? 0
+      dragRef.current = {
+        startX: pointerX,
+        startY: pointerY,
+        originX: position.x,
+        originY: position.y,
+      }
+      setIsDragging(true)
+    },
+    [isZoomed, position.x, position.y]
+  )
+
+  const onPointerMove = useCallback(
+    e => {
+      if (!isDragging) return
+      e.preventDefault()
+      e.stopPropagation()
+      const pointerX = e.clientX ?? (e.touches && e.touches[0]?.clientX) ?? 0
+      const pointerY = e.clientY ?? (e.touches && e.touches[0]?.clientY) ?? 0
+      const dx = pointerX - dragRef.current.startX
+      const dy = pointerY - dragRef.current.startY
+      setPosition({
+        x: dragRef.current.originX + dx,
+        y: dragRef.current.originY + dy,
+      })
+    },
+    [isDragging]
+  )
+
+  const onPointerUp = useCallback(
+    e => {
+      if (!isDragging) return
+      e.preventDefault()
+      e.stopPropagation()
+      setIsDragging(false)
+    },
+    [isDragging]
+  )
 
   const renderPagination = () => {
     const pages = []
@@ -234,16 +303,6 @@ const PhotoGallery = () => {
               ✕
             </button>
 
-            {/* Zoom button */}
-            <button
-              onClick={() => setIsZoomed(!isZoomed)}
-              className="absolute top-4 right-16 z-10 text-white text-2xl
-                hover:text-gray-300 transition-colors bg-black bg-opacity-50
-                rounded-full p-2"
-            >
-              {isZoomed ? '🔍-' : '🔍+'}
-            </button>
-
             <div className="w-full h-full flex items-center justify-center">
               <style>
                 {`
@@ -291,13 +350,60 @@ const PhotoGallery = () => {
                 showThumbnails={false}
                 showFullscreenButton={false}
                 showPlayButton={false}
-                showNav={true}
+                showNav={!isMobile}
                 useBrowserFullscreen={false}
-                onScreenChange={isFullscreen => {
-                  if (!isFullscreen) {
+                onScreenChange={isFs => {
+                  if (!isFs) {
                     setIsFullscreen(false)
                   }
                 }}
+                renderItem={item => (
+                  <div
+                    className="w-full h-full flex items-center justify-center
+                      touch-pan-y"
+                    onMouseDown={onPointerDown}
+                    onMouseMove={onPointerMove}
+                    onMouseUp={onPointerUp}
+                    onMouseLeave={onPointerUp}
+                    onTouchStart={onPointerDown}
+                    onTouchMove={onPointerMove}
+                    onTouchEnd={onPointerUp}
+                    onDoubleClick={toggleZoom}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      overflow: 'hidden',
+                      cursor: isZoomed
+                        ? isDragging
+                          ? 'grabbing'
+                          : 'grab'
+                        : 'zoom-in',
+                    }}
+                  >
+                    <img
+                      src={item.original}
+                      alt=""
+                      draggable={false}
+                      style={{
+                        maxWidth: '100vw',
+                        maxHeight: '100vh',
+                        objectFit: 'contain',
+                        transform: `translate3d(${position.x}px, ${position.y}px, 0) scale(${zoomScale})`,
+                        transition: isDragging ? 'none' : 'transform 0.2s ease',
+                        willChange: 'transform',
+                        touchAction: isZoomed ? 'none' : 'pan-y',
+                      }}
+                      onClick={e => {
+                        // prevent gallery from advancing when zoomed and clicking
+                        if (isZoomed) {
+                          e.preventDefault()
+                          e.stopPropagation()
+                        }
+                      }}
+                      onDragStart={e => e.preventDefault()}
+                    />
+                  </div>
+                )}
               />
             </div>
           </div>
