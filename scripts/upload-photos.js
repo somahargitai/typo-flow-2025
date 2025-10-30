@@ -17,6 +17,7 @@ import sharp from 'sharp'
 import { S3Client } from '@aws-sdk/client-s3'
 import { Upload } from '@aws-sdk/lib-storage'
 import dotenv from 'dotenv'
+import crypto from 'crypto'
 
 dotenv.config()
 
@@ -134,13 +135,13 @@ async function uploadToR2(filePath, key) {
 }
 
 /**
- * Generate unique filename with timestamp
+ * Compute a stable hash of a file's contents (sha256, shortened)
  */
-function generateUniqueFilename(originalName, suffix = '') {
-  const ext = path.extname(originalName)
-  const name = path.basename(originalName, ext)
-  const timestamp = Date.now()
-  return `${name}-${timestamp}${suffix}${ext}`
+function computeFileHash(filePath, length = 16) {
+  const hash = crypto.createHash('sha256')
+  const data = fs.readFileSync(filePath)
+  hash.update(data)
+  return hash.digest('hex').slice(0, length)
 }
 
 /**
@@ -151,9 +152,12 @@ async function processImageFile(imagePath) {
   console.log(`Processing: ${filename}`)
 
   try {
-    // Generate unique filenames
-    const thumbnailFilename = generateUniqueFilename(filename, '-thumb')
-    const fullImageFilename = generateUniqueFilename(filename, '-full')
+    // Generate deterministic filenames from content hash
+    const baseHash = computeFileHash(imagePath)
+    const timestamp = Date.now()
+    const id = `${baseHash}-${timestamp}`
+    const thumbnailFilename = `${id}-thumb.jpg`
+    const fullImageFilename = `${id}-full.jpg`
 
     // Create temp directory
     const tempDir = path.join(__dirname, '../temp')
@@ -201,7 +205,7 @@ async function processImageFile(imagePath) {
     fs.unlinkSync(fullImagePath)
 
     return {
-      originalName: filename,
+      originalName: id,
       thumbnail: thumbnailUrl,
       original: fullImageUrl,
       thumbnailKey: `thumbnails/${thumbnailFilename}`,
