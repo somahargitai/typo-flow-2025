@@ -136,7 +136,7 @@ const Navigation = () => {
 
   const navigationItems = [
     { id: 'home', label: translationsOfLanguage.navigation.home },
-    // { id: 'gallery', label: translationsOfLanguage.navigation.gallery },
+    { id: 'gallery', label: translationsOfLanguage.navigation.gallery },
     { id: 'competition', label: translationsOfLanguage.navigation.competition },
     { id: 'awards', label: translationsOfLanguage.navigation.awards },
     { id: 'jury', label: translationsOfLanguage.navigation.jury },
