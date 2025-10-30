@@ -351,6 +351,9 @@ const PhotoGallery = () => {
                 showFullscreenButton={false}
                 showPlayButton={false}
                 showNav={!isMobile}
+                /* When zoomed, make swiping to next slide effectively impossible */
+                swipeThreshold={isZoomed ? 10000 : 30}
+                disableSwipe={isZoomed}
                 useBrowserFullscreen={false}
                 onScreenChange={isFs => {
                   if (!isFs) {
@@ -361,6 +364,25 @@ const PhotoGallery = () => {
                   <div
                     className="w-full h-full flex items-center justify-center
                       touch-pan-y"
+                    /* Capture and stop touch/pointer events when zoomed to prevent gallery swipe */
+                    onTouchStartCapture={e => {
+                      if (isZoomed) {
+                        e.preventDefault()
+                        e.stopPropagation()
+                      }
+                    }}
+                    onTouchMoveCapture={e => {
+                      if (isZoomed) {
+                        e.preventDefault()
+                        e.stopPropagation()
+                      }
+                    }}
+                    onPointerDownCapture={e => {
+                      if (isZoomed) {
+                        e.preventDefault()
+                        e.stopPropagation()
+                      }
+                    }}
                     onMouseDown={onPointerDown}
                     onMouseMove={onPointerMove}
                     onMouseUp={onPointerUp}
