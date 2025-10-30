@@ -135,12 +135,12 @@ const Navigation = () => {
   const shouldShowHamburger = isMobile || isScrolled
 
   const navigationItems = [
-    { id: 'home', label: translationsOfLanguage.navigation.home },
-    { id: 'gallery', label: translationsOfLanguage.navigation.gallery },
+    // { id: 'home', label: translationsOfLanguage.navigation.home },
     { id: 'competition', label: translationsOfLanguage.navigation.competition },
     { id: 'awards', label: translationsOfLanguage.navigation.awards },
     { id: 'jury', label: translationsOfLanguage.navigation.jury },
     { id: 'conference', label: translationsOfLanguage.navigation.conference },
+    { id: 'gallery', label: translationsOfLanguage.navigation.gallery },
     // {
     //   id: 'registration',
     //   label: translationsOfLanguage.navigation.registration,

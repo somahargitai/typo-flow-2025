@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react'
+import React, { useState, useCallback, useMemo, useEffect, useRef } from 'react'
 import ImageGallery from 'react-image-gallery'
 import 'react-image-gallery/styles/css/image-gallery.css'
 import imagesData from '../data/images.json'
@@ -8,6 +8,9 @@ const PhotoGallery = () => {
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [isZoomed, setIsZoomed] = useState(false)
   const imagesPerPage = 12
+  const [isMobile, setIsMobile] = useState(false)
+  const [itemsToShow, setItemsToShow] = useState(imagesPerPage)
+  const loadMoreRef = useRef(null)
 
   // Transform images from JSON format to ImageGallery format
   const allImages = useMemo(() => {
@@ -25,7 +28,49 @@ const PhotoGallery = () => {
   const totalPages = Math.ceil(allImages.length / imagesPerPage)
   const startIndex = (currentPage - 1) * imagesPerPage
   const endIndex = startIndex + imagesPerPage
-  const currentImages = allImages.slice(startIndex, endIndex)
+  const currentImages = isMobile
+    ? allImages.slice(0, itemsToShow)
+    : allImages.slice(startIndex, endIndex)
+
+  // Detect mobile and set up resize listener
+  useEffect(() => {
+    const updateIsMobile = () => {
+      setIsMobile(window.matchMedia('(max-width: 767px)').matches)
+    }
+    updateIsMobile()
+    window.addEventListener('resize', updateIsMobile)
+    return () => window.removeEventListener('resize', updateIsMobile)
+  }, [])
+
+  // Reset/show counts when images or mode changes
+  useEffect(() => {
+    if (isMobile) {
+      setItemsToShow(imagesPerPage)
+    } else {
+      setCurrentPage(1)
+    }
+  }, [isMobile, allImages.length])
+
+  // Infinite scroll via IntersectionObserver
+  useEffect(() => {
+    if (!isMobile) return
+    if (!loadMoreRef.current) return
+
+    const observer = new IntersectionObserver(
+      entries => {
+        const entry = entries[0]
+        if (entry.isIntersecting) {
+          setItemsToShow(prev =>
+            Math.min(prev + imagesPerPage, allImages.length)
+          )
+        }
+      },
+      { root: null, rootMargin: '200px', threshold: 0 }
+    )
+
+    observer.observe(loadMoreRef.current)
+    return () => observer.disconnect()
+  }, [isMobile, imagesPerPage, allImages.length])
 
   const handleImageClick = useCallback(
     index => {
@@ -161,10 +206,13 @@ const PhotoGallery = () => {
             </div>
           </div>
         ))}
+        {isMobile && itemsToShow < allImages.length && (
+          <div ref={loadMoreRef} className="col-span-full h-1" />
+        )}
       </div>
 
-      {/* Pagination */}
-      {totalPages > 1 && (
+      {/* Pagination (desktop only) */}
+      {!isMobile && totalPages > 1 && (
         <div className="flex justify-center items-center space-x-2 mb-8">
           {renderPagination()}
         </div>
