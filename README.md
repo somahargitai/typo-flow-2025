@@ -3,12 +3,12 @@
 ![Typo Flow 2025 Logo](docs/assets/typoflow-readme-logo.jpg)
 
 I. országos tipográfiai biennálé  
-Győr, 2025 október 22-november 9  
+Győr, 2025 október 22-november 4  
 Széchenyi Egyetem, Design Campus
 
 ## About
 
-This is the official website for Typo Flow 2025, the first national typography biennale in Hungary. The event will take place from October 22 to November 9, 2025, at the Design Campus of Széchenyi University in Győr.
+This is the official website for Typo Flow 2025, the first national typography biennale in Hungary. The event will take place from October 22 to November 4, 2025, at the Design Campus of Széchenyi University in Győr.
 
 ## Technology Stack
 
